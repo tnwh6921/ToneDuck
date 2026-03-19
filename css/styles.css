@@ -1,0 +1,633 @@
+/* ===========================
+   Cantonese Jyutping Tutorial
+   Warm Color Scheme with Plain Design
+   =========================== */
+
+:root {
+    /* Warm Color Palette */
+    --primary-color: #E07A5F;        /* Warm coral */
+    --secondary-color: #F2CC8F;      /* Soft golden */
+    --accent-color: #81B29A;         /* Warm sage green */
+    --background: #FAF9F6;           /* Warm white */
+    --card-background: #FFFFFF;
+    --text-primary: #3D405B;         /* Warm dark gray */
+    --text-secondary: #6B6D7A;
+    --border-color: #E8DDD3;         /* Warm beige */
+    --success: #81B29A;
+    --error: #D4727B;
+    --warning: #F2CC8F;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    /* Typography */
+    --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    --border-radius: 12px;
+}
+
+/* ===========================
+   Base Styles
+   =========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--background);
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* ===========================
+   Typography
+   =========================== */
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+p {
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ===========================
+   Header
+   =========================== */
+
+header {
+    background-color: var(--card-background);
+    border-bottom: 3px solid var(--primary-color);
+    padding: var(--spacing-lg) 0;
+    margin-bottom: var(--spacing-xl);
+}
+
+header h1 {
+    margin-bottom: var(--spacing-xs);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: var(--spacing-md);
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--accent-color);
+}
+
+/* ===========================
+   Main Content
+   =========================== */
+
+main {
+    min-height: 60vh;
+    padding-bottom: var(--spacing-xl);
+}
+
+.intro {
+    background-color: var(--card-background);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    border-left: 5px solid var(--secondary-color);
+    margin-bottom: var(--spacing-xl);
+}
+
+.intro ul {
+    margin-left: var(--spacing-lg);
+    margin-top: var(--spacing-md);
+}
+
+.intro li {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-secondary);
+}
+
+/* ===========================
+   Lessons Grid
+   =========================== */
+
+.lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.lesson-card {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    border: 2px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.lesson-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(224, 122, 95, 0.15);
+    border-color: var(--primary-color);
+}
+
+.lesson-number {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--text-primary);
+    font-weight: 700;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.lesson-card h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.lesson-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* ===========================
+   Lesson Content Sections
+   =========================== */
+
+.section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.content-box {
+    background-color: var(--card-background);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--border-color);
+}
+
+.section-hint {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-md);
+}
+
+/* ===========================
+   Audio Components
+   =========================== */
+
+.audio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.audio-item {
+    background-color: var(--card-background);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+}
+
+.audio-header {
+    margin-bottom: var(--spacing-md);
+}
+
+.audio-item h4 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.audio-romanization {
+    color: var(--text-secondary);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.audio-controls {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.audio-controls button {
+    flex: 1;
+}
+
+.waveform {
+    height: 60px;
+    background: linear-gradient(to right, var(--secondary-color) 0%, var(--primary-color) 100%);
+    border-radius: 8px;
+    margin: var(--spacing-sm) 0;
+    opacity: 0.3;
+    position: relative;
+    overflow: hidden;
+}
+
+.waveform.active {
+    opacity: 1;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+/* ===========================
+   Quiz Components
+   =========================== */
+
+.quiz {
+    background-color: var(--card-background);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.quiz-type {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.quiz-question {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.quiz-option {
+    background-color: var(--background);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.quiz-option:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(224, 122, 95, 0.05);
+}
+
+.quiz-option.selected {
+    border-color: var(--primary-color);
+    background-color: rgba(224, 122, 95, 0.1);
+}
+
+.quiz-option.correct {
+    border-color: var(--success);
+    background-color: rgba(129, 178, 154, 0.1);
+}
+
+.quiz-option.incorrect {
+    border-color: var(--error);
+    background-color: rgba(212, 114, 123, 0.1);
+}
+
+.quiz-option:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Matching Quiz */
+.matching-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+.matching-column h4 {
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-color);
+}
+
+.matching-item {
+    background-color: var(--background);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.matching-item:hover {
+    border-color: var(--primary-color);
+}
+
+.matching-item.selected {
+    border-color: var(--primary-color);
+    background-color: rgba(224, 122, 95, 0.1);
+}
+
+.matching-item.matched {
+    border-color: var(--success);
+    background-color: rgba(129, 178, 154, 0.1);
+}
+
+/* Fill in the Blank */
+.fill-blank-input {
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 1rem;
+    font-family: var(--font-main);
+    width: 100%;
+    max-width: 300px;
+    margin: var(--spacing-md) 0;
+    transition: border-color 0.3s ease;
+}
+
+.fill-blank-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.fill-blank-input.correct {
+    border-color: var(--success);
+    background-color: rgba(129, 178, 154, 0.05);
+}
+
+.fill-blank-input.incorrect {
+    border-color: var(--error);
+    background-color: rgba(212, 114, 123, 0.05);
+}
+
+.quiz-feedback {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.quiz-feedback.correct {
+    background-color: rgba(129, 178, 154, 0.1);
+    color: var(--success);
+    border-left: 4px solid var(--success);
+}
+
+.quiz-feedback.incorrect {
+    background-color: rgba(212, 114, 123, 0.1);
+    color: var(--error);
+    border-left: 4px solid var(--error);
+}
+
+/* ===========================
+   Buttons
+   =========================== */
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-main);
+}
+
+button:hover {
+    background-color: #c96a51;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(224, 122, 95, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    background-color: var(--border-color);
+    cursor: not-allowed;
+    transform: none;
+}
+
+button.secondary {
+    background-color: var(--accent-color);
+}
+
+button.secondary:hover {
+    background-color: #6a9981;
+}
+
+button.outline {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+button.outline:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+/* ===========================
+   Navigation
+   =========================== */
+
+.lesson-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+    border-top: 2px solid var(--border-color);
+}
+
+.nav-btn {
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+/* ===========================
+   Footer
+   =========================== */
+
+footer {
+    background-color: var(--card-background);
+    border-top: 2px solid var(--border-color);
+    padding: var(--spacing-lg) 0;
+    margin-top: var(--spacing-xl);
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+/* ===========================
+   Utility Classes
+   =========================== */
+
+.hidden {
+    display: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-1 { margin-top: var(--spacing-sm); }
+.mt-2 { margin-top: var(--spacing-md); }
+.mt-3 { margin-top: var(--spacing-lg); }
+
+.mb-1 { margin-bottom: var(--spacing-sm); }
+.mb-2 { margin-bottom: var(--spacing-md); }
+.mb-3 { margin-bottom: var(--spacing-lg); }
+
+/* ===========================
+   Responsive Design
+   =========================== */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .lessons-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .matching-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .lesson-nav {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .nav-btn {
+        width: 100%;
+    }
+    
+    .audio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --spacing-lg: 1.5rem;
+        --spacing-xl: 2rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    h1 {
+        font-size: 1.75rem;
+    }
+}
+
+/* ===========================
+   Animations
+   =========================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Recording indicator */
+.recording {
+    position: relative;
+}
+
+.recording::before {
+    content: '●';
+    color: var(--error);
+    font-size: 1.2rem;
+    margin-right: var(--spacing-xs);
+    animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}

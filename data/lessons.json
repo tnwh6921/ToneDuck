@@ -1,0 +1,1493 @@
+{
+  "lessons": [
+    {
+      "lessonNumber": 1,
+      "title": "單元一：第一､二調",
+      "description": "介紹廣東話第一二調",
+      "modules": [
+        {
+          "type": "Content",
+          "title": "聲調特點",
+          "data": "第一調：高平調tone number 55"
+        },
+        {
+          "type": "AudioPractice",
+          "subType": "Content_Mono",
+          "title": "例子",
+          "items": [
+            {
+              "character": "都",
+              "jyutping": "dou1",
+              "audioFile": "asset/unit1/都.wav"
+            },
+            {
+              "character": "多",
+              "jyutping": "do1",
+              "audioFile": "asset/unit1/多.wav"
+            },
+            {
+              "character": "開",
+              "jyutping": "hoi1",
+              "audioFile": "asset/unit1/開.wav"
+            },
+            {
+              "character": "心",
+              "jyutping": "sam1",
+              "audioFile": "asset/unit1/心.wav"
+            },
+            {
+              "character": "之",
+              "jyutping": "zi1",
+              "audioFile": "asset/unit1/之.wav"
+            },
+            {
+              "character": "經",
+              "jyutping": "ging1",
+              "audioFile": "asset/unit1/經.wav"
+            },
+            {
+              "character": "新",
+              "jyutping": "san1",
+              "audioFile": "asset/unit1/新.wav"
+            },
+            {
+              "character": "機",
+              "jyutping": "gei1",
+              "audioFile": "asset/unit1/機.wav"
+            }
+          ]
+        },
+        {
+          "type": "AudioPractice",
+          "subType": "Prac_Mono",
+          "title": "單字練習",
+          "items": [
+            {
+              "character": "加",
+              "jyutping": "gaa1",
+              "audioFile": "asset/unit1/加.wav"
+            },
+            {
+              "character": "公",
+              "jyutping": "gung1",
+              "audioFile": "asset/unit1/公.wav"
+            },
+            {
+              "character": "方",
+              "jyutping": "fong1",
+              "audioFile": "asset/unit1/方.wav"
+            },
+            {
+              "character": "今",
+              "jyutping": "gam1",
+              "audioFile": "asset/unit1/今.wav"
+            },
+            {
+              "character": "真",
+              "jyutping": "zan1",
+              "audioFile": "asset/unit1/真.wav"
+            },
+            {
+              "character": "先",
+              "jyutping": "sin1",
+              "audioFile": "asset/unit1/先.wav"
+            },
+            {
+              "character": "高",
+              "jyutping": "gou1",
+              "audioFile": "asset/unit1/高.wav"
+            },
+            {
+              "character": "收",
+              "jyutping": "sau1",
+              "audioFile": "asset/unit1/收.wav"
+            },
+            {
+              "character": "車",
+              "jyutping": "ce1",
+              "audioFile": "asset/unit1/車.wav"
+            },
+            {
+              "character": "關",
+              "jyutping": "gwaan1",
+              "audioFile": "asset/unit1/關.wav"
+            }
+          ]
+        },
+        {
+          "type": "Content",
+          "title": "聲調特點",
+          "data": "第二調：高升調tone number 25"
+        },
+        {
+          "type": "AudioPractice",
+          "subType": "Content_Mono",
+          "title": "例子",
+          "items": [
+            {
+              "character": "可",
+              "jyutping": "ho2",
+              "audioFile": "asset/unit1/可.wav"
+            },
+            {
+              "character": "港",
+              "jyutping": "gong2",
+              "audioFile": "asset/unit1/港.wav"
+            },
+            {
+              "character": "好",
+              "jyutping": "hou2",
+              "audioFile": "asset/unit1/好.wav"
+            },
+            {
+              "character": "手",
+              "jyutping": "sau2",
+              "audioFile": "asset/unit1/手.wav"
+            },
+            {
+              "character": "點",
+              "jyutping": "dim2",
+              "audioFile": "asset/unit1/點.wav"
+            },
+            {
+              "character": "主",
+              "jyutping": "zyu2",
+              "audioFile": "asset/unit1/主.wav"
+            },
+            {
+              "character": "本",
+              "jyutping": "bun2",
+              "audioFile": "asset/unit1/本.wav"
+            },
+            {
+              "character": "影",
+              "jyutping": "jing2",
+              "audioFile": "asset/unit1/影.wav"
+            }
+          ]
+        },
+        {
+          "type": "AudioPractice",
+          "subType": "Prac_Mono",
+          "title": "單字練習",
+          "items": [
+            {
+              "character": "者",
+              "jyutping": "ze2",
+              "audioFile": "asset/unit1/者.wav"
+            },
+            {
+              "character": "所",
+              "jyutping": "so2",
+              "audioFile": "asset/unit1/所.wav"
+            },
+            {
+              "character": "小",
+              "jyutping": "siu2",
+              "audioFile": "asset/unit1/小.wav"
+            },
+            {
+              "character": "比",
+              "jyutping": "bei2",
+              "audioFile": "asset/unit1/比.wav"
+            },
+            {
+              "character": "等",
+              "jyutping": "dang2",
+              "audioFile": "asset/unit1/等.wav"
+            },
+            {
+              "character": "保",
+              "jyutping": "bou2",
+              "audioFile": "asset/unit1/保.wav"
+            },
+            {
+              "character": "反",
+              "jyutping": "faan2",
+              "audioFile": "asset/unit1/反.wav"
+            },
+            {
+              "character": "股",
+              "jyutping": "gu2",
+              "audioFile": "asset/unit1/股.wav"
+            },
+            {
+              "character": "解",
+              "jyutping": "gaai2",
+              "audioFile": "asset/unit1/解.wav"
+            },
+            {
+              "character": "警",
+              "jyutping": "ging2",
+              "audioFile": "asset/unit1/警.wav"
+            }
+          ]
+        },
+        {
+          "type": "Quiz",
+          "title": "選擇題1",
+          "question": "以下哪個字的聲調和其他不一樣？",
+          "options": [
+            {
+              "character": "中",
+              "jyutping": "zung1",
+              "audioFile": "asset/unit1/中.wav"
+            },
+            {
+              "character": "只",
+              "jyutping": "zi2",
+              "audioFile": "asset/unit1/只.wav"
+            },
+            {
+              "character": "單",
+              "jyutping": "daan1",
+              "audioFile": "asset/unit1/單.wav"
+            },
+            {
+              "character": "通",
+              "jyutping": "tung1",
+              "audioFile": "asset/unit1/通.wav"
+            }
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "type": "Quiz",
+          "title": "選擇題2",
+          "question": "以下哪個字的聲調和其他不一樣？",
+          "options": [
+            {
+              "character": "波",
+              "jyutping": "bo1",
+              "audioFile": "asset/unit1/波.wav"
+            },
+            {
+              "character": "該",
+              "jyutping": "goi1",
+              "audioFile": "asset/unit1/該.wav"
+            },
+            {
+              "character": "因",
+              "jyutping": "jan1",
+              "audioFile": "asset/unit1/因.wav"
+            },
+            {
+              "character": "表",
+              "jyutping": "biu2",
+              "audioFile": "asset/unit1/表.wav"
+            }
+          ],
+          "correctAnswer": 3
+        },
+        {
+          "type": "Quiz",
+          "title": "選擇題3",
+          "question": "以下哪個字的聲調和其他不一樣？",
+          "options": [
+            {
+              "character": "當",
+              "jyutping": "dong1",
+              "audioFile": "asset/unit1/當.wav"
+            },
+            {
+              "character": "把",
+              "jyutping": "baa2",
+              "audioFile": "asset/unit1/把.wav"
+            },
+            {
+              "character": "己",
+              "jyutping": "gei2",
+              "audioFile": "asset/unit1/己.wav"
+            },
+            {
+              "character": "感",
+              "jyutping": "gam2",
+              "audioFile": "asset/unit1/感.wav"
+            }
+          ],
+          "correctAnswer": 0
+        },
+        {
+          "type": "Colour_colour",
+          "title": "填色遊戲",
+          "colors": [
+            "#fbbc04",
+            "#efefef",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": "Colour_puzzle",
+          "title": "填色遊戲",
+          "board": [
+            "選",
+            "選",
+            "選",
+            "起",
+            "起",
+            "起",
+            "起",
+            "選",
+            "起",
+            "天",
+            "包",
+            "包",
+            "天",
+            "起",
+            "起",
+            "選",
+            "起",
+            "天",
+            "包",
+            "包",
+            "包",
+            "包",
+            "選",
+            "起",
+            "選",
+            "天",
+            "天",
+            "包",
+            "包",
+            "選",
+            "包",
+            "起",
+            "選",
+            "天",
+            "天",
+            "天",
+            "天",
+            "包",
+            "起",
+            "起",
+            "起",
+            "包",
+            "包",
+            "天",
+            "天",
+            "起",
+            "起",
+            "起",
+            "起",
+            "起",
+            "包",
+            "天",
+            "選",
+            "選",
+            "選",
+            "起",
+            "起",
+            "包",
+            "天",
+            "包",
+            "天",
+            "選",
+            "選",
+            "起"
+          ],
+          "distinct_items": [
+            {
+              "character": "天",
+              "jyutping": "tin1",
+              "audioFile": "asset/unit1/天.wav",
+              "tone": 1
+            },
+            {
+              "character": "起",
+              "jyutping": "hei2",
+              "audioFile": "asset/unit1/起.wav",
+              "tone": 2
+            },
+            {
+              "character": "包",
+              "jyutping": "baau1",
+              "audioFile": "asset/unit1/包.wav",
+              "tone": 1
+            },
+            {
+              "character": "選",
+              "jyutping": "syun2",
+              "audioFile": "asset/unit1/選.wav",
+              "tone": 2
+            }
+          ]
+        },
+        {
+          "type": "Colour_MC",
+          "title": "填色遊戲",
+          "question": "答案：",
+          "options": [
+            {
+              "character": "星",
+              "jyutping": "sing1",
+              "audioFile": "asset/unit1/星.wav"
+            },
+            {
+              "character": "口",
+              "jyutping": "hau2",
+              "audioFile": "asset/unit1/口.wav"
+            },
+            {
+              "character": "杯",
+              "jyutping": "bui1",
+              "audioFile": "asset/unit1/杯.wav"
+            }
+          ],
+          "correctAnswer": 2
+        },
+        {
+          "type": "AudioPractice",
+          "subType": "Prac_Disyl",
+          "title": "雙音節字練習",
+          "items": [
+            {
+              "character": "分鐘",
+              "jyutping": "fan1 zung1",
+              "audioFile": "asset/unit1/分鐘.wav"
+            },
+            {
+              "character": "餐廳",
+              "jyutping": "caan1 teng1",
+              "audioFile": "asset/unit1/餐廳.wav"
+            },
+            {
+              "character": "空間",
+              "jyutping": "hung1 gaan1",
+              "audioFile": "asset/unit1/空間.wav"
+            },
+            {
+              "character": "專家",
+              "jyutping": "zyun1 gaa1",
+              "audioFile": "asset/unit1/專家.wav"
+            },
+            {
+              "character": "申請",
+              "jyutping": "san1 cing2",
+              "audioFile": "asset/unit1/申請.wav"
+            },
+            {
+              "character": "清楚",
+              "jyutping": "cing1 co2",
+              "audioFile": "asset/unit1/清楚.wav"
+            },
+            {
+              "character": "風險",
+              "jyutping": "fung1 him2",
+              "audioFile": "asset/unit1/風險.wav"
+            },
+            {
+              "character": "參考",
+              "jyutping": "caam1 haau2",
+              "audioFile": "asset/unit1/參考.wav"
+            },
+            {
+              "character": "喜歡",
+              "jyutping": "hei2 fun1",
+              "audioFile": "asset/unit1/喜歡.wav"
+            },
+            {
+              "character": "廣東",
+              "jyutping": "gwong2 dung1",
+              "audioFile": "asset/unit1/廣東.wav"
+            },
+            {
+              "character": "補充",
+              "jyutping": "bou2 cung1",
+              "audioFile": "asset/unit1/補充.wav"
+            },
+            {
+              "character": "打工",
+              "jyutping": "daa2 gung1",
+              "audioFile": "asset/unit1/打工.wav"
+            },
+            {
+              "character": "採訪",
+              "jyutping": "coi2 fong2",
+              "audioFile": "asset/unit1/採訪.wav"
+            },
+            {
+              "character": "阻止",
+              "jyutping": "zo2 zi2",
+              "audioFile": "asset/unit1/阻止.wav"
+            },
+            {
+              "character": "檢討",
+              "jyutping": "gim2 tou2",
+              "audioFile": "asset/unit1/檢討.wav"
+            },
+            {
+              "character": "飲品",
+              "jyutping": "jam2 ban2",
+              "audioFile": "asset/unit1/飲品.wav"
+            }
+          ]
+        },
+        {
+          "type": "Link",
+          "title": "課後練習及問卷",
+          "data": "(Link to be added)"
+        }
+      ]
+    },
+    {
+      "lessonNumber": 2,
+      "title": "單元二：第四調",
+      "description": "介紹廣東話第四調",
+      "modules": [
+        {
+          "type": "Content",
+          "title": "聲調特點",
+          "data": "第四調：低降調tone number 21"
+        },
+        {
+          "type": "AudioPractice",
+          "subType": "Content_Mono",
+          "title": "例子",
+          "items": [
+            {
+              "character": "人",
+              "jyutping": "jan4",
+              "audioFile": "asset/unit2/人.wav"
+            },
+            {
+              "character": "同",
+              "jyutping": "tung4",
+              "audioFile": "asset/unit2/同.wav"
+            },
+            {
+              "character": "成",
+              "jyutping": "sing4",
+              "audioFile": "asset/unit2/成.wav"
+            },
+            {
+              "character": "前",
+              "jyutping": "cin4",
+              "audioFile": "asset/unit2/前.wav"
+            },
+            {
+              "character": "門",
+              "jyutping": "mun4",
+              "audioFile": "asset/unit2/門.wav"
+            },
+            {
+              "character": "無",
+              "jyutping": "mou4",
+              "audioFile": "asset/unit2/無.wav"
+            },
+            {
+              "character": "如",
+              "jyutping": "jyu4",
+              "audioFile": "asset/unit2/如.wav"
+            },
+            {
+              "character": "來",
+              "jyutping": "loi4",
+              "audioFile": "asset/unit2/來.wav"
+            }
+          ]
+        },
+        {
+          "type": "AudioPractice",
+          "subType": "Prac_Mono",
+          "title": "單字練習",
+          "items": [
+            {
+              "character": "然",
+              "jyutping": "jin4",
+              "audioFile": "asset/unit2/然.wav"
+            },
+            {
+              "character": "全",
+              "jyutping": "cyun4",
+              "audioFile": "asset/unit2/全.wav"
+            },
+            {
+              "character": "明",
+              "jyutping": "ming4",
+              "audioFile": "asset/unit2/明.wav"
+            },
+            {
+              "character": "民",
+              "jyutping": "man4",
+              "audioFile": "asset/unit2/民.wav"
+            },
+            {
+              "character": "能",
+              "jyutping": "nang4",
+              "audioFile": "asset/unit2/能.wav"
+            },
+            {
+              "character": "球",
+              "jyutping": "kau4",
+              "audioFile": "asset/unit2/球.wav"
+            },
+            {
+              "character": "員",
+              "jyutping": "jyun4",
+              "audioFile": "asset/unit2/員.wav"
+            },
+            {
+              "character": "頭",
+              "jyutping": "tau4",
+              "audioFile": "asset/unit2/頭.wav"
+            },
+            {
+              "character": "和",
+              "jyutping": "wo4",
+              "audioFile": "asset/unit2/和.wav"
+            },
+            {
+              "character": "情",
+              "jyutping": "cing4",
+              "audioFile": "asset/unit2/情.wav"
+            }
+          ]
+        },
+        {
+          "type": "Quiz",
+          "title": "選擇題1",
+          "question": "以下哪個字的聲調和其他不一樣？",
+          "options": [
+            {
+              "character": "連",
+              "jyutping": "lin4",
+              "audioFile": "asset/unit2/連.wav"
+            },
+            {
+              "character": "回",
+              "jyutping": "wui4",
+              "audioFile": "asset/unit2/回.wav"
+            },
+            {
+              "character": "交",
+              "jyutping": "gaau1",
+              "audioFile": "asset/unit2/交.wav"
+            },
+            {
+              "character": "台",
+              "jyutping": "toi4",
+              "audioFile": "asset/unit2/台.wav"
+            }
+          ],
+          "correctAnswer": 2
+        },
+        {
+          "type": "Quiz",
+          "title": "選擇題2",
+          "question": "以下哪個字的聲調和其他不一樣？",
+          "options": [
+            {
+              "character": "持",
+              "jyutping": "ci4",
+              "audioFile": "asset/unit2/持.wav"
+            },
+            {
+              "character": "題",
+              "jyutping": "tai4",
+              "audioFile": "asset/unit2/題.wav"
+            },
+            {
+              "character": "男",
+              "jyutping": "naam4",
+              "audioFile": "asset/unit2/男.wav"
+            },
+            {
+              "character": "火",
+              "jyutping": "fo2",
+              "audioFile": "asset/unit2/火.wav"
+            }
+          ],
+          "correctAnswer": 3
+        },
+        {
+          "type": "Colour_Q",
+          "title": "填色遊戲",
+          "data": "(to be added)"
+        },
+        {
+          "type": "Colour_MC",
+          "title": "",
+          "question": "答案：",
+          "options": [
+            {
+              "character": "龍",
+              "jyutping": "lung4",
+              "audioFile": "asset/unit2/龍.wav"
+            },
+            {
+              "character": "紅",
+              "jyutping": "hung4",
+              "audioFile": "asset/unit2/紅.wav"
+            },
+            {
+              "character": "旗",
+              "jyutping": "kei4",
+              "audioFile": "asset/unit2/旗.wav"
+            }
+          ],
+          "correctAnswer": 2
+        },
+        {
+          "type": "AudioPractice",
+          "subType": "Prac_Disyl",
+          "title": "雙音節字練習",
+          "items": [
+            {
+              "character": "銀行",
+              "jyutping": "ngan4 hong4",
+              "audioFile": "asset/unit2/銀行.wav"
+            },
+            {
+              "character": "傳媒",
+              "jyutping": "cyun4 mui4",
+              "audioFile": "asset/unit2/傳媒.wav"
+            },
+            {
+              "character": "形容",
+              "jyutping": "jing4 jung4",
+              "audioFile": "asset/unit2/形容.wav"
+            },
+            {
+              "character": "凌晨",
+              "jyutping": "ling4 san4",
+              "audioFile": "asset/unit2/凌晨.wav"
+            },
+            {
+              "character": "當年",
+              "jyutping": "dong1 nin4",
+              "audioFile": "asset/unit2/當年.wav"
+            },
+            {
+              "character": "要求",
+              "jyutping": "jiu1 kau4",
+              "audioFile": "asset/unit2/要求.wav"
+            },
+            {
+              "character": "離開",
+              "jyutping": "lei4 hoi1",
+              "audioFile": "asset/unit2/離開.wav"
+            },
+            {
+              "character": "重新",
+              "jyutping": "cung4 san1",
+              "audioFile": "asset/unit2/重新.wav"
+            },
+            {
+              "character": "團體",
+              "jyutping": "tyun4 tai2",
+              "audioFile": "asset/unit2/團體.wav"
+            },
+            {
+              "character": "防止",
+              "jyutping": "fong4 zi2",
+              "audioFile": "asset/unit2/防止.wav"
+            },
+            {
+              "character": "籌款",
+              "jyutping": "cau4 fun2",
+              "audioFile": "asset/unit2/籌款.wav"
+            },
+            {
+              "character": "高層",
+              "jyutping": "gou1 cang4",
+              "audioFile": "asset/unit2/高層.wav"
+            },
+            {
+              "character": "品牌",
+              "jyutping": "ban2 paai4",
+              "audioFile": "asset/unit2/品牌.wav"
+            },
+            {
+              "character": "檢查",
+              "jyutping": "gim2 caa4",
+              "audioFile": "asset/unit2/檢查.wav"
+            },
+            {
+              "character": "減肥",
+              "jyutping": "gaam2 fei4",
+              "audioFile": "asset/unit2/減肥.wav"
+            },
+            {
+              "character": "黃金",
+              "jyutping": "wong4 gam1",
+              "audioFile": "asset/unit2/黃金.wav"
+            }
+          ]
+        },
+        {
+          "type": "Link",
+          "title": "課後練習及問卷",
+          "data": "(Link to be added)"
+        }
+      ]
+    },
+    {
+      "lessonNumber": 3,
+      "title": "單元三：第三調",
+      "description": "介紹廣東話第三調",
+      "modules": [
+        {
+          "type": "Content",
+          "title": "聲調特點",
+          "data": "第三調：中平調tone number 33"
+        },
+        {
+          "type": "AudioPractice",
+          "subType": "Content_Mono",
+          "title": "例子",
+          "items": [
+            {
+              "character": "過",
+              "jyutping": "gwo3",
+              "audioFile": "asset/unit3/過.wav"
+            },
+            {
+              "character": "要",
+              "jyutping": "jiu3",
+              "audioFile": "asset/unit3/要.wav"
+            },
+            {
+              "character": "到",
+              "jyutping": "dou3",
+              "audioFile": "asset/unit3/到.wav"
+            },
+            {
+              "character": "次",
+              "jyutping": "ci3",
+              "audioFile": "asset/unit3/次.wav"
+            },
+            {
+              "character": "見",
+              "jyutping": "gin3",
+              "audioFile": "asset/unit3/見.wav"
+            },
+            {
+              "character": "政",
+              "jyutping": "zing3",
+              "audioFile": "asset/unit3/政.wav"
+            },
+            {
+              "character": "至",
+              "jyutping": "zi3",
+              "audioFile": "asset/unit3/至.wav"
+            },
+            {
+              "character": "價",
+              "jyutping": "gaa3",
+              "audioFile": "asset/unit3/價.wav"
+            }
+          ]
+        },
+        {
+          "type": "AudioPractice",
+          "subType": "Prac_Mono",
+          "title": "單字練習",
+          "items": [
+            {
+              "character": "記",
+              "jyutping": "gei3",
+              "audioFile": "asset/unit3/記.wav"
+            },
+            {
+              "character": "再",
+              "jyutping": "zoi3",
+              "audioFile": "asset/unit3/再.wav"
+            },
+            {
+              "character": "報",
+              "jyutping": "bou3",
+              "audioFile": "asset/unit3/報.wav"
+            },
+            {
+              "character": "放",
+              "jyutping": "fong3",
+              "audioFile": "asset/unit3/放.wav"
+            },
+            {
+              "character": "算",
+              "jyutping": "syun3",
+              "audioFile": "asset/unit3/算.wav"
+            },
+            {
+              "character": "世",
+              "jyutping": "sai3",
+              "audioFile": "asset/unit3/世.wav"
+            },
+            {
+              "character": "氣",
+              "jyutping": "hei3",
+              "audioFile": "asset/unit3/氣.wav"
+            },
+            {
+              "character": "戰",
+              "jyutping": "zin3",
+              "audioFile": "asset/unit3/戰.wav"
+            },
+            {
+              "character": "教",
+              "jyutping": "gaau3",
+              "audioFile": "asset/unit3/教.wav"
+            },
+            {
+              "character": "太",
+              "jyutping": "taai3",
+              "audioFile": "asset/unit3/太.wav"
+            }
+          ]
+        },
+        {
+          "type": "Quiz",
+          "title": "選擇題1",
+          "question": "以下哪個字的聲調和其他不一樣？",
+          "options": [
+            {
+              "character": "變",
+              "jyutping": "bin3",
+              "audioFile": "asset/unit3/變.wav"
+            },
+            {
+              "character": "賽",
+              "jyutping": "coi3",
+              "audioFile": "asset/unit3/賽.wav"
+            },
+            {
+              "character": "界",
+              "jyutping": "gaai3",
+              "audioFile": "asset/unit3/界.wav"
+            },
+            {
+              "character": "指",
+              "jyutping": "zi2",
+              "audioFile": "asset/unit3/指.wav"
+            }
+          ],
+          "correctAnswer": 3
+        },
+        {
+          "type": "Quiz",
+          "title": "選擇題2",
+          "question": "以下哪個字的聲調和其他不一樣？",
+          "options": [
+            {
+              "character": "叫",
+              "jyutping": "giu3",
+              "audioFile": "asset/unit3/叫.wav"
+            },
+            {
+              "character": "化",
+              "jyutping": "faa3",
+              "audioFile": "asset/unit3/化.wav"
+            },
+            {
+              "character": "樓",
+              "jyutping": "lau4",
+              "audioFile": "asset/unit3/樓.wav"
+            },
+            {
+              "character": "爆",
+              "jyutping": "baau3",
+              "audioFile": "asset/unit3/爆.wav"
+            }
+          ],
+          "correctAnswer": 2
+        },
+        {
+          "type": "Colour_Q",
+          "title": "填色遊戲",
+          "data": ""
+        },
+        {
+          "type": "Colour_MC",
+          "title": "",
+          "question": "答案：",
+          "options": [
+            {
+              "character": "傘",
+              "jyutping": "saan3",
+              "audioFile": "asset/unit3/傘.wav"
+            },
+            {
+              "character": "愛",
+              "jyutping": "oi3",
+              "audioFile": "asset/unit3/愛.wav"
+            },
+            {
+              "character": "快",
+              "jyutping": "faai3",
+              "audioFile": "asset/unit3/快.wav"
+            }
+          ],
+          "correctAnswer": 0
+        },
+        {
+          "type": "AudioPractice",
+          "subType": "Prac_Disyl",
+          "title": "雙音節字練習",
+          "items": [
+            {
+              "character": "個案",
+              "jyutping": "go3 on3",
+              "audioFile": "asset/unit3/個案.wav"
+            },
+            {
+              "character": "照顧",
+              "jyutping": "ziu3 gu3",
+              "audioFile": "asset/unit3/照顧.wav"
+            },
+            {
+              "character": "聖誕",
+              "jyutping": "sing3 daan3",
+              "audioFile": "asset/unit3/聖誕.wav"
+            },
+            {
+              "character": "貢獻",
+              "jyutping": "gung3 hin3",
+              "audioFile": "asset/unit3/貢獻.wav"
+            },
+            {
+              "character": "更加",
+              "jyutping": "gang3 gaa1",
+              "audioFile": "asset/unit3/更加.wav"
+            },
+            {
+              "character": "降低",
+              "jyutping": "gong3 dai1",
+              "audioFile": "asset/unit3/降低.wav"
+            },
+            {
+              "character": "背景",
+              "jyutping": "bui3 ging2",
+              "audioFile": "asset/unit3/背景.wav"
+            },
+            {
+              "character": "禁止",
+              "jyutping": "gam3 zi2",
+              "audioFile": "asset/unit3/禁止.wav"
+            },
+            {
+              "character": "鏡頭",
+              "jyutping": "geng3 tau4",
+              "audioFile": "asset/unit3/鏡頭.wav"
+            },
+            {
+              "character": "四圍",
+              "jyutping": "sei3 wai4",
+              "audioFile": "asset/unit3/四圍.wav"
+            },
+            {
+              "character": "觀眾",
+              "jyutping": "gun1 zung3",
+              "audioFile": "asset/unit3/觀眾.wav"
+            },
+            {
+              "character": "關注",
+              "jyutping": "gwaan1 zyu3",
+              "audioFile": "asset/unit3/關注.wav"
+            },
+            {
+              "character": "酒店",
+              "jyutping": "zau2 dim3",
+              "audioFile": "asset/unit3/酒店.wav"
+            },
+            {
+              "character": "廣吿",
+              "jyutping": "gwong2 gou3",
+              "audioFile": "asset/unit3/廣吿.wav"
+            },
+            {
+              "character": "投訴",
+              "jyutping": "tau4 sou3",
+              "audioFile": "asset/unit3/投訴.wav"
+            },
+            {
+              "character": "門票",
+              "jyutping": "mun4 piu3",
+              "audioFile": "asset/unit3/門票.wav"
+            }
+          ]
+        },
+        {
+          "type": "Link",
+          "title": "課後練習及問卷",
+          "data": ""
+        }
+      ]
+    },
+    {
+      "lessonNumber": 4,
+      "title": "單元四：第六調",
+      "description": "介紹廣東話第六調",
+      "modules": [
+        {
+          "type": "Content",
+          "title": "聲調特點",
+          "data": "第六調：低平調tone number 22"
+        },
+        {
+          "type": "AudioPractice",
+          "subType": "Content_Mono",
+          "title": "例子",
+          "items": [
+            {
+              "character": "大",
+              "jyutping": "daai6",
+              "audioFile": "asset/unit4/大.wav"
+            },
+            {
+              "character": "地",
+              "jyutping": "dei6",
+              "audioFile": "asset/unit4/地.wav"
+            },
+            {
+              "character": "後",
+              "jyutping": "hau6",
+              "audioFile": "asset/unit4/後.wav"
+            },
+            {
+              "character": "自",
+              "jyutping": "zi6",
+              "audioFile": "asset/unit4/自.wav"
+            },
+            {
+              "character": "面",
+              "jyutping": "min6",
+              "audioFile": "asset/unit4/面.wav"
+            },
+            {
+              "character": "在",
+              "jyutping": "zoi6",
+              "audioFile": "asset/unit4/在.wav"
+            },
+            {
+              "character": "用",
+              "jyutping": "jung6",
+              "audioFile": "asset/unit4/用.wav"
+            },
+            {
+              "character": "定",
+              "jyutping": "ding6",
+              "audioFile": "asset/unit4/定.wav"
+            }
+          ]
+        },
+        {
+          "type": "AudioPractice",
+          "subType": "Prac_Mono",
+          "title": "單字練習",
+          "items": [
+            {
+              "character": "就",
+              "jyutping": "zau6",
+              "audioFile": "asset/unit4/就.wav"
+            },
+            {
+              "character": "為",
+              "jyutping": "wai6",
+              "audioFile": "asset/unit4/為.wav"
+            },
+            {
+              "character": "話",
+              "jyutping": "waa6",
+              "audioFile": "asset/unit4/話.wav"
+            },
+            {
+              "character": "但",
+              "jyutping": "daan6",
+              "audioFile": "asset/unit4/但.wav"
+            },
+            {
+              "character": "現",
+              "jyutping": "jin6",
+              "audioFile": "asset/unit4/現.wav"
+            },
+            {
+              "character": "動",
+              "jyutping": "dung6",
+              "audioFile": "asset/unit4/動.wav"
+            },
+            {
+              "character": "外",
+              "jyutping": "ngoi6",
+              "audioFile": "asset/unit4/外.wav"
+            },
+            {
+              "character": "問",
+              "jyutping": "man6",
+              "audioFile": "asset/unit4/問.wav"
+            },
+            {
+              "character": "利",
+              "jyutping": "lei6",
+              "audioFile": "asset/unit4/利.wav"
+            },
+            {
+              "character": "部",
+              "jyutping": "bou6",
+              "audioFile": "asset/unit4/部.wav"
+            }
+          ]
+        },
+        {
+          "type": "Quiz",
+          "title": "選擇題1",
+          "question": "以下哪個字的聲調和其他不一樣？",
+          "options": [
+            {
+              "character": "未",
+              "jyutping": "mei6",
+              "audioFile": "asset/unit4/未.wav"
+            },
+            {
+              "character": "排",
+              "jyutping": "paai4",
+              "audioFile": "asset/unit4/排.wav"
+            },
+            {
+              "character": "住",
+              "jyutping": "zyu6",
+              "audioFile": "asset/unit4/住.wav"
+            },
+            {
+              "character": "道",
+              "jyutping": "dou6",
+              "audioFile": "asset/unit4/道.wav"
+            }
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "type": "Quiz",
+          "title": "選擇題2",
+          "question": "以下哪個字的聲調和其他不一樣？",
+          "options": [
+            {
+              "character": "電",
+              "jyutping": "din6",
+              "audioFile": "asset/unit4/電.wav"
+            },
+            {
+              "character": "做",
+              "jyutping": "zou6",
+              "audioFile": "asset/unit4/做.wav"
+            },
+            {
+              "character": "認",
+              "jyutping": "jing6",
+              "audioFile": "asset/unit4/認.wav"
+            },
+            {
+              "character": "費",
+              "jyutping": "fai3",
+              "audioFile": "asset/unit4/費.wav"
+            }
+          ],
+          "correctAnswer": 3
+        },
+        {
+          "type": "Colour_Q",
+          "title": "填色遊戲",
+          "data": ""
+        },
+        {
+          "type": "Colour_MC",
+          "title": "",
+          "question": "答案：",
+          "options": [
+            {
+              "character": "夢",
+              "jyutping": "mung6",
+              "audioFile": "asset/unit4/夢.wav"
+            },
+            {
+              "character": "幣",
+              "jyutping": "bai6",
+              "audioFile": "asset/unit4/幣.wav"
+            },
+            {
+              "character": "浪",
+              "jyutping": "long6",
+              "audioFile": "asset/unit4/浪.wav"
+            }
+          ],
+          "correctAnswer": 2
+        },
+        {
+          "type": "AudioPractice",
+          "subType": "Prac_Disyl",
+          "title": "雙音節字練習",
+          "items": [
+            {
+              "character": "運動",
+              "jyutping": "wan6 dung6",
+              "audioFile": "asset/unit4/運動.wav"
+            },
+            {
+              "character": "任務",
+              "jyutping": "jam6 mou6",
+              "audioFile": "asset/unit4/任務.wav"
+            },
+            {
+              "character": "混亂",
+              "jyutping": "wan6 lyun6",
+              "audioFile": "asset/unit4/混亂.wav"
+            },
+            {
+              "character": "誤會",
+              "jyutping": "ng6 wui6",
+              "audioFile": "asset/unit4/誤會.wav"
+            },
+            {
+              "character": "健康",
+              "jyutping": "gin6 hong1",
+              "audioFile": "asset/unit4/健康.wav"
+            },
+            {
+              "character": "第三",
+              "jyutping": "dai6 saam1",
+              "audioFile": "asset/unit4/第三.wav"
+            },
+            {
+              "character": "代表",
+              "jyutping": "doi6 biu2",
+              "audioFile": "asset/unit4/代表.wav"
+            },
+            {
+              "character": "系統",
+              "jyutping": "hai6 tung2",
+              "audioFile": "asset/unit4/系統.wav"
+            },
+            {
+              "character": "甚至",
+              "jyutping": "sam6 zi3",
+              "audioFile": "asset/unit4/甚至.wav"
+            },
+            {
+              "character": "受到",
+              "jyutping": "sau6 dou3",
+              "audioFile": "asset/unit4/受到.wav"
+            },
+            {
+              "character": "例如",
+              "jyutping": "lai6 jyu4",
+              "audioFile": "asset/unit4/例如.wav"
+            },
+            {
+              "character": "調查",
+              "jyutping": "diu6 caa4",
+              "audioFile": "asset/unit4/調查.wav"
+            },
+            {
+              "character": "關係",
+              "jyutping": "gwaan1 hai6",
+              "audioFile": "asset/unit4/關係.wav"
+            },
+            {
+              "character": "經驗",
+              "jyutping": "ging1 jim6",
+              "audioFile": "asset/unit4/經驗.wav"
+            },
+            {
+              "character": "改善",
+              "jyutping": "goi2 sin6",
+              "audioFile": "asset/unit4/改善.wav"
+            },
+            {
+              "character": "總共",
+              "jyutping": "zung2 gung6",
+              "audioFile": "asset/unit4/總共.wav"
+            },
+            {
+              "character": "透露",
+              "jyutping": "tau3 lou6",
+              "audioFile": "asset/unit4/透露.wav"
+            },
+            {
+              "character": "訓練",
+              "jyutping": "fan3 lin6",
+              "audioFile": "asset/unit4/訓練.wav"
+            },
+            {
+              "character": "成立",
+              "jyutping": "sing4 laap6",
+              "audioFile": "asset/unit4/成立.wav"
+            },
+            {
+              "character": "無限",
+              "jyutping": "mou4 haan6",
+              "audioFile": "asset/unit4/無限.wav"
+            }
+          ]
+        },
+        {
+          "type": "Link",
+          "title": "課後練習及問卷",
+          "data": ""
+        }
+      ]
+    },
+    {
+      "lessonNumber": 5,
+      "title": "單元五：第五調",
+      "description": "介紹廣東話第五調",
+      "modules": [
+        {
+          "type": "Content",
+          "title": "聲調特點",
+          "data": "第五調：低升調tone number 23"
+        },
+        {
+          "type": "AudioPractice",
+          "subType": "Content_Mono",
+          "title": "例子",
+          "items": []
+        },
+        {
+          "type": "AudioPractice",
+          "subType": "Prac_Mono",
+          "title": "單字練習",
+          "items": []
+        },
+        {
+          "type": "Quiz",
+          "title": "選擇題1",
+          "question": "以下哪個字的聲調和其他不一樣？",
+          "options": [],
+          "correctAnswer": 0
+        },
+        {
+          "type": "Quiz",
+          "title": "選擇題2",
+          "question": "以下哪個字的聲調和其他不一樣？",
+          "options": [],
+          "correctAnswer": 0
+        },
+        {
+          "type": "Colour_Q",
+          "title": "填色遊戲",
+          "data": ""
+        },
+        {
+          "type": "Colour_MC",
+          "title": "",
+          "question": "答案：",
+          "options": [],
+          "correctAnswer": 0
+        },
+        {
+          "type": "AudioPractice",
+          "subType": "Prac_Disyl",
+          "title": "雙音節字練習",
+          "items": []
+        },
+        {
+          "type": "Link",
+          "title": "課後練習及問卷",
+          "data": ""
+        }
+      ]
+    }
+  ]
+}

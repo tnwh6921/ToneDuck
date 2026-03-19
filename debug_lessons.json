@@ -1,0 +1,297 @@
+[
+  {
+    "lessonNumber": 1,
+    "title": "單元一：第一､二調",
+    "description": "介紹廣東話第一二調",
+    "introduction": "",
+    "keyPoints": [],
+    "modules": [
+      {
+        "type": "Content",
+        "title": "聲調特點",
+        "data": "第一調：高平調tone number 55"
+      },
+      {
+        "type": "Content_Mono",
+        "title": "例子",
+        "data": "都多開心之經新機"
+      },
+      {
+        "type": "Prac_Mono",
+        "title": "單字練習",
+        "data": "加公方今真先高收車關"
+      },
+      {
+        "type": "Content",
+        "title": "聲調特點",
+        "data": "第二調：高升調tone number 25"
+      },
+      {
+        "type": "Content_Mono",
+        "title": "例子",
+        "data": "可港好手點主本影"
+      },
+      {
+        "type": "Prac_Mono",
+        "title": "單字練習",
+        "data": "者所小比等保反股解警"
+      },
+      {
+        "type": "Quiz",
+        "title": "選擇題1",
+        "data": "中!只單通"
+      },
+      {
+        "type": "Quiz",
+        "title": "選擇題2",
+        "data": "波該因!表"
+      },
+      {
+        "type": "Quiz",
+        "title": "選擇題3",
+        "data": "!當把己感"
+      },
+      {
+        "type": "Colour_colour",
+        "title": "填色遊戲",
+        "data": "#fbbc04,#efefef,,,,"
+      },
+      {
+        "type": "Colour_puzzle",
+        "title": "填色遊戲",
+        "data": "選選選起起起起選起天包包天起起選起天包包包包選起選天天包包選包起選天天天天包起起起包包天天起起起起起包天選選選起起包天包天選選起"
+      },
+      {
+        "type": "Colour_MC",
+        "title": "填色遊戲",
+        "data": ""
+      },
+      {
+        "type": "Prac_Disyl",
+        "title": "雙音節字練習",
+        "data": "分鐘|餐廳|空間|專家|申請|清楚|風險|參考|喜歡|廣東|補充|打工|採訪|阻止|檢討|飲品"
+      },
+      {
+        "type": "Link",
+        "title": "課後練習及問卷",
+        "data": "(Link to be added)"
+      }
+    ]
+  },
+  {
+    "lessonNumber": 2,
+    "title": "單元二：第四調",
+    "description": "介紹廣東話第四調",
+    "introduction": "",
+    "keyPoints": [],
+    "modules": [
+      {
+        "type": "Content",
+        "title": "聲調特點",
+        "data": "第四調：低降調tone number 21"
+      },
+      {
+        "type": "Content_Mono",
+        "title": "例子",
+        "data": "人同成前門無如來"
+      },
+      {
+        "type": "Prac_Mono",
+        "title": "單字練習",
+        "data": "然全明民能球員頭和情"
+      },
+      {
+        "type": "Quiz",
+        "title": "選擇題1",
+        "data": "連回!交台"
+      },
+      {
+        "type": "Quiz",
+        "title": "選擇題2",
+        "data": "持題男!火"
+      },
+      {
+        "type": "Colour_Q",
+        "title": "填色遊戲",
+        "data": ""
+      },
+      {
+        "type": "Colour_MC",
+        "title": "",
+        "data": ""
+      },
+      {
+        "type": "Prac_Disyl",
+        "title": "雙音節字練習",
+        "data": "銀行|傳媒|形容|凌晨|當年|要求|離開|重新|團體|防止|籌款|高層|品牌|檢查|減肥|黃金"
+      },
+      {
+        "type": "Link",
+        "title": "課後練習及問卷",
+        "data": "(Link to be added)"
+      }
+    ]
+  },
+  {
+    "lessonNumber": 3,
+    "title": "單元三：第三調",
+    "description": "介紹廣東話第三調",
+    "introduction": "",
+    "keyPoints": [],
+    "modules": [
+      {
+        "type": "Content",
+        "title": "聲調特點",
+        "data": "第三調：中平調tone number 33"
+      },
+      {
+        "type": "Content_Mono",
+        "title": "例子",
+        "data": "過要到次見政至價"
+      },
+      {
+        "type": "Prac_Mono",
+        "title": "單字練習",
+        "data": "記再報放算世氣戰教太"
+      },
+      {
+        "type": "Quiz",
+        "title": "選擇題1",
+        "data": "變賽界!指"
+      },
+      {
+        "type": "Quiz",
+        "title": "選擇題2",
+        "data": "叫化!樓爆"
+      },
+      {
+        "type": "Colour_Q",
+        "title": "填色遊戲",
+        "data": ""
+      },
+      {
+        "type": "Colour_MC",
+        "title": "",
+        "data": ""
+      },
+      {
+        "type": "Prac_Disyl",
+        "title": "雙音節字練習",
+        "data": "個案|照顧|聖誕|貢獻|更加|降低|背景|禁止|鏡頭|四圍|觀眾|關注|酒店|廣吿|投訴|門票"
+      },
+      {
+        "type": "Link",
+        "title": "課後練習及問卷",
+        "data": ""
+      }
+    ]
+  },
+  {
+    "lessonNumber": 4,
+    "title": "單元四：第六調",
+    "description": "介紹廣東話第六調",
+    "introduction": "",
+    "keyPoints": [],
+    "modules": [
+      {
+        "type": "Content",
+        "title": "聲調特點",
+        "data": "第六調：低平調tone number 22"
+      },
+      {
+        "type": "Content_Mono",
+        "title": "例子",
+        "data": "大地後自面在用定"
+      },
+      {
+        "type": "Prac_Mono",
+        "title": "單字練習",
+        "data": "就為話但現動外問利部"
+      },
+      {
+        "type": "Quiz",
+        "title": "選擇題1",
+        "data": "未!排住道"
+      },
+      {
+        "type": "Quiz",
+        "title": "選擇題2",
+        "data": "電做認!費"
+      },
+      {
+        "type": "Colour_Q",
+        "title": "填色遊戲",
+        "data": ""
+      },
+      {
+        "type": "Colour_MC",
+        "title": "",
+        "data": ""
+      },
+      {
+        "type": "Prac_Disyl",
+        "title": "雙音節字練習",
+        "data": "運動|任務|混亂|誤會|健康|第三|代表|系統|甚至|受到|例如|調查|關係|經驗|改善|總共|透露|訓練|成立|無限|"
+      },
+      {
+        "type": "Link",
+        "title": "課後練習及問卷",
+        "data": ""
+      }
+    ]
+  },
+  {
+    "lessonNumber": 5,
+    "title": "單元五：第五調",
+    "description": "介紹廣東話第五調",
+    "introduction": "",
+    "keyPoints": [],
+    "modules": [
+      {
+        "type": "Content",
+        "title": "聲調特點",
+        "data": "第五調：低升調tone number 23"
+      },
+      {
+        "type": "Content_Mono",
+        "title": "例子",
+        "data": ""
+      },
+      {
+        "type": "Prac_Mono",
+        "title": "單字練習",
+        "data": ""
+      },
+      {
+        "type": "Quiz",
+        "title": "選擇題1",
+        "data": ""
+      },
+      {
+        "type": "Quiz",
+        "title": "選擇題2",
+        "data": ""
+      },
+      {
+        "type": "Colour_Q",
+        "title": "填色遊戲",
+        "data": ""
+      },
+      {
+        "type": "Colour_MC",
+        "title": "",
+        "data": ""
+      },
+      {
+        "type": "Prac_Disyl",
+        "title": "雙音節字練習",
+        "data": ""
+      },
+      {
+        "type": "Link",
+        "title": "課後練習及問卷",
+        "data": ""
+      }
+    ]
+  }
+]
