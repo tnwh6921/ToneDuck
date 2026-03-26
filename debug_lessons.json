@@ -9,7 +9,7 @@
       {
         "type": "Content",
         "title": "聲調特點",
-        "data": "第一調：高平調tone number 55"
+        "data": "廣東話的第一調是高平調，調值為55。通常對應普通話第一聲（較多）､第二聲（較少）､第四聲（較少）。"
       },
       {
         "type": "Content_Mono",
@@ -24,7 +24,7 @@
       {
         "type": "Content",
         "title": "聲調特點",
-        "data": "第二調：高升調tone number 25"
+        "data": "廣東話的第二調是高升調，調值為25。通常對應普通話第三聲。"
       },
       {
         "type": "Content_Mono",
@@ -54,7 +54,7 @@
       {
         "type": "Colour_colour",
         "title": "填色遊戲",
-        "data": "#fbbc04,#efefef,,,,"
+        "data": "#fbbc04,#cbcbcb,,,,"
       },
       {
         "type": "Colour_puzzle",
@@ -88,7 +88,7 @@
       {
         "type": "Content",
         "title": "聲調特點",
-        "data": "第四調：低降調tone number 21"
+        "data": "廣東話的第四調是低降調，調值為21。通常對應普通話第二調（較多）､第一聲（較少）。"
       },
       {
         "type": "Content_Mono",
@@ -111,19 +111,24 @@
         "data": "持題男!火"
       },
       {
-        "type": "Colour_Q",
+        "type": "Colour_colour",
         "title": "填色遊戲",
-        "data": ""
+        "data": "#b9feff,#9a4200,,#ff5239,,"
+      },
+      {
+        "type": "Colour_puzzle",
+        "title": "填色遊戲",
+        "data": "三安安三三三三安三三走留留條條安三安走條留留條安安三早留條留條安三安早安安安三三三三早三三三安安安安走安安安安三安三走三安三安安"
       },
       {
         "type": "Colour_MC",
-        "title": "",
+        "title": "填色遊戲",
         "data": ""
       },
       {
         "type": "Prac_Disyl",
         "title": "雙音節字練習",
-        "data": "銀行|傳媒|形容|凌晨|當年|要求|離開|重新|團體|防止|籌款|高層|品牌|檢查|減肥|黃金"
+        "data": "銀行|傳媒|形容|凌晨|黃金|離開|重新|團體|防止|籌款|當年|要求|高層|品牌|檢查|減肥"
       },
       {
         "type": "Link",
@@ -142,7 +147,7 @@
       {
         "type": "Content",
         "title": "聲調特點",
-        "data": "第三調：中平調tone number 33"
+        "data": "廣東話的第三調是中平調，調值為33。通常對應普通話第四聲（較多）､第一聲（較少）､第二聲（較少）。"
       },
       {
         "type": "Content_Mono",
@@ -162,16 +167,16 @@
       {
         "type": "Quiz",
         "title": "選擇題2",
-        "data": "叫化!樓爆"
+        "data": "叫化!流爆"
       },
       {
-        "type": "Colour_Q",
+        "type": "Colour_puzzle",
         "title": "填色遊戲",
-        "data": ""
+        "data": "他他提工工工工完工他完半半工他完提他制制半制他他提制半半制半半他工他工工講工提工工提他他講工提工工完工講講完工他工他他工他完工他"
       },
       {
         "type": "Colour_MC",
-        "title": "",
+        "title": "填色遊戲",
         "data": ""
       },
       {
@@ -182,7 +187,7 @@
       {
         "type": "Link",
         "title": "課後練習及問卷",
-        "data": ""
+        "data": "(Link to be added)"
       }
     ]
   },
@@ -196,7 +201,7 @@
       {
         "type": "Content",
         "title": "聲調特點",
-        "data": "第六調：低平調tone number 22"
+        "data": "廣東話的第六調是低平調，調值為22。通常對應普通話第四聲（較多）､第二聲（較少）。"
       },
       {
         "type": "Content_Mono",
@@ -219,13 +224,13 @@
         "data": "電做認!費"
       },
       {
-        "type": "Colour_Q",
+        "type": "Colour_puzzle",
         "title": "填色遊戲",
-        "data": ""
+        "data": "萬萬望望望萬萬望望投望望萬萬萬望聯投聯萬望望望投投瀉聯聯萬萬聯聯案瀉案投投投投案瀉品案瀉聯聯瀉品品班品案瀉瀉品品班班班品品品班班"
       },
       {
         "type": "Colour_MC",
-        "title": "",
+        "title": "填色遊戲",
         "data": ""
       },
       {
@@ -236,7 +241,7 @@
       {
         "type": "Link",
         "title": "課後練習及問卷",
-        "data": ""
+        "data": "(Link to be added)"
       }
     ]
   },
@@ -250,47 +255,47 @@
       {
         "type": "Content",
         "title": "聲調特點",
-        "data": "第五調：低升調tone number 23"
+        "data": "廣東話的第五調是低升調，調值為23。通常對應普通話第三聲（較多）､第四聲（較少）。"
       },
       {
         "type": "Content_Mono",
         "title": "例子",
-        "data": ""
+        "data": "秒我你腦買碼網與"
       },
       {
         "type": "Prac_Mono",
         "title": "單字練習",
-        "data": ""
+        "data": "美理晚武也每引遠滿朗"
       },
       {
         "type": "Quiz",
         "title": "選擇題1",
-        "data": ""
+        "data": "企!路禮往"
       },
       {
         "type": "Quiz",
         "title": "選擇題2",
-        "data": ""
+        "data": "!神免署永"
       },
       {
-        "type": "Colour_Q",
+        "type": "Colour_puzzle",
         "title": "填色遊戲",
-        "data": ""
+        "data": "勇勇勇勇勇染染染染染何何何權勇染勇權件笑笑第何染權第件笑笑件件權染權第笑笑第何勇勇勇何權權何染染染染勇勇勇勇染染勇染染染勇勇勇勇"
       },
       {
         "type": "Colour_MC",
-        "title": "",
+        "title": "填色遊戲",
         "data": ""
       },
       {
         "type": "Prac_Disyl",
         "title": "雙音節字練習",
-        "data": ""
+        "data": "螞蟻|母語|魯莽|馬尾|領先|野豬|了解|敏感|挽救|軟化|儲存|偶然|冷淡|偉大|温暖|風雨|展覽|小鳥|快艇|器皿|行李|牛腩|伴舞|廟宇"
       },
       {
         "type": "Link",
         "title": "課後練習及問卷",
-        "data": ""
+        "data": "(Link to be added)"
       }
     ]
   }
