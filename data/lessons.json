@@ -8,7 +8,7 @@
         {
           "type": "Content",
           "title": "聲調特點",
-          "data": "第一調：高平調tone number 55"
+          "data": "廣東話的第一調是高平調，調值為55。通常對應普通話第一聲（較多）､第二聲（較少）､第四聲（較少）。"
         },
         {
           "type": "AudioPractice",
@@ -117,7 +117,7 @@
         {
           "type": "Content",
           "title": "聲調特點",
-          "data": "第二調：高升調tone number 25"
+          "data": "廣東話的第二調是高升調，調值為25。通常對應普通話第三聲。"
         },
         {
           "type": "AudioPractice",
@@ -312,7 +312,7 @@
           "title": "填色遊戲",
           "colors": [
             "#fbbc04",
-            "#efefef",
+            "#cbcbcb",
             "",
             "",
             "",
@@ -396,16 +396,16 @@
               "tone": 1
             },
             {
-              "character": "起",
-              "jyutping": "hei2",
-              "audioFile": "asset/unit1/起.wav",
-              "tone": 2
-            },
-            {
               "character": "包",
               "jyutping": "baau1",
               "audioFile": "asset/unit1/包.wav",
               "tone": 1
+            },
+            {
+              "character": "起",
+              "jyutping": "hei2",
+              "audioFile": "asset/unit1/起.wav",
+              "tone": 2
             },
             {
               "character": "選",
@@ -418,7 +418,7 @@
         {
           "type": "Colour_MC",
           "title": "填色遊戲",
-          "question": "答案：",
+          "question": "What is the picture associated with the colouring game?",
           "options": [
             {
               "character": "星",
@@ -540,7 +540,7 @@
         {
           "type": "Content",
           "title": "聲調特點",
-          "data": "第四調：低降調tone number 21"
+          "data": "廣東話的第四調是低降調，調值為21。通常對應普通話第二調（較多）､第一聲（較少）。"
         },
         {
           "type": "AudioPractice",
@@ -703,14 +703,129 @@
           "correctAnswer": 3
         },
         {
-          "type": "Colour_Q",
+          "type": "Colour_colour",
           "title": "填色遊戲",
-          "data": "(to be added)"
+          "colors": [
+            "#b9feff",
+            "#9a4200",
+            "",
+            "#ff5239",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": "Colour_puzzle",
+          "title": "填色遊戲",
+          "board": [
+            "三",
+            "安",
+            "安",
+            "三",
+            "三",
+            "三",
+            "三",
+            "安",
+            "三",
+            "三",
+            "走",
+            "留",
+            "留",
+            "條",
+            "條",
+            "安",
+            "三",
+            "安",
+            "走",
+            "條",
+            "留",
+            "留",
+            "條",
+            "安",
+            "安",
+            "三",
+            "早",
+            "留",
+            "條",
+            "留",
+            "條",
+            "安",
+            "三",
+            "安",
+            "早",
+            "安",
+            "安",
+            "安",
+            "三",
+            "三",
+            "三",
+            "三",
+            "早",
+            "三",
+            "三",
+            "三",
+            "安",
+            "安",
+            "安",
+            "安",
+            "走",
+            "安",
+            "安",
+            "安",
+            "安",
+            "三",
+            "安",
+            "三",
+            "走",
+            "三",
+            "安",
+            "三",
+            "安",
+            "安"
+          ],
+          "distinct_items": [
+            {
+              "character": "走",
+              "jyutping": "zau2",
+              "audioFile": "asset/unit2/走.wav",
+              "tone": 2
+            },
+            {
+              "character": "留",
+              "jyutping": "lau4",
+              "audioFile": "asset/unit2/留.wav",
+              "tone": 4
+            },
+            {
+              "character": "三",
+              "jyutping": "saam1",
+              "audioFile": "asset/unit2/三.wav",
+              "tone": 1
+            },
+            {
+              "character": "條",
+              "jyutping": "tiu4",
+              "audioFile": "asset/unit2/條.wav",
+              "tone": 4
+            },
+            {
+              "character": "早",
+              "jyutping": "zou2",
+              "audioFile": "asset/unit2/早.wav",
+              "tone": 2
+            },
+            {
+              "character": "安",
+              "jyutping": "on1",
+              "audioFile": "asset/unit2/安.wav",
+              "tone": 1
+            }
+          ]
         },
         {
           "type": "Colour_MC",
-          "title": "",
-          "question": "答案：",
+          "title": "填色遊戲",
+          "question": "What is the picture associated with the colouring game?",
           "options": [
             {
               "character": "龍",
@@ -756,14 +871,9 @@
               "audioFile": "asset/unit2/凌晨.wav"
             },
             {
-              "character": "當年",
-              "jyutping": "dong1 nin4",
-              "audioFile": "asset/unit2/當年.wav"
-            },
-            {
-              "character": "要求",
-              "jyutping": "jiu1 kau4",
-              "audioFile": "asset/unit2/要求.wav"
+              "character": "黃金",
+              "jyutping": "wong4 gam1",
+              "audioFile": "asset/unit2/黃金.wav"
             },
             {
               "character": "離開",
@@ -791,6 +901,16 @@
               "audioFile": "asset/unit2/籌款.wav"
             },
             {
+              "character": "當年",
+              "jyutping": "dong1 nin4",
+              "audioFile": "asset/unit2/當年.wav"
+            },
+            {
+              "character": "要求",
+              "jyutping": "jiu1 kau4",
+              "audioFile": "asset/unit2/要求.wav"
+            },
+            {
               "character": "高層",
               "jyutping": "gou1 cang4",
               "audioFile": "asset/unit2/高層.wav"
@@ -809,11 +929,6 @@
               "character": "減肥",
               "jyutping": "gaam2 fei4",
               "audioFile": "asset/unit2/減肥.wav"
-            },
-            {
-              "character": "黃金",
-              "jyutping": "wong4 gam1",
-              "audioFile": "asset/unit2/黃金.wav"
             }
           ]
         },
@@ -832,7 +947,7 @@
         {
           "type": "Content",
           "title": "聲調特點",
-          "data": "第三調：中平調tone number 33"
+          "data": "廣東話的第三調是中平調，調值為33。通常對應普通話第四聲（較多）､第一聲（較少）､第二聲（較少）。"
         },
         {
           "type": "AudioPractice",
@@ -982,9 +1097,9 @@
               "audioFile": "asset/unit3/化.wav"
             },
             {
-              "character": "樓",
+              "character": "流",
               "jyutping": "lau4",
-              "audioFile": "asset/unit3/樓.wav"
+              "audioFile": "asset/unit3/流.wav"
             },
             {
               "character": "爆",
@@ -995,14 +1110,123 @@
           "correctAnswer": 2
         },
         {
-          "type": "Colour_Q",
+          "type": "Colour_puzzle",
           "title": "填色遊戲",
-          "data": ""
+          "board": [
+            "他",
+            "他",
+            "提",
+            "工",
+            "工",
+            "工",
+            "工",
+            "完",
+            "工",
+            "他",
+            "完",
+            "半",
+            "半",
+            "工",
+            "他",
+            "完",
+            "提",
+            "他",
+            "制",
+            "制",
+            "半",
+            "制",
+            "他",
+            "他",
+            "提",
+            "制",
+            "半",
+            "半",
+            "制",
+            "半",
+            "半",
+            "他",
+            "工",
+            "他",
+            "工",
+            "工",
+            "講",
+            "工",
+            "提",
+            "工",
+            "工",
+            "提",
+            "他",
+            "他",
+            "講",
+            "工",
+            "提",
+            "工",
+            "工",
+            "完",
+            "工",
+            "講",
+            "講",
+            "完",
+            "工",
+            "他",
+            "工",
+            "他",
+            "他",
+            "工",
+            "他",
+            "完",
+            "工",
+            "他"
+          ],
+          "distinct_items": [
+            {
+              "character": "工",
+              "jyutping": "gung1",
+              "audioFile": "asset/unit3/工.wav",
+              "tone": 1
+            },
+            {
+              "character": "他",
+              "jyutping": "taa1",
+              "audioFile": "asset/unit3/他.wav",
+              "tone": 1
+            },
+            {
+              "character": "講",
+              "jyutping": "gong2",
+              "audioFile": "asset/unit3/講.wav",
+              "tone": 2
+            },
+            {
+              "character": "制",
+              "jyutping": "zai3",
+              "audioFile": "asset/unit3/制.wav",
+              "tone": 3
+            },
+            {
+              "character": "提",
+              "jyutping": "tai4",
+              "audioFile": "asset/unit3/提.wav",
+              "tone": 4
+            },
+            {
+              "character": "半",
+              "jyutping": "bun3",
+              "audioFile": "asset/unit3/半.wav",
+              "tone": 3
+            },
+            {
+              "character": "完",
+              "jyutping": "jyun4",
+              "audioFile": "asset/unit3/完.wav",
+              "tone": 4
+            }
+          ]
         },
         {
           "type": "Colour_MC",
-          "title": "",
-          "question": "答案：",
+          "title": "填色遊戲",
+          "question": "What is the picture associated with the colouring game?",
           "options": [
             {
               "character": "傘",
@@ -1112,7 +1336,7 @@
         {
           "type": "Link",
           "title": "課後練習及問卷",
-          "data": ""
+          "data": "(Link to be added)"
         }
       ]
     },
@@ -1124,7 +1348,7 @@
         {
           "type": "Content",
           "title": "聲調特點",
-          "data": "第六調：低平調tone number 22"
+          "data": "廣東話的第六調是低平調，調值為22。通常對應普通話第四聲（較多）､第二聲（較少）。"
         },
         {
           "type": "AudioPractice",
@@ -1287,14 +1511,129 @@
           "correctAnswer": 3
         },
         {
-          "type": "Colour_Q",
+          "type": "Colour_puzzle",
           "title": "填色遊戲",
-          "data": ""
+          "board": [
+            "萬",
+            "萬",
+            "望",
+            "望",
+            "望",
+            "萬",
+            "萬",
+            "望",
+            "望",
+            "投",
+            "望",
+            "望",
+            "萬",
+            "萬",
+            "萬",
+            "望",
+            "聯",
+            "投",
+            "聯",
+            "萬",
+            "望",
+            "望",
+            "望",
+            "投",
+            "投",
+            "瀉",
+            "聯",
+            "聯",
+            "萬",
+            "萬",
+            "聯",
+            "聯",
+            "案",
+            "瀉",
+            "案",
+            "投",
+            "投",
+            "投",
+            "投",
+            "案",
+            "瀉",
+            "品",
+            "案",
+            "瀉",
+            "聯",
+            "聯",
+            "瀉",
+            "品",
+            "品",
+            "班",
+            "品",
+            "案",
+            "瀉",
+            "瀉",
+            "品",
+            "品",
+            "班",
+            "班",
+            "班",
+            "品",
+            "品",
+            "品",
+            "班",
+            "班"
+          ],
+          "distinct_items": [
+            {
+              "character": "萬",
+              "jyutping": "maan6",
+              "audioFile": "asset/unit4/萬.wav",
+              "tone": 6
+            },
+            {
+              "character": "班",
+              "jyutping": "baan1",
+              "audioFile": "asset/unit4/班.wav",
+              "tone": 1
+            },
+            {
+              "character": "瀉",
+              "jyutping": "se3",
+              "audioFile": "asset/unit4/瀉.wav",
+              "tone": 3
+            },
+            {
+              "character": "聯",
+              "jyutping": "lyun4",
+              "audioFile": "asset/unit4/聯.wav",
+              "tone": 4
+            },
+            {
+              "character": "品",
+              "jyutping": "ban2",
+              "audioFile": "asset/unit4/品.wav",
+              "tone": 2
+            },
+            {
+              "character": "案",
+              "jyutping": "on3",
+              "audioFile": "asset/unit4/案.wav",
+              "tone": 3
+            },
+            {
+              "character": "望",
+              "jyutping": "mong6",
+              "audioFile": "asset/unit4/望.wav",
+              "tone": 6
+            },
+            {
+              "character": "投",
+              "jyutping": "tau4",
+              "audioFile": "asset/unit4/投.wav",
+              "tone": 4
+            }
+          ]
         },
         {
           "type": "Colour_MC",
-          "title": "",
-          "question": "答案：",
+          "title": "填色遊戲",
+          "question": "What is the picture associated with the colouring game?",
           "options": [
             {
               "character": "夢",
@@ -1424,7 +1763,7 @@
         {
           "type": "Link",
           "title": "課後練習及問卷",
-          "data": ""
+          "data": "(Link to be added)"
         }
       ]
     },
@@ -1436,56 +1775,436 @@
         {
           "type": "Content",
           "title": "聲調特點",
-          "data": "第五調：低升調tone number 23"
+          "data": "廣東話的第五調是低升調，調值為23。通常對應普通話第三聲（較多）､第四聲（較少）。"
         },
         {
           "type": "AudioPractice",
           "subType": "Content_Mono",
           "title": "例子",
-          "items": []
+          "items": [
+            {
+              "character": "秒",
+              "jyutping": "miu5",
+              "audioFile": "asset/unit5/秒.wav"
+            },
+            {
+              "character": "我",
+              "jyutping": "ngo5",
+              "audioFile": "asset/unit5/我.wav"
+            },
+            {
+              "character": "你",
+              "jyutping": "nei5",
+              "audioFile": "asset/unit5/你.wav"
+            },
+            {
+              "character": "腦",
+              "jyutping": "nou5",
+              "audioFile": "asset/unit5/腦.wav"
+            },
+            {
+              "character": "買",
+              "jyutping": "maai5",
+              "audioFile": "asset/unit5/買.wav"
+            },
+            {
+              "character": "碼",
+              "jyutping": "maa5",
+              "audioFile": "asset/unit5/碼.wav"
+            },
+            {
+              "character": "網",
+              "jyutping": "mong5",
+              "audioFile": "asset/unit5/網.wav"
+            },
+            {
+              "character": "與",
+              "jyutping": "jyu5",
+              "audioFile": "asset/unit5/與.wav"
+            }
+          ]
         },
         {
           "type": "AudioPractice",
           "subType": "Prac_Mono",
           "title": "單字練習",
-          "items": []
+          "items": [
+            {
+              "character": "美",
+              "jyutping": "mei5",
+              "audioFile": "asset/unit5/美.wav"
+            },
+            {
+              "character": "理",
+              "jyutping": "lei5",
+              "audioFile": "asset/unit5/理.wav"
+            },
+            {
+              "character": "晚",
+              "jyutping": "maan5",
+              "audioFile": "asset/unit5/晚.wav"
+            },
+            {
+              "character": "武",
+              "jyutping": "mou5",
+              "audioFile": "asset/unit5/武.wav"
+            },
+            {
+              "character": "也",
+              "jyutping": "jaa5",
+              "audioFile": "asset/unit5/也.wav"
+            },
+            {
+              "character": "每",
+              "jyutping": "mui5",
+              "audioFile": "asset/unit5/每.wav"
+            },
+            {
+              "character": "引",
+              "jyutping": "jan5",
+              "audioFile": "asset/unit5/引.wav"
+            },
+            {
+              "character": "遠",
+              "jyutping": "jyun5",
+              "audioFile": "asset/unit5/遠.wav"
+            },
+            {
+              "character": "滿",
+              "jyutping": "mun5",
+              "audioFile": "asset/unit5/滿.wav"
+            },
+            {
+              "character": "朗",
+              "jyutping": "long5",
+              "audioFile": "asset/unit5/朗.wav"
+            }
+          ]
         },
         {
           "type": "Quiz",
           "title": "選擇題1",
           "question": "以下哪個字的聲調和其他不一樣？",
-          "options": [],
-          "correctAnswer": 0
+          "options": [
+            {
+              "character": "企",
+              "jyutping": "kei5",
+              "audioFile": "asset/unit5/企.wav"
+            },
+            {
+              "character": "路",
+              "jyutping": "lou6",
+              "audioFile": "asset/unit5/路.wav"
+            },
+            {
+              "character": "禮",
+              "jyutping": "lai5",
+              "audioFile": "asset/unit5/禮.wav"
+            },
+            {
+              "character": "往",
+              "jyutping": "wong5",
+              "audioFile": "asset/unit5/往.wav"
+            }
+          ],
+          "correctAnswer": 1
         },
         {
           "type": "Quiz",
           "title": "選擇題2",
           "question": "以下哪個字的聲調和其他不一樣？",
-          "options": [],
+          "options": [
+            {
+              "character": "神",
+              "jyutping": "san4",
+              "audioFile": "asset/unit5/神.wav"
+            },
+            {
+              "character": "免",
+              "jyutping": "min5",
+              "audioFile": "asset/unit5/免.wav"
+            },
+            {
+              "character": "署",
+              "jyutping": "cyu5",
+              "audioFile": "asset/unit5/署.wav"
+            },
+            {
+              "character": "永",
+              "jyutping": "wing5",
+              "audioFile": "asset/unit5/永.wav"
+            }
+          ],
           "correctAnswer": 0
         },
         {
-          "type": "Colour_Q",
+          "type": "Colour_puzzle",
           "title": "填色遊戲",
-          "data": ""
+          "board": [
+            "勇",
+            "勇",
+            "勇",
+            "勇",
+            "勇",
+            "染",
+            "染",
+            "染",
+            "染",
+            "染",
+            "何",
+            "何",
+            "何",
+            "權",
+            "勇",
+            "染",
+            "勇",
+            "權",
+            "件",
+            "笑",
+            "笑",
+            "第",
+            "何",
+            "染",
+            "權",
+            "第",
+            "件",
+            "笑",
+            "笑",
+            "件",
+            "件",
+            "權",
+            "染",
+            "權",
+            "第",
+            "笑",
+            "笑",
+            "第",
+            "何",
+            "勇",
+            "勇",
+            "勇",
+            "何",
+            "權",
+            "權",
+            "何",
+            "染",
+            "染",
+            "染",
+            "染",
+            "勇",
+            "勇",
+            "勇",
+            "勇",
+            "染",
+            "染",
+            "勇",
+            "染",
+            "染",
+            "染",
+            "勇",
+            "勇",
+            "勇",
+            "勇"
+          ],
+          "distinct_items": [
+            {
+              "character": "笑",
+              "jyutping": "siu3",
+              "audioFile": "asset/unit5/笑.wav",
+              "tone": 3
+            },
+            {
+              "character": "權",
+              "jyutping": "kyun4",
+              "audioFile": "asset/unit5/權.wav",
+              "tone": 4
+            },
+            {
+              "character": "件",
+              "jyutping": "gin6",
+              "audioFile": "asset/unit5/件.wav",
+              "tone": 6
+            },
+            {
+              "character": "第",
+              "jyutping": "dai6",
+              "audioFile": "asset/unit5/第.wav",
+              "tone": 6
+            },
+            {
+              "character": "染",
+              "jyutping": "jim5",
+              "audioFile": "asset/unit5/染.wav",
+              "tone": 5
+            },
+            {
+              "character": "何",
+              "jyutping": "ho4",
+              "audioFile": "asset/unit5/何.wav",
+              "tone": 4
+            },
+            {
+              "character": "勇",
+              "jyutping": "jung5",
+              "audioFile": "asset/unit5/勇.wav",
+              "tone": 5
+            }
+          ]
         },
         {
           "type": "Colour_MC",
-          "title": "",
-          "question": "答案：",
-          "options": [],
-          "correctAnswer": 0
+          "title": "填色遊戲",
+          "question": "What is the picture associated with the colouring game?",
+          "options": [
+            {
+              "character": "奶",
+              "jyutping": "naai5",
+              "audioFile": "asset/unit5/奶.wav"
+            },
+            {
+              "character": "眼",
+              "jyutping": "ngaan5",
+              "audioFile": "asset/unit5/眼.wav"
+            },
+            {
+              "character": "米",
+              "jyutping": "mai5",
+              "audioFile": "asset/unit5/米.wav"
+            }
+          ],
+          "correctAnswer": 1
         },
         {
           "type": "AudioPractice",
           "subType": "Prac_Disyl",
           "title": "雙音節字練習",
-          "items": []
+          "items": [
+            {
+              "character": "螞蟻",
+              "jyutping": "maa5 ngai5",
+              "audioFile": "asset/unit5/螞蟻.wav"
+            },
+            {
+              "character": "母語",
+              "jyutping": "mou5 jyu5",
+              "audioFile": "asset/unit5/母語.wav"
+            },
+            {
+              "character": "魯莽",
+              "jyutping": "lou5 mong5",
+              "audioFile": "asset/unit5/魯莽.wav"
+            },
+            {
+              "character": "馬尾",
+              "jyutping": "maa5 mei5",
+              "audioFile": "asset/unit5/馬尾.wav"
+            },
+            {
+              "character": "領先",
+              "jyutping": "ling5 sin1",
+              "audioFile": "asset/unit5/領先.wav"
+            },
+            {
+              "character": "野豬",
+              "jyutping": "je5 zyu1",
+              "audioFile": "asset/unit5/野豬.wav"
+            },
+            {
+              "character": "了解",
+              "jyutping": "liu5 gaai2",
+              "audioFile": "asset/unit5/了解.wav"
+            },
+            {
+              "character": "敏感",
+              "jyutping": "man5 gam2",
+              "audioFile": "asset/unit5/敏感.wav"
+            },
+            {
+              "character": "挽救",
+              "jyutping": "waan5 gau3",
+              "audioFile": "asset/unit5/挽救.wav"
+            },
+            {
+              "character": "軟化",
+              "jyutping": "jyun5 faa3",
+              "audioFile": "asset/unit5/軟化.wav"
+            },
+            {
+              "character": "儲存",
+              "jyutping": "cyu5 cyun4",
+              "audioFile": "asset/unit5/儲存.wav"
+            },
+            {
+              "character": "偶然",
+              "jyutping": "ngau5 jin4",
+              "audioFile": "asset/unit5/偶然.wav"
+            },
+            {
+              "character": "冷淡",
+              "jyutping": "laang5 daam6",
+              "audioFile": "asset/unit5/冷淡.wav"
+            },
+            {
+              "character": "偉大",
+              "jyutping": "wai5 daai6",
+              "audioFile": "asset/unit5/偉大.wav"
+            },
+            {
+              "character": "温暖",
+              "jyutping": "wan1 nyun5",
+              "audioFile": "asset/unit5/温暖.wav"
+            },
+            {
+              "character": "風雨",
+              "jyutping": "fung1 jyu5",
+              "audioFile": "asset/unit5/風雨.wav"
+            },
+            {
+              "character": "展覽",
+              "jyutping": "zin2 laam5",
+              "audioFile": "asset/unit5/展覽.wav"
+            },
+            {
+              "character": "小鳥",
+              "jyutping": "siu2 niu5",
+              "audioFile": "asset/unit5/小鳥.wav"
+            },
+            {
+              "character": "快艇",
+              "jyutping": "faai3 teng5",
+              "audioFile": "asset/unit5/快艇.wav"
+            },
+            {
+              "character": "器皿",
+              "jyutping": "hei3 ming5",
+              "audioFile": "asset/unit5/器皿.wav"
+            },
+            {
+              "character": "行李",
+              "jyutping": "hang4 lei5",
+              "audioFile": "asset/unit5/行李.wav"
+            },
+            {
+              "character": "牛腩",
+              "jyutping": "ngau4 naam5",
+              "audioFile": "asset/unit5/牛腩.wav"
+            },
+            {
+              "character": "伴舞",
+              "jyutping": "bun6 mou5",
+              "audioFile": "asset/unit5/伴舞.wav"
+            },
+            {
+              "character": "廟宇",
+              "jyutping": "miu6 jyu5",
+              "audioFile": "asset/unit5/廟宇.wav"
+            }
+          ]
         },
         {
           "type": "Link",
           "title": "課後練習及問卷",
-          "data": ""
+          "data": "(Link to be added)"
         }
       ]
     }
