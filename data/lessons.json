@@ -396,6 +396,12 @@
               "tone": 1
             },
             {
+              "character": "選",
+              "jyutping": "syun2",
+              "audioFile": "asset/unit1/選.wav",
+              "tone": 2
+            },
+            {
               "character": "包",
               "jyutping": "baau1",
               "audioFile": "asset/unit1/包.wav",
@@ -406,19 +412,13 @@
               "jyutping": "hei2",
               "audioFile": "asset/unit1/起.wav",
               "tone": 2
-            },
-            {
-              "character": "選",
-              "jyutping": "syun2",
-              "audioFile": "asset/unit1/選.wav",
-              "tone": 2
             }
           ]
         },
         {
           "type": "Colour_MC",
           "title": "填色遊戲",
-          "question": "What is the picture associated with the colouring game?",
+          "question": "答案",
           "options": [
             {
               "character": "星",
@@ -442,86 +442,106 @@
           "type": "AudioPractice",
           "subType": "Prac_Disyl",
           "title": "雙音節字練習",
-          "items": [
+          "groups": [
             {
-              "character": "分鐘",
-              "jyutping": "fan1 zung1",
-              "audioFile": "asset/unit1/分鐘.wav"
+              "title": "1+1",
+              "items": [
+                {
+                  "character": "分鐘",
+                  "jyutping": "fan1 zung1",
+                  "audioFile": "asset/unit1/分鐘.wav"
+                },
+                {
+                  "character": "餐廳",
+                  "jyutping": "caan1 teng1",
+                  "audioFile": "asset/unit1/餐廳.wav"
+                },
+                {
+                  "character": "空間",
+                  "jyutping": "hung1 gaan1",
+                  "audioFile": "asset/unit1/空間.wav"
+                },
+                {
+                  "character": "專家",
+                  "jyutping": "zyun1 gaa1",
+                  "audioFile": "asset/unit1/專家.wav"
+                }
+              ]
             },
             {
-              "character": "餐廳",
-              "jyutping": "caan1 teng1",
-              "audioFile": "asset/unit1/餐廳.wav"
+              "title": "2+2",
+              "items": [
+                {
+                  "character": "採訪",
+                  "jyutping": "coi2 fong2",
+                  "audioFile": "asset/unit1/採訪.wav"
+                },
+                {
+                  "character": "阻止",
+                  "jyutping": "zo2 zi2",
+                  "audioFile": "asset/unit1/阻止.wav"
+                },
+                {
+                  "character": "檢討",
+                  "jyutping": "gim2 tou2",
+                  "audioFile": "asset/unit1/檢討.wav"
+                },
+                {
+                  "character": "飲品",
+                  "jyutping": "jam2 ban2",
+                  "audioFile": "asset/unit1/飲品.wav"
+                }
+              ]
             },
             {
-              "character": "空間",
-              "jyutping": "hung1 gaan1",
-              "audioFile": "asset/unit1/空間.wav"
+              "title": "1+2",
+              "items": [
+                {
+                  "character": "申請",
+                  "jyutping": "san1 cing2",
+                  "audioFile": "asset/unit1/申請.wav"
+                },
+                {
+                  "character": "清楚",
+                  "jyutping": "cing1 co2",
+                  "audioFile": "asset/unit1/清楚.wav"
+                },
+                {
+                  "character": "風險",
+                  "jyutping": "fung1 him2",
+                  "audioFile": "asset/unit1/風險.wav"
+                },
+                {
+                  "character": "參考",
+                  "jyutping": "caam1 haau2",
+                  "audioFile": "asset/unit1/參考.wav"
+                }
+              ]
             },
             {
-              "character": "專家",
-              "jyutping": "zyun1 gaa1",
-              "audioFile": "asset/unit1/專家.wav"
-            },
-            {
-              "character": "申請",
-              "jyutping": "san1 cing2",
-              "audioFile": "asset/unit1/申請.wav"
-            },
-            {
-              "character": "清楚",
-              "jyutping": "cing1 co2",
-              "audioFile": "asset/unit1/清楚.wav"
-            },
-            {
-              "character": "風險",
-              "jyutping": "fung1 him2",
-              "audioFile": "asset/unit1/風險.wav"
-            },
-            {
-              "character": "參考",
-              "jyutping": "caam1 haau2",
-              "audioFile": "asset/unit1/參考.wav"
-            },
-            {
-              "character": "喜歡",
-              "jyutping": "hei2 fun1",
-              "audioFile": "asset/unit1/喜歡.wav"
-            },
-            {
-              "character": "廣東",
-              "jyutping": "gwong2 dung1",
-              "audioFile": "asset/unit1/廣東.wav"
-            },
-            {
-              "character": "補充",
-              "jyutping": "bou2 cung1",
-              "audioFile": "asset/unit1/補充.wav"
-            },
-            {
-              "character": "打工",
-              "jyutping": "daa2 gung1",
-              "audioFile": "asset/unit1/打工.wav"
-            },
-            {
-              "character": "採訪",
-              "jyutping": "coi2 fong2",
-              "audioFile": "asset/unit1/採訪.wav"
-            },
-            {
-              "character": "阻止",
-              "jyutping": "zo2 zi2",
-              "audioFile": "asset/unit1/阻止.wav"
-            },
-            {
-              "character": "檢討",
-              "jyutping": "gim2 tou2",
-              "audioFile": "asset/unit1/檢討.wav"
-            },
-            {
-              "character": "飲品",
-              "jyutping": "jam2 ban2",
-              "audioFile": "asset/unit1/飲品.wav"
+              "title": "2+1",
+              "items": [
+                {
+                  "character": "喜歡",
+                  "jyutping": "hei2 fun1",
+                  "audioFile": "asset/unit1/喜歡.wav"
+                },
+                {
+                  "character": "廣東",
+                  "jyutping": "gwong2 dung1",
+                  "audioFile": "asset/unit1/廣東.wav"
+                },
+                {
+                  "character": "補充",
+                  "jyutping": "bou2 cung1",
+                  "audioFile": "asset/unit1/補充.wav"
+                },
+                {
+                  "character": "打工",
+                  "jyutping": "daa2 gung1",
+                  "audioFile": "asset/unit1/打工.wav"
+                }
+              ]
             }
           ]
         },
@@ -785,27 +805,27 @@
           ],
           "distinct_items": [
             {
+              "character": "安",
+              "jyutping": "on1",
+              "audioFile": "asset/unit2/安.wav",
+              "tone": 1
+            },
+            {
               "character": "走",
               "jyutping": "zau2",
               "audioFile": "asset/unit2/走.wav",
               "tone": 2
             },
             {
-              "character": "留",
-              "jyutping": "lau4",
-              "audioFile": "asset/unit2/留.wav",
-              "tone": 4
-            },
-            {
-              "character": "三",
-              "jyutping": "saam1",
-              "audioFile": "asset/unit2/三.wav",
-              "tone": 1
-            },
-            {
               "character": "條",
               "jyutping": "tiu4",
               "audioFile": "asset/unit2/條.wav",
+              "tone": 4
+            },
+            {
+              "character": "留",
+              "jyutping": "lau4",
+              "audioFile": "asset/unit2/留.wav",
               "tone": 4
             },
             {
@@ -815,9 +835,9 @@
               "tone": 2
             },
             {
-              "character": "安",
-              "jyutping": "on1",
-              "audioFile": "asset/unit2/安.wav",
+              "character": "三",
+              "jyutping": "saam1",
+              "audioFile": "asset/unit2/三.wav",
               "tone": 1
             }
           ]
@@ -825,7 +845,7 @@
         {
           "type": "Colour_MC",
           "title": "填色遊戲",
-          "question": "What is the picture associated with the colouring game?",
+          "question": "答案",
           "options": [
             {
               "character": "龍",
@@ -849,86 +869,111 @@
           "type": "AudioPractice",
           "subType": "Prac_Disyl",
           "title": "雙音節字練習",
-          "items": [
+          "groups": [
             {
-              "character": "銀行",
-              "jyutping": "ngan4 hong4",
-              "audioFile": "asset/unit2/銀行.wav"
+              "title": "4+4",
+              "items": [
+                {
+                  "character": "銀行",
+                  "jyutping": "ngan4 hong4",
+                  "audioFile": "asset/unit2/銀行.wav"
+                },
+                {
+                  "character": "傳媒",
+                  "jyutping": "cyun4 mui4",
+                  "audioFile": "asset/unit2/傳媒.wav"
+                },
+                {
+                  "character": "形容",
+                  "jyutping": "jing4 jung4",
+                  "audioFile": "asset/unit2/形容.wav"
+                },
+                {
+                  "character": "凌晨",
+                  "jyutping": "ling4 san4",
+                  "audioFile": "asset/unit2/凌晨.wav"
+                }
+              ]
             },
             {
-              "character": "傳媒",
-              "jyutping": "cyun4 mui4",
-              "audioFile": "asset/unit2/傳媒.wav"
+              "title": "4+1",
+              "items": [
+                {
+                  "character": "黃金",
+                  "jyutping": "wong4 gam1",
+                  "audioFile": "asset/unit2/黃金.wav"
+                },
+                {
+                  "character": "離開",
+                  "jyutping": "lei4 hoi1",
+                  "audioFile": "asset/unit2/離開.wav"
+                },
+                {
+                  "character": "重新",
+                  "jyutping": "cung4 san1",
+                  "audioFile": "asset/unit2/重新.wav"
+                }
+              ]
             },
             {
-              "character": "形容",
-              "jyutping": "jing4 jung4",
-              "audioFile": "asset/unit2/形容.wav"
+              "title": "1+4",
+              "items": [
+                {
+                  "character": "當年",
+                  "jyutping": "dong1 nin4",
+                  "audioFile": "asset/unit2/當年.wav"
+                },
+                {
+                  "character": "要求",
+                  "jyutping": "jiu1 kau4",
+                  "audioFile": "asset/unit2/要求.wav"
+                },
+                {
+                  "character": "高層",
+                  "jyutping": "gou1 cang4",
+                  "audioFile": "asset/unit2/高層.wav"
+                }
+              ]
             },
             {
-              "character": "凌晨",
-              "jyutping": "ling4 san4",
-              "audioFile": "asset/unit2/凌晨.wav"
+              "title": "4+2",
+              "items": [
+                {
+                  "character": "團體",
+                  "jyutping": "tyun4 tai2",
+                  "audioFile": "asset/unit2/團體.wav"
+                },
+                {
+                  "character": "防止",
+                  "jyutping": "fong4 zi2",
+                  "audioFile": "asset/unit2/防止.wav"
+                },
+                {
+                  "character": "籌款",
+                  "jyutping": "cau4 fun2",
+                  "audioFile": "asset/unit2/籌款.wav"
+                }
+              ]
             },
             {
-              "character": "黃金",
-              "jyutping": "wong4 gam1",
-              "audioFile": "asset/unit2/黃金.wav"
-            },
-            {
-              "character": "離開",
-              "jyutping": "lei4 hoi1",
-              "audioFile": "asset/unit2/離開.wav"
-            },
-            {
-              "character": "重新",
-              "jyutping": "cung4 san1",
-              "audioFile": "asset/unit2/重新.wav"
-            },
-            {
-              "character": "團體",
-              "jyutping": "tyun4 tai2",
-              "audioFile": "asset/unit2/團體.wav"
-            },
-            {
-              "character": "防止",
-              "jyutping": "fong4 zi2",
-              "audioFile": "asset/unit2/防止.wav"
-            },
-            {
-              "character": "籌款",
-              "jyutping": "cau4 fun2",
-              "audioFile": "asset/unit2/籌款.wav"
-            },
-            {
-              "character": "當年",
-              "jyutping": "dong1 nin4",
-              "audioFile": "asset/unit2/當年.wav"
-            },
-            {
-              "character": "要求",
-              "jyutping": "jiu1 kau4",
-              "audioFile": "asset/unit2/要求.wav"
-            },
-            {
-              "character": "高層",
-              "jyutping": "gou1 cang4",
-              "audioFile": "asset/unit2/高層.wav"
-            },
-            {
-              "character": "品牌",
-              "jyutping": "ban2 paai4",
-              "audioFile": "asset/unit2/品牌.wav"
-            },
-            {
-              "character": "檢查",
-              "jyutping": "gim2 caa4",
-              "audioFile": "asset/unit2/檢查.wav"
-            },
-            {
-              "character": "減肥",
-              "jyutping": "gaam2 fei4",
-              "audioFile": "asset/unit2/減肥.wav"
+              "title": "2+4",
+              "items": [
+                {
+                  "character": "品牌",
+                  "jyutping": "ban2 paai4",
+                  "audioFile": "asset/unit2/品牌.wav"
+                },
+                {
+                  "character": "檢查",
+                  "jyutping": "gim2 caa4",
+                  "audioFile": "asset/unit2/檢查.wav"
+                },
+                {
+                  "character": "減肥",
+                  "jyutping": "gaam2 fei4",
+                  "audioFile": "asset/unit2/減肥.wav"
+                }
+              ]
             }
           ]
         },
@@ -1110,6 +1155,18 @@
           "correctAnswer": 2
         },
         {
+          "type": "Colour_colour",
+          "title": "填色遊戲",
+          "colors": [
+            "#e0e0e0",
+            "#808080",
+            "#9900ff",
+            "#ffffff",
+            "",
+            ""
+          ]
+        },
+        {
           "type": "Colour_puzzle",
           "title": "填色遊戲",
           "board": [
@@ -1180,28 +1237,10 @@
           ],
           "distinct_items": [
             {
-              "character": "工",
-              "jyutping": "gung1",
-              "audioFile": "asset/unit3/工.wav",
-              "tone": 1
-            },
-            {
-              "character": "他",
-              "jyutping": "taa1",
-              "audioFile": "asset/unit3/他.wav",
-              "tone": 1
-            },
-            {
-              "character": "講",
-              "jyutping": "gong2",
-              "audioFile": "asset/unit3/講.wav",
-              "tone": 2
-            },
-            {
-              "character": "制",
-              "jyutping": "zai3",
-              "audioFile": "asset/unit3/制.wav",
-              "tone": 3
+              "character": "完",
+              "jyutping": "jyun4",
+              "audioFile": "asset/unit3/完.wav",
+              "tone": 4
             },
             {
               "character": "提",
@@ -1210,23 +1249,41 @@
               "tone": 4
             },
             {
+              "character": "他",
+              "jyutping": "taa1",
+              "audioFile": "asset/unit3/他.wav",
+              "tone": 1
+            },
+            {
+              "character": "制",
+              "jyutping": "zai3",
+              "audioFile": "asset/unit3/制.wav",
+              "tone": 3
+            },
+            {
               "character": "半",
               "jyutping": "bun3",
               "audioFile": "asset/unit3/半.wav",
               "tone": 3
             },
             {
-              "character": "完",
-              "jyutping": "jyun4",
-              "audioFile": "asset/unit3/完.wav",
-              "tone": 4
+              "character": "講",
+              "jyutping": "gong2",
+              "audioFile": "asset/unit3/講.wav",
+              "tone": 2
+            },
+            {
+              "character": "工",
+              "jyutping": "gung1",
+              "audioFile": "asset/unit3/工.wav",
+              "tone": 1
             }
           ]
         },
         {
           "type": "Colour_MC",
           "title": "填色遊戲",
-          "question": "What is the picture associated with the colouring game?",
+          "question": "答案",
           "options": [
             {
               "character": "傘",
@@ -1250,86 +1307,151 @@
           "type": "AudioPractice",
           "subType": "Prac_Disyl",
           "title": "雙音節字練習",
-          "items": [
+          "groups": [
             {
-              "character": "個案",
-              "jyutping": "go3 on3",
-              "audioFile": "asset/unit3/個案.wav"
+              "title": "3+3",
+              "items": [
+                {
+                  "character": "個案",
+                  "jyutping": "go3 on3",
+                  "audioFile": "asset/unit3/個案.wav"
+                },
+                {
+                  "character": "照顧",
+                  "jyutping": "ziu3 gu3",
+                  "audioFile": "asset/unit3/照顧.wav"
+                },
+                {
+                  "character": "聖誕",
+                  "jyutping": "sing3 daan3",
+                  "audioFile": "asset/unit3/聖誕.wav"
+                },
+                {
+                  "character": "貢獻",
+                  "jyutping": "gung3 hin3",
+                  "audioFile": "asset/unit3/貢獻.wav"
+                }
+              ]
             },
             {
-              "character": "照顧",
-              "jyutping": "ziu3 gu3",
-              "audioFile": "asset/unit3/照顧.wav"
+              "title": "3+1",
+              "items": [
+                {
+                  "character": "抗爭",
+                  "jyutping": "kong3 zang1",
+                  "audioFile": "asset/unit3/抗爭.wav"
+                },
+                {
+                  "character": "更加",
+                  "jyutping": "gang3 gaa1",
+                  "audioFile": "asset/unit3/更加.wav"
+                },
+                {
+                  "character": "降低",
+                  "jyutping": "gong3 dai1",
+                  "audioFile": "asset/unit3/降低.wav"
+                }
+              ]
             },
             {
-              "character": "聖誕",
-              "jyutping": "sing3 daan3",
-              "audioFile": "asset/unit3/聖誕.wav"
+              "title": "1+3",
+              "items": [
+                {
+                  "character": "觀眾",
+                  "jyutping": "gun1 zung3",
+                  "audioFile": "asset/unit3/觀眾.wav"
+                },
+                {
+                  "character": "機構",
+                  "jyutping": "gei1 kau3",
+                  "audioFile": "asset/unit3/機構.wav"
+                },
+                {
+                  "character": "關注",
+                  "jyutping": "gwaan1 zyu3",
+                  "audioFile": "asset/unit3/關注.wav"
+                }
+              ]
             },
             {
-              "character": "貢獻",
-              "jyutping": "gung3 hin3",
-              "audioFile": "asset/unit3/貢獻.wav"
+              "title": "3+2",
+              "items": [
+                {
+                  "character": "背景",
+                  "jyutping": "bui3 ging2",
+                  "audioFile": "asset/unit3/背景.wav"
+                },
+                {
+                  "character": "破產",
+                  "jyutping": "po3 caan2",
+                  "audioFile": "asset/unit3/破產.wav"
+                },
+                {
+                  "character": "禁止",
+                  "jyutping": "gam3 zi2",
+                  "audioFile": "asset/unit3/禁止.wav"
+                }
+              ]
             },
             {
-              "character": "更加",
-              "jyutping": "gang3 gaa1",
-              "audioFile": "asset/unit3/更加.wav"
+              "title": "2+3",
+              "items": [
+                {
+                  "character": "酒店",
+                  "jyutping": "zau2 dim3",
+                  "audioFile": "asset/unit3/酒店.wav"
+                },
+                {
+                  "character": "廣吿",
+                  "jyutping": "gwong2 gou3",
+                  "audioFile": "asset/unit3/廣吿.wav"
+                },
+                {
+                  "character": "口罩",
+                  "jyutping": "hau2 zaau3",
+                  "audioFile": "asset/unit3/口罩.wav"
+                }
+              ]
             },
             {
-              "character": "降低",
-              "jyutping": "gong3 dai1",
-              "audioFile": "asset/unit3/降低.wav"
+              "title": "3+4",
+              "items": [
+                {
+                  "character": "鏡頭",
+                  "jyutping": "geng3 tau4",
+                  "audioFile": "asset/unit3/鏡頭.wav"
+                },
+                {
+                  "character": "四圍",
+                  "jyutping": "sei3 wai4",
+                  "audioFile": "asset/unit3/四圍.wav"
+                },
+                {
+                  "character": "肺炎",
+                  "jyutping": "fai3 jim4",
+                  "audioFile": "asset/unit3/肺炎.wav"
+                }
+              ]
             },
             {
-              "character": "背景",
-              "jyutping": "bui3 ging2",
-              "audioFile": "asset/unit3/背景.wav"
-            },
-            {
-              "character": "禁止",
-              "jyutping": "gam3 zi2",
-              "audioFile": "asset/unit3/禁止.wav"
-            },
-            {
-              "character": "鏡頭",
-              "jyutping": "geng3 tau4",
-              "audioFile": "asset/unit3/鏡頭.wav"
-            },
-            {
-              "character": "四圍",
-              "jyutping": "sei3 wai4",
-              "audioFile": "asset/unit3/四圍.wav"
-            },
-            {
-              "character": "觀眾",
-              "jyutping": "gun1 zung3",
-              "audioFile": "asset/unit3/觀眾.wav"
-            },
-            {
-              "character": "關注",
-              "jyutping": "gwaan1 zyu3",
-              "audioFile": "asset/unit3/關注.wav"
-            },
-            {
-              "character": "酒店",
-              "jyutping": "zau2 dim3",
-              "audioFile": "asset/unit3/酒店.wav"
-            },
-            {
-              "character": "廣吿",
-              "jyutping": "gwong2 gou3",
-              "audioFile": "asset/unit3/廣吿.wav"
-            },
-            {
-              "character": "投訴",
-              "jyutping": "tau4 sou3",
-              "audioFile": "asset/unit3/投訴.wav"
-            },
-            {
-              "character": "門票",
-              "jyutping": "mun4 piu3",
-              "audioFile": "asset/unit3/門票.wav"
+              "title": "4+3",
+              "items": [
+                {
+                  "character": "投訴",
+                  "jyutping": "tau4 sou3",
+                  "audioFile": "asset/unit3/投訴.wav"
+                },
+                {
+                  "character": "門票",
+                  "jyutping": "mun4 piu3",
+                  "audioFile": "asset/unit3/門票.wav"
+                },
+                {
+                  "character": "人數",
+                  "jyutping": "jan4 sou3",
+                  "audioFile": "asset/unit3/人數.wav"
+                }
+              ]
             }
           ]
         },
@@ -1511,6 +1633,18 @@
           "correctAnswer": 3
         },
         {
+          "type": "Colour_colour",
+          "title": "填色遊戲",
+          "colors": [
+            "#D5FDFF",
+            "#a4c2f4",
+            "#93E8FF",
+            "#1155cc",
+            "",
+            "#FFF4D1"
+          ]
+        },
+        {
           "type": "Colour_puzzle",
           "title": "填色遊戲",
           "board": [
@@ -1587,22 +1721,10 @@
               "tone": 6
             },
             {
-              "character": "班",
-              "jyutping": "baan1",
-              "audioFile": "asset/unit4/班.wav",
-              "tone": 1
-            },
-            {
-              "character": "瀉",
-              "jyutping": "se3",
-              "audioFile": "asset/unit4/瀉.wav",
+              "character": "案",
+              "jyutping": "on3",
+              "audioFile": "asset/unit4/案.wav",
               "tone": 3
-            },
-            {
-              "character": "聯",
-              "jyutping": "lyun4",
-              "audioFile": "asset/unit4/聯.wav",
-              "tone": 4
             },
             {
               "character": "品",
@@ -1611,10 +1733,22 @@
               "tone": 2
             },
             {
-              "character": "案",
-              "jyutping": "on3",
-              "audioFile": "asset/unit4/案.wav",
+              "character": "瀉",
+              "jyutping": "se3",
+              "audioFile": "asset/unit4/瀉.wav",
               "tone": 3
+            },
+            {
+              "character": "投",
+              "jyutping": "tau4",
+              "audioFile": "asset/unit4/投.wav",
+              "tone": 4
+            },
+            {
+              "character": "班",
+              "jyutping": "baan1",
+              "audioFile": "asset/unit4/班.wav",
+              "tone": 1
             },
             {
               "character": "望",
@@ -1623,9 +1757,9 @@
               "tone": 6
             },
             {
-              "character": "投",
-              "jyutping": "tau4",
-              "audioFile": "asset/unit4/投.wav",
+              "character": "聯",
+              "jyutping": "lyun4",
+              "audioFile": "asset/unit4/聯.wav",
               "tone": 4
             }
           ]
@@ -1633,7 +1767,7 @@
         {
           "type": "Colour_MC",
           "title": "填色遊戲",
-          "question": "What is the picture associated with the colouring game?",
+          "question": "答案",
           "options": [
             {
               "character": "夢",
@@ -1657,106 +1791,191 @@
           "type": "AudioPractice",
           "subType": "Prac_Disyl",
           "title": "雙音節字練習",
-          "items": [
+          "groups": [
             {
-              "character": "運動",
-              "jyutping": "wan6 dung6",
-              "audioFile": "asset/unit4/運動.wav"
+              "title": "6+6",
+              "items": [
+                {
+                  "character": "運動",
+                  "jyutping": "wan6 dung6",
+                  "audioFile": "asset/unit4/運動.wav"
+                },
+                {
+                  "character": "任務",
+                  "jyutping": "jam6 mou6",
+                  "audioFile": "asset/unit4/任務.wav"
+                },
+                {
+                  "character": "混亂",
+                  "jyutping": "wan6 lyun6",
+                  "audioFile": "asset/unit4/混亂.wav"
+                },
+                {
+                  "character": "誤會",
+                  "jyutping": "ng6 wui6",
+                  "audioFile": "asset/unit4/誤會.wav"
+                }
+              ]
             },
             {
-              "character": "任務",
-              "jyutping": "jam6 mou6",
-              "audioFile": "asset/unit4/任務.wav"
+              "title": "6+1",
+              "items": [
+                {
+                  "character": "健康",
+                  "jyutping": "gin6 hong1",
+                  "audioFile": "asset/unit4/健康.wav"
+                },
+                {
+                  "character": "第三",
+                  "jyutping": "dai6 saam1",
+                  "audioFile": "asset/unit4/第三.wav"
+                },
+                {
+                  "character": "罷工",
+                  "jyutping": "baa6 gung1",
+                  "audioFile": "asset/unit4/罷工.wav"
+                }
+              ]
             },
             {
-              "character": "混亂",
-              "jyutping": "wan6 lyun6",
-              "audioFile": "asset/unit4/混亂.wav"
+              "title": "1+6",
+              "items": [
+                {
+                  "character": "關係",
+                  "jyutping": "gwaan1 hai6",
+                  "audioFile": "asset/unit4/關係.wav"
+                },
+                {
+                  "character": "方便",
+                  "jyutping": "fong1 bin6",
+                  "audioFile": "asset/unit4/方便.wav"
+                },
+                {
+                  "character": "經驗",
+                  "jyutping": "ging1 jim6",
+                  "audioFile": "asset/unit4/經驗.wav"
+                }
+              ]
             },
             {
-              "character": "誤會",
-              "jyutping": "ng6 wui6",
-              "audioFile": "asset/unit4/誤會.wav"
+              "title": "6+2",
+              "items": [
+                {
+                  "character": "效果",
+                  "jyutping": "haau6 gwo2",
+                  "audioFile": "asset/unit4/效果.wav"
+                },
+                {
+                  "character": "代表",
+                  "jyutping": "doi6 biu2",
+                  "audioFile": "asset/unit4/代表.wav"
+                },
+                {
+                  "character": "系統",
+                  "jyutping": "hai6 tung2",
+                  "audioFile": "asset/unit4/系統.wav"
+                }
+              ]
             },
             {
-              "character": "健康",
-              "jyutping": "gin6 hong1",
-              "audioFile": "asset/unit4/健康.wav"
+              "title": "2+6",
+              "items": [
+                {
+                  "character": "口號",
+                  "jyutping": "hau2 hou6",
+                  "audioFile": "asset/unit4/口號.wav"
+                },
+                {
+                  "character": "改善",
+                  "jyutping": "goi2 sin6",
+                  "audioFile": "asset/unit4/改善.wav"
+                },
+                {
+                  "character": "總共",
+                  "jyutping": "zung2 gung6",
+                  "audioFile": "asset/unit4/總共.wav"
+                }
+              ]
             },
             {
-              "character": "第三",
-              "jyutping": "dai6 saam1",
-              "audioFile": "asset/unit4/第三.wav"
+              "title": "6+3",
+              "items": [
+                {
+                  "character": "甚至",
+                  "jyutping": "sam6 zi3",
+                  "audioFile": "asset/unit4/甚至.wav"
+                },
+                {
+                  "character": "受到",
+                  "jyutping": "sau6 dou3",
+                  "audioFile": "asset/unit4/受到.wav"
+                },
+                {
+                  "character": "預計",
+                  "jyutping": "jyu6 gai3",
+                  "audioFile": "asset/unit4/預計.wav"
+                }
+              ]
             },
             {
-              "character": "代表",
-              "jyutping": "doi6 biu2",
-              "audioFile": "asset/unit4/代表.wav"
+              "title": "3+6",
+              "items": [
+                {
+                  "character": "透露",
+                  "jyutping": "tau3 lou6",
+                  "audioFile": "asset/unit4/透露.wav"
+                },
+                {
+                  "character": "訓練",
+                  "jyutping": "fan3 lin6",
+                  "audioFile": "asset/unit4/訓練.wav"
+                },
+                {
+                  "character": "破壞",
+                  "jyutping": "po3 waai6",
+                  "audioFile": "asset/unit4/破壞.wav"
+                }
+              ]
             },
             {
-              "character": "系統",
-              "jyutping": "hai6 tung2",
-              "audioFile": "asset/unit4/系統.wav"
+              "title": "6+4",
+              "items": [
+                {
+                  "character": "病人",
+                  "jyutping": "beng6 jan4",
+                  "audioFile": "asset/unit4/病人.wav"
+                },
+                {
+                  "character": "例如",
+                  "jyutping": "lai6 jyu4",
+                  "audioFile": "asset/unit4/例如.wav"
+                },
+                {
+                  "character": "調查",
+                  "jyutping": "diu6 caa4",
+                  "audioFile": "asset/unit4/調查.wav"
+                }
+              ]
             },
             {
-              "character": "甚至",
-              "jyutping": "sam6 zi3",
-              "audioFile": "asset/unit4/甚至.wav"
-            },
-            {
-              "character": "受到",
-              "jyutping": "sau6 dou3",
-              "audioFile": "asset/unit4/受到.wav"
-            },
-            {
-              "character": "例如",
-              "jyutping": "lai6 jyu4",
-              "audioFile": "asset/unit4/例如.wav"
-            },
-            {
-              "character": "調查",
-              "jyutping": "diu6 caa4",
-              "audioFile": "asset/unit4/調查.wav"
-            },
-            {
-              "character": "關係",
-              "jyutping": "gwaan1 hai6",
-              "audioFile": "asset/unit4/關係.wav"
-            },
-            {
-              "character": "經驗",
-              "jyutping": "ging1 jim6",
-              "audioFile": "asset/unit4/經驗.wav"
-            },
-            {
-              "character": "改善",
-              "jyutping": "goi2 sin6",
-              "audioFile": "asset/unit4/改善.wav"
-            },
-            {
-              "character": "總共",
-              "jyutping": "zung2 gung6",
-              "audioFile": "asset/unit4/總共.wav"
-            },
-            {
-              "character": "透露",
-              "jyutping": "tau3 lou6",
-              "audioFile": "asset/unit4/透露.wav"
-            },
-            {
-              "character": "訓練",
-              "jyutping": "fan3 lin6",
-              "audioFile": "asset/unit4/訓練.wav"
-            },
-            {
-              "character": "成立",
-              "jyutping": "sing4 laap6",
-              "audioFile": "asset/unit4/成立.wav"
-            },
-            {
-              "character": "無限",
-              "jyutping": "mou4 haan6",
-              "audioFile": "asset/unit4/無限.wav"
+              "title": "4+6",
+              "items": [
+                {
+                  "character": "旗下",
+                  "jyutping": "kei4 haa6",
+                  "audioFile": "asset/unit4/旗下.wav"
+                },
+                {
+                  "character": "成立",
+                  "jyutping": "sing4 laap6",
+                  "audioFile": "asset/unit4/成立.wav"
+                },
+                {
+                  "character": "無限",
+                  "jyutping": "mou4 haan6",
+                  "audioFile": "asset/unit4/無限.wav"
+                }
+              ]
             }
           ]
         },
@@ -1813,9 +2032,9 @@
               "audioFile": "asset/unit5/碼.wav"
             },
             {
-              "character": "網",
+              "character": "惘",
               "jyutping": "mong5",
-              "audioFile": "asset/unit5/網.wav"
+              "audioFile": "asset/unit5/惘.wav"
             },
             {
               "character": "與",
@@ -1830,9 +2049,9 @@
           "title": "單字練習",
           "items": [
             {
-              "character": "美",
-              "jyutping": "mei5",
-              "audioFile": "asset/unit5/美.wav"
+              "character": "懶",
+              "jyutping": "laan5",
+              "audioFile": "asset/unit5/懶.wav"
             },
             {
               "character": "理",
@@ -1938,14 +2157,26 @@
           "correctAnswer": 0
         },
         {
+          "type": "Colour_colour",
+          "title": "填色遊戲",
+          "colors": [
+            "",
+            "",
+            "#864300",
+            "#525252",
+            "#FFF3E2",
+            "#FFFFFF"
+          ]
+        },
+        {
           "type": "Colour_puzzle",
           "title": "填色遊戲",
           "board": [
-            "勇",
-            "勇",
-            "勇",
-            "勇",
-            "勇",
+            "妥",
+            "妥",
+            "妥",
+            "妥",
+            "妥",
             "染",
             "染",
             "染",
@@ -1955,9 +2186,9 @@
             "何",
             "何",
             "權",
-            "勇",
+            "妥",
             "染",
-            "勇",
+            "妥",
             "權",
             "件",
             "笑",
@@ -1980,9 +2211,9 @@
             "笑",
             "第",
             "何",
-            "勇",
-            "勇",
-            "勇",
+            "妥",
+            "妥",
+            "妥",
             "何",
             "權",
             "權",
@@ -1991,39 +2222,27 @@
             "染",
             "染",
             "染",
-            "勇",
-            "勇",
-            "勇",
-            "勇",
+            "妥",
+            "妥",
+            "妥",
+            "妥",
             "染",
             "染",
-            "勇",
+            "妥",
             "染",
             "染",
             "染",
-            "勇",
-            "勇",
-            "勇",
-            "勇"
+            "妥",
+            "妥",
+            "妥",
+            "妥"
           ],
           "distinct_items": [
             {
-              "character": "笑",
-              "jyutping": "siu3",
-              "audioFile": "asset/unit5/笑.wav",
-              "tone": 3
-            },
-            {
-              "character": "權",
-              "jyutping": "kyun4",
-              "audioFile": "asset/unit5/權.wav",
-              "tone": 4
-            },
-            {
-              "character": "件",
-              "jyutping": "gin6",
-              "audioFile": "asset/unit5/件.wav",
-              "tone": 6
+              "character": "染",
+              "jyutping": "jim5",
+              "audioFile": "asset/unit5/染.wav",
+              "tone": 5
             },
             {
               "character": "第",
@@ -2032,10 +2251,10 @@
               "tone": 6
             },
             {
-              "character": "染",
-              "jyutping": "jim5",
-              "audioFile": "asset/unit5/染.wav",
-              "tone": 5
+              "character": "權",
+              "jyutping": "kyun4",
+              "audioFile": "asset/unit5/權.wav",
+              "tone": 4
             },
             {
               "character": "何",
@@ -2044,17 +2263,29 @@
               "tone": 4
             },
             {
-              "character": "勇",
-              "jyutping": "jung5",
-              "audioFile": "asset/unit5/勇.wav",
+              "character": "笑",
+              "jyutping": "siu3",
+              "audioFile": "asset/unit5/笑.wav",
+              "tone": 3
+            },
+            {
+              "character": "妥",
+              "jyutping": "to5",
+              "audioFile": "asset/unit5/妥.wav",
               "tone": 5
+            },
+            {
+              "character": "件",
+              "jyutping": "gin6",
+              "audioFile": "asset/unit5/件.wav",
+              "tone": 6
             }
           ]
         },
         {
           "type": "Colour_MC",
           "title": "填色遊戲",
-          "question": "What is the picture associated with the colouring game?",
+          "question": "答案",
           "options": [
             {
               "character": "奶",
@@ -2067,9 +2298,9 @@
               "audioFile": "asset/unit5/眼.wav"
             },
             {
-              "character": "米",
-              "jyutping": "mai5",
-              "audioFile": "asset/unit5/米.wav"
+              "character": "美",
+              "jyutping": "mei5",
+              "audioFile": "asset/unit5/美.wav"
             }
           ],
           "correctAnswer": 1
@@ -2078,126 +2309,231 @@
           "type": "AudioPractice",
           "subType": "Prac_Disyl",
           "title": "雙音節字練習",
-          "items": [
+          "groups": [
             {
-              "character": "螞蟻",
-              "jyutping": "maa5 ngai5",
-              "audioFile": "asset/unit5/螞蟻.wav"
+              "title": "5+5",
+              "items": [
+                {
+                  "character": "螞蟻",
+                  "jyutping": "maa5 ngai5",
+                  "audioFile": "asset/unit5/螞蟻.wav"
+                },
+                {
+                  "character": "母語",
+                  "jyutping": "mou5 jyu5",
+                  "audioFile": "asset/unit5/母語.wav"
+                },
+                {
+                  "character": "魯莽",
+                  "jyutping": "lou5 mong5",
+                  "audioFile": "asset/unit5/魯莽.wav"
+                },
+                {
+                  "character": "馬尾",
+                  "jyutping": "maa5 mei5",
+                  "audioFile": "asset/unit5/馬尾.wav"
+                }
+              ]
             },
             {
-              "character": "母語",
-              "jyutping": "mou5 jyu5",
-              "audioFile": "asset/unit5/母語.wav"
+              "title": "5+1",
+              "items": [
+                {
+                  "character": "領先",
+                  "jyutping": "ling5 sin1",
+                  "audioFile": "asset/unit5/領先.wav"
+                },
+                {
+                  "character": "野豬",
+                  "jyutping": "je5 zyu1",
+                  "audioFile": "asset/unit5/野豬.wav"
+                },
+                {
+                  "character": "有些",
+                  "jyutping": "jau5 se1",
+                  "audioFile": "asset/unit5/有些.wav"
+                }
+              ]
             },
             {
-              "character": "魯莽",
-              "jyutping": "lou5 mong5",
-              "audioFile": "asset/unit5/魯莽.wav"
+              "title": "1+5",
+              "items": [
+                {
+                  "character": "優雅",
+                  "jyutping": "jau1 ngaa5",
+                  "audioFile": "asset/unit5/優雅.wav"
+                },
+                {
+                  "character": "温暖",
+                  "jyutping": "wan1 nyun5",
+                  "audioFile": "asset/unit5/温暖.wav"
+                },
+                {
+                  "character": "風雨",
+                  "jyutping": "fung1 jyu5",
+                  "audioFile": "asset/unit5/風雨.wav"
+                }
+              ]
             },
             {
-              "character": "馬尾",
-              "jyutping": "maa5 mei5",
-              "audioFile": "asset/unit5/馬尾.wav"
+              "title": "5+2",
+              "items": [
+                {
+                  "character": "勇敢",
+                  "jyutping": "jung5 gam2",
+                  "audioFile": "asset/unit5/勇敢.wav"
+                },
+                {
+                  "character": "了解",
+                  "jyutping": "liu5 gaai2",
+                  "audioFile": "asset/unit5/了解.wav"
+                },
+                {
+                  "character": "敏感",
+                  "jyutping": "man5 gam2",
+                  "audioFile": "asset/unit5/敏感.wav"
+                }
+              ]
             },
             {
-              "character": "領先",
-              "jyutping": "ling5 sin1",
-              "audioFile": "asset/unit5/領先.wav"
+              "title": "2+5",
+              "items": [
+                {
+                  "character": "展覽",
+                  "jyutping": "zin2 laam5",
+                  "audioFile": "asset/unit5/展覽.wav"
+                },
+                {
+                  "character": "小鳥",
+                  "jyutping": "siu2 niu5",
+                  "audioFile": "asset/unit5/小鳥.wav"
+                },
+                {
+                  "character": "口吻",
+                  "jyutping": "hau2 man5",
+                  "audioFile": "asset/unit5/口吻.wav"
+                }
+              ]
             },
             {
-              "character": "野豬",
-              "jyutping": "je5 zyu1",
-              "audioFile": "asset/unit5/野豬.wav"
+              "title": "5+3",
+              "items": [
+                {
+                  "character": "挽救",
+                  "jyutping": "waan5 gau3",
+                  "audioFile": "asset/unit5/挽救.wav"
+                },
+                {
+                  "character": "軟化",
+                  "jyutping": "jyun5 faa3",
+                  "audioFile": "asset/unit5/軟化.wav"
+                },
+                {
+                  "character": "猛獸",
+                  "jyutping": "maang5 sau3",
+                  "audioFile": "asset/unit5/猛獸.wav"
+                }
+              ]
             },
             {
-              "character": "了解",
-              "jyutping": "liu5 gaai2",
-              "audioFile": "asset/unit5/了解.wav"
+              "title": "3+5",
+              "items": [
+                {
+                  "character": "過癮",
+                  "jyutping": "gwo3 jan5",
+                  "audioFile": "asset/unit5/過癮.wav"
+                },
+                {
+                  "character": "快艇",
+                  "jyutping": "faai3 teng5",
+                  "audioFile": "asset/unit5/快艇.wav"
+                },
+                {
+                  "character": "器皿",
+                  "jyutping": "hei3 ming5",
+                  "audioFile": "asset/unit5/器皿.wav"
+                }
+              ]
             },
             {
-              "character": "敏感",
-              "jyutping": "man5 gam2",
-              "audioFile": "asset/unit5/敏感.wav"
+              "title": "5+4",
+              "items": [
+                {
+                  "character": "友情",
+                  "jyutping": "jau5 cing4",
+                  "audioFile": "asset/unit5/友情.wav"
+                },
+                {
+                  "character": "儲存",
+                  "jyutping": "cyu5 cyun4",
+                  "audioFile": "asset/unit5/儲存.wav"
+                },
+                {
+                  "character": "偶然",
+                  "jyutping": "ngau5 jin4",
+                  "audioFile": "asset/unit5/偶然.wav"
+                }
+              ]
             },
             {
-              "character": "挽救",
-              "jyutping": "waan5 gau3",
-              "audioFile": "asset/unit5/挽救.wav"
+              "title": "4+5",
+              "items": [
+                {
+                  "character": "行李",
+                  "jyutping": "hang4 lei5",
+                  "audioFile": "asset/unit5/行李.wav"
+                },
+                {
+                  "character": "牛腩",
+                  "jyutping": "ngau4 naam5",
+                  "audioFile": "asset/unit5/牛腩.wav"
+                },
+                {
+                  "character": "煩惱",
+                  "jyutping": "faan4 nou5",
+                  "audioFile": "asset/unit5/煩惱.wav"
+                }
+              ]
             },
             {
-              "character": "軟化",
-              "jyutping": "jyun5 faa3",
-              "audioFile": "asset/unit5/軟化.wav"
+              "title": "5+6",
+              "items": [
+                {
+                  "character": "冷淡",
+                  "jyutping": "laang5 daam6",
+                  "audioFile": "asset/unit5/冷淡.wav"
+                },
+                {
+                  "character": "偉大",
+                  "jyutping": "wai5 daai6",
+                  "audioFile": "asset/unit5/偉大.wav"
+                },
+                {
+                  "character": "網站",
+                  "jyutping": "mong5 zaam6",
+                  "audioFile": "asset/unit5/網站.wav"
+                }
+              ]
             },
             {
-              "character": "儲存",
-              "jyutping": "cyu5 cyun4",
-              "audioFile": "asset/unit5/儲存.wav"
-            },
-            {
-              "character": "偶然",
-              "jyutping": "ngau5 jin4",
-              "audioFile": "asset/unit5/偶然.wav"
-            },
-            {
-              "character": "冷淡",
-              "jyutping": "laang5 daam6",
-              "audioFile": "asset/unit5/冷淡.wav"
-            },
-            {
-              "character": "偉大",
-              "jyutping": "wai5 daai6",
-              "audioFile": "asset/unit5/偉大.wav"
-            },
-            {
-              "character": "温暖",
-              "jyutping": "wan1 nyun5",
-              "audioFile": "asset/unit5/温暖.wav"
-            },
-            {
-              "character": "風雨",
-              "jyutping": "fung1 jyu5",
-              "audioFile": "asset/unit5/風雨.wav"
-            },
-            {
-              "character": "展覽",
-              "jyutping": "zin2 laam5",
-              "audioFile": "asset/unit5/展覽.wav"
-            },
-            {
-              "character": "小鳥",
-              "jyutping": "siu2 niu5",
-              "audioFile": "asset/unit5/小鳥.wav"
-            },
-            {
-              "character": "快艇",
-              "jyutping": "faai3 teng5",
-              "audioFile": "asset/unit5/快艇.wav"
-            },
-            {
-              "character": "器皿",
-              "jyutping": "hei3 ming5",
-              "audioFile": "asset/unit5/器皿.wav"
-            },
-            {
-              "character": "行李",
-              "jyutping": "hang4 lei5",
-              "audioFile": "asset/unit5/行李.wav"
-            },
-            {
-              "character": "牛腩",
-              "jyutping": "ngau4 naam5",
-              "audioFile": "asset/unit5/牛腩.wav"
-            },
-            {
-              "character": "伴舞",
-              "jyutping": "bun6 mou5",
-              "audioFile": "asset/unit5/伴舞.wav"
-            },
-            {
-              "character": "廟宇",
-              "jyutping": "miu6 jyu5",
-              "audioFile": "asset/unit5/廟宇.wav"
+              "title": "6+5",
+              "items": [
+                {
+                  "character": "糯米",
+                  "jyutping": "no6 mai5",
+                  "audioFile": "asset/unit5/糯米.wav"
+                },
+                {
+                  "character": "伴舞",
+                  "jyutping": "bun6 mou5",
+                  "audioFile": "asset/unit5/伴舞.wav"
+                },
+                {
+                  "character": "廟宇",
+                  "jyutping": "miu6 jyu5",
+                  "audioFile": "asset/unit5/廟宇.wav"
+                }
+              ]
             }
           ]
         },

@@ -13,6 +13,15 @@ for _, row in word_df.iterrows():
     if pd.notna(row['Honzi']) and pd.notna(row['Jyutping']):
         word_dict[str(row['Honzi']).strip()] = str(row['Jyutping']).strip()
 
+def get_tone_combo(jyutping):
+    tones = []
+    for s in jyutping.split():
+        if s and s[-1].isdigit():
+            tones.append(s[-1])
+        else:
+            tones.append('?')
+    return "+".join(tones)
+
 lessons = []
 
 for _, row in struct2_df.iterrows():
@@ -62,20 +71,49 @@ for _, row in struct2_df.iterrows():
             "items": items
         })
     elif module_type == 'Prac_Disyl':
-        items = []
+        unit_orders = {
+            1: ['1+1', '2+2', '1+2', '2+1'],
+            2: ['4+4', '4+1', '1+4', '4+2', '2+4'],
+            3: ['3+3', '3+1', '1+3', '3+2', '2+3', '3+4', '4+3'],
+            4: ['6+6', '6+1', '1+6', '6+2', '2+6', '6+3', '3+6', '6+4', '4+6'],
+            5: ['5+5', '5+1', '1+5', '5+2', '2+5', '5+3', '3+5', '5+4', '4+5', '5+6', '6+5']
+        }
+        order = unit_orders.get(unit, [])
+        from collections import defaultdict
+        groups_dict = defaultdict(list)
+        
         for word in data.split('|'):
             word = word.strip()
             if word:
-                items.append({
+                jp = word_dict.get(word, "Unknown")
+                combo = get_tone_combo(jp)
+                groups_dict[combo].append({
                     "character": word,
-                    "jyutping": word_dict.get(word, "Unknown"),
+                    "jyutping": jp,
                     "audioFile": f"asset/unit{unit}/{word}.wav"
                 })
+        
+        group_list = []
+        for k in order:
+            if k in groups_dict:
+                group_list.append({
+                    "title": k,
+                    "items": groups_dict[k]
+                })
+                
+        # remaining groups not in order
+        for k in sorted(groups_dict.keys()):
+            if k not in order:
+                group_list.append({
+                    "title": k,
+                    "items": groups_dict[k]
+                })
+
         current_lesson['modules'].append({
             "type": "AudioPractice",
             "subType": module_type,
             "title": module_c,
-            "items": items
+            "groups": group_list
         })
     elif module_type == 'Quiz':
         options = []
@@ -159,7 +197,7 @@ for _, row in struct2_df.iterrows():
         current_lesson['modules'].append({
             "type": "Colour_MC",
             "title": module_c,
-            "question": "What is the picture associated with the colouring game?",
+            "question": "答案",
             "options": options,
             "correctAnswer": correct_idx
         })
