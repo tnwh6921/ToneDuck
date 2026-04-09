@@ -805,27 +805,9 @@
           ],
           "distinct_items": [
             {
-              "character": "早",
-              "jyutping": "zou2",
-              "audioFile": "asset/unit2/早.wav",
-              "tone": 2
-            },
-            {
               "character": "三",
               "jyutping": "saam1",
               "audioFile": "asset/unit2/三.wav",
-              "tone": 1
-            },
-            {
-              "character": "走",
-              "jyutping": "zau2",
-              "audioFile": "asset/unit2/走.wav",
-              "tone": 2
-            },
-            {
-              "character": "安",
-              "jyutping": "on1",
-              "audioFile": "asset/unit2/安.wav",
               "tone": 1
             },
             {
@@ -835,10 +817,28 @@
               "tone": 4
             },
             {
+              "character": "走",
+              "jyutping": "zau2",
+              "audioFile": "asset/unit2/走.wav",
+              "tone": 2
+            },
+            {
               "character": "留",
               "jyutping": "lau4",
               "audioFile": "asset/unit2/留.wav",
               "tone": 4
+            },
+            {
+              "character": "早",
+              "jyutping": "zou2",
+              "audioFile": "asset/unit2/早.wav",
+              "tone": 2
+            },
+            {
+              "character": "安",
+              "jyutping": "on1",
+              "audioFile": "asset/unit2/安.wav",
+              "tone": 1
             }
           ]
         },
@@ -1243,10 +1243,10 @@
               "tone": 3
             },
             {
-              "character": "完",
-              "jyutping": "jyun4",
-              "audioFile": "asset/unit3/完.wav",
-              "tone": 4
+              "character": "制",
+              "jyutping": "zai3",
+              "audioFile": "asset/unit3/制.wav",
+              "tone": 3
             },
             {
               "character": "他",
@@ -1255,22 +1255,22 @@
               "tone": 1
             },
             {
-              "character": "講",
-              "jyutping": "gong2",
-              "audioFile": "asset/unit3/講.wav",
-              "tone": 2
-            },
-            {
-              "character": "制",
-              "jyutping": "zai3",
-              "audioFile": "asset/unit3/制.wav",
-              "tone": 3
-            },
-            {
               "character": "提",
               "jyutping": "tai4",
               "audioFile": "asset/unit3/提.wav",
               "tone": 4
+            },
+            {
+              "character": "完",
+              "jyutping": "jyun4",
+              "audioFile": "asset/unit3/完.wav",
+              "tone": 4
+            },
+            {
+              "character": "講",
+              "jyutping": "gong2",
+              "audioFile": "asset/unit3/講.wav",
+              "tone": 2
             },
             {
               "character": "工",
@@ -1715,16 +1715,16 @@
           ],
           "distinct_items": [
             {
-              "character": "聯",
-              "jyutping": "lyun4",
-              "audioFile": "asset/unit4/聯.wav",
+              "character": "投",
+              "jyutping": "tau4",
+              "audioFile": "asset/unit4/投.wav",
               "tone": 4
             },
             {
-              "character": "瀉",
-              "jyutping": "se3",
-              "audioFile": "asset/unit4/瀉.wav",
-              "tone": 3
+              "character": "望",
+              "jyutping": "mong6",
+              "audioFile": "asset/unit4/望.wav",
+              "tone": 6
             },
             {
               "character": "案",
@@ -1739,22 +1739,22 @@
               "tone": 2
             },
             {
+              "character": "聯",
+              "jyutping": "lyun4",
+              "audioFile": "asset/unit4/聯.wav",
+              "tone": 4
+            },
+            {
               "character": "班",
               "jyutping": "baan1",
               "audioFile": "asset/unit4/班.wav",
               "tone": 1
             },
             {
-              "character": "望",
-              "jyutping": "mong6",
-              "audioFile": "asset/unit4/望.wav",
-              "tone": 6
-            },
-            {
-              "character": "投",
-              "jyutping": "tau4",
-              "audioFile": "asset/unit4/投.wav",
-              "tone": 4
+              "character": "瀉",
+              "jyutping": "se3",
+              "audioFile": "asset/unit4/瀉.wav",
+              "tone": 3
             },
             {
               "character": "萬",
@@ -2239,24 +2239,6 @@
           ],
           "distinct_items": [
             {
-              "character": "權",
-              "jyutping": "kyun4",
-              "audioFile": "asset/unit5/權.wav",
-              "tone": 4
-            },
-            {
-              "character": "妥",
-              "jyutping": "to5",
-              "audioFile": "asset/unit5/妥.wav",
-              "tone": 5
-            },
-            {
-              "character": "染",
-              "jyutping": "jim5",
-              "audioFile": "asset/unit5/染.wav",
-              "tone": 5
-            },
-            {
               "character": "何",
               "jyutping": "ho4",
               "audioFile": "asset/unit5/何.wav",
@@ -2269,6 +2251,12 @@
               "tone": 6
             },
             {
+              "character": "權",
+              "jyutping": "kyun4",
+              "audioFile": "asset/unit5/權.wav",
+              "tone": 4
+            },
+            {
               "character": "笑",
               "jyutping": "siu3",
               "audioFile": "asset/unit5/笑.wav",
@@ -2279,6 +2267,18 @@
               "jyutping": "gin6",
               "audioFile": "asset/unit5/件.wav",
               "tone": 6
+            },
+            {
+              "character": "染",
+              "jyutping": "jim5",
+              "audioFile": "asset/unit5/染.wav",
+              "tone": 5
+            },
+            {
+              "character": "妥",
+              "jyutping": "to5",
+              "audioFile": "asset/unit5/妥.wav",
+              "tone": 5
             }
           ]
         },

@@ -143,20 +143,17 @@ function renderAudioPractice(module, moduleIdx) {
             container.appendChild(groupTitle);
             
             const grid = document.createElement('div');
-            grid.style.display = 'flex';
+            grid.style.display = 'grid';
+            grid.style.gridTemplateColumns = 'repeat(4, minmax(0, 1fr))';
             grid.style.gap = 'var(--spacing-sm)';
-            grid.style.flexWrap = 'wrap';
-            grid.style.justifyContent = 'flex-start';
             grid.style.paddingBottom = '1rem';
             
             group.items.forEach((item, itemIdx) => {
                 const audioId = `m${moduleIdx}-g${groupIdx}-i${itemIdx}`;
                 const itemDiv = document.createElement('div');
                 itemDiv.className = 'audio-item';
-                itemDiv.style.flex = '1 1 150px';
-                itemDiv.style.minWidth = '150px';
-                itemDiv.style.maxWidth = '250px';
                 itemDiv.style.padding = '0.75rem';
+                itemDiv.style.overflow = 'hidden';
                 
                 itemDiv.innerHTML = buildAudioPracticeItemHTML(item, audioId, module, true);
                 grid.appendChild(itemDiv);
