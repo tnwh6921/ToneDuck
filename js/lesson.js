@@ -143,20 +143,22 @@ function renderAudioPractice(module, moduleIdx) {
             container.appendChild(groupTitle);
             
             const grid = document.createElement('div');
-            // Use flex to display horizontally in one row, allowing scrolling
             grid.style.display = 'flex';
-            grid.style.gap = 'var(--spacing-md)';
-            grid.style.overflowX = 'auto';
+            grid.style.gap = 'var(--spacing-sm)';
+            grid.style.flexWrap = 'wrap';
+            grid.style.justifyContent = 'flex-start';
             grid.style.paddingBottom = '1rem';
             
             group.items.forEach((item, itemIdx) => {
                 const audioId = `m${moduleIdx}-g${groupIdx}-i${itemIdx}`;
                 const itemDiv = document.createElement('div');
                 itemDiv.className = 'audio-item';
-                itemDiv.style.minWidth = '280px';
-                itemDiv.style.flexShrink = '0';
+                itemDiv.style.flex = '1 1 150px';
+                itemDiv.style.minWidth = '150px';
+                itemDiv.style.maxWidth = '250px';
+                itemDiv.style.padding = '0.75rem';
                 
-                itemDiv.innerHTML = buildAudioPracticeItemHTML(item, audioId, module);
+                itemDiv.innerHTML = buildAudioPracticeItemHTML(item, audioId, module, true);
                 grid.appendChild(itemDiv);
             });
             container.appendChild(grid);
@@ -180,36 +182,44 @@ function renderAudioPractice(module, moduleIdx) {
     return grid;
 }
 
-function buildAudioPracticeItemHTML(item, audioId, module) {
+function buildAudioPracticeItemHTML(item, audioId, module, isCompact = false) {
+    const headingSize = isCompact ? '1.5rem' : '2rem';
+    const waveHeight = isCompact ? '40px' : '60px';
+    const btnLabelPlay = isCompact ? '▶️' : '▶️ 播放示範';
+    const btnLabelRec = isCompact ? '🎤' : '🎤 對比錄音';
+    const btnStyle = isCompact ? 'padding: 0.4rem; justify-content: center;' : '';
+    const ctrlStyle = isCompact ? 'display:flex; flex-direction:row; gap:0.5rem; justify-content:center;' : '';
+    const marginClass = isCompact ? 'm-0' : '';
+
     return `
         <div class="audio-header">
-            <h4 style="font-size: 2rem;">${item.character}</h4>
-            <div class="audio-romanization">${item.jyutping}</div>
+            <h4 style="font-size: ${headingSize}; margin: 0;">${item.character}</h4>
+            <div class="audio-romanization" style="${isCompact ? 'font-size:0.9rem;' : ''}">${item.jyutping}</div>
         </div>
         <!-- Audio visualization container -->
         <div>
-            <div style="font-size:0.8rem; color:var(--text-secondary);">示範音調：</div>
-            <div class="waveform" id="waveform-${audioId}" data-src="${item.audioFile}" style="height: 60px; background: #eee; border-radius: 8px; border: 2px solid var(--primary-color);"></div>
+            <div style="font-size:0.75rem; color:var(--text-secondary); margin-top: 0.5rem;">示範音調：</div>
+            <div class="waveform" id="waveform-${audioId}" data-src="${item.audioFile}" style="height: ${waveHeight}; background: #eee; border-radius: 8px; border: 2px solid var(--primary-color);"></div>
         </div>
         ${module.subType !== 'Content_Mono' ? `
         <!-- Recording spectrogram container -->
         <div class="mt-1 hidden" id="spectrogram-container-${audioId}">
-             <div style="font-size:0.8rem; color:var(--text-secondary);">你的音調（錄音對比）：</div>
-             <div class="spectrogram" id="spectrogram-${audioId}" style="height: 60px; background: #eee; border-radius: 8px; border: 2px solid #FFA500;"></div>
+             <div style="font-size:0.75rem; color:var(--text-secondary);">你的音調：</div>
+             <div class="spectrogram" id="spectrogram-${audioId}" style="height: ${waveHeight}; background: #eee; border-radius: 8px; border: 2px solid #FFA500;"></div>
         </div>
         ` : ''}
         
-        <div class="audio-controls">
-            <button class="btn-icon" onclick="window.playAudio('${audioId}', '${item.audioFile}')">
-                ▶️ 播放示範
+        <div class="audio-controls" style="${ctrlStyle}">
+            <button class="btn-icon" style="${isCompact ? 'flex:1; ' + btnStyle : ''}" onclick="window.playAudio('${audioId}', '${item.audioFile}')">
+                ${btnLabelPlay}
             </button>
             ${module.subType !== 'Content_Mono' ? `
-            <button class="btn-icon secondary" onclick="window.recordAudio('${audioId}')">
-                🎤 對比錄音
+            <button class="btn-icon secondary" style="${isCompact ? 'flex:1; ' + btnStyle : ''}" onclick="window.recordAudio('${audioId}')">
+                ${btnLabelRec}
             </button>
             ` : ''}
         </div>
-        <div id="recording-status-${audioId}" class="hidden" style="margin-top: 0.5rem; font-size: 0.9rem;"></div>
+        <div id="recording-status-${audioId}" class="hidden" style="margin-top: 0.5rem; font-size: 0.8rem;"></div>
     `;
 }
 
