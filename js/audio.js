@@ -304,9 +304,11 @@ export class AudioPlayer {
                 
                 // Moved playback button outside spectrogram so it doesn't block
                 const playBtn = document.createElement('button');
-                playBtn.className = 'btn-icon secondary';
+                playBtn.className = 'btn-icon';
+                playBtn.style.backgroundColor = '#F3AB63';
                 playBtn.style.color = 'white';
                 playBtn.style.width = '100%'; // Spans correctly under
+                playBtn.style.justifyContent = 'center';
                 playBtn.innerHTML = '🎧';
                 playBtn.onclick = () => {
                     if (this.recordWavesurfers[audioId]) {

@@ -168,7 +168,7 @@ for _, row in struct2_df.iterrows():
         current_lesson['modules'].append({
             "type": "Quiz",
             "title": module_c,
-            "question": "ä»¥ä¸‹å“ªå€‹å­—çš„è²èª¿å’Œå…¶ä»–ä¸ä¸€æ¨£ï¼Ÿ",
+            "question": "以下哪個字的聲調和其他字不一樣？",
             "options": options,
             "correctAnswer": correct_idx
         })
@@ -231,7 +231,7 @@ for _, row in struct2_df.iterrows():
         current_lesson['modules'].append({
             "type": "Colour_MC",
             "title": module_c,
-            "question": "ç­”æ¡ˆ",
+            "question": "以上的圖案是：",
             "options": options,
             "correctAnswer": correct_idx
         })
