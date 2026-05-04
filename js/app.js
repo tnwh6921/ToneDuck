@@ -2,10 +2,19 @@
 // Loads lesson cards on the home page
 
 import { loadLessonsData } from './data-loader.js';
+import { initLanguageToggle } from './translator.js';
+import { translateDOM } from './dom-translator.js';
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', async () => {
     await loadLessonCards();
+    
+    initLanguageToggle();
+    translateDOM(document.body);
+    
+    window.addEventListener('languageChanged', () => {
+        translateDOM(document.body);
+    });
 });
 
 // Load and display lesson cards on home page

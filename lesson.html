@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>單元 - 廣東話聲調學習</title>
+    <title>單元 - ToneDuck: 廣東話聲調練習平台</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <nav>
-                <a href="index.html" class="back-link">← 返回首頁</a>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <nav style="flex: 1;">
+                <a href="index.html" class="back-link">↵ 返回首頁</a>
             </nav>
-            <h1 id="lessonTitle">正在加載...</h1>
+            <div style="text-align: center; flex: 2;">
+                <div style="font-size: 1rem; color: var(--primary-color); font-weight: bold; margin-bottom: 0.2rem;">ToneDuck: 廣東話聲調練習平台</div>
+                <h1 id="lessonTitle" style="margin: 0;">正在加載...</h1>
+            </div>
+            <div style="flex: 1; display: flex; justify-content: flex-end;">
+                <div id="languageToggle" style="cursor: pointer; background: var(--primary-color); color: white; padding: 0.3rem 0.6rem; border-radius: var(--border-radius); font-weight: bold; font-family: sans-serif;">
+                    <span id="langTrad" style="opacity: 1; margin-right: 0.2rem;">繁</span>
+                    <span style="opacity: 0.5;">|</span>
+                    <span id="langSimp" style="opacity: 0.5; margin-left: 0.2rem;">简</span>
+                </div>
+            </div>
         </div>
     </header>
 

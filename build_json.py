@@ -1,6 +1,8 @@
+
 import pandas as pd
 import json
 import os
+import re
 
 file_path = 'epepep_structure.xlsx'
 xl = pd.ExcelFile(file_path)
@@ -22,13 +24,30 @@ def get_tone_combo(jyutping):
             tones.append('?')
     return "+".join(tones)
 
+def get_textgrid(unit):
+    tg_path = f'asset/unit{unit}/Unit{unit}.textgrid'
+    times = {}
+    if os.path.exists(tg_path):
+        with open(tg_path, 'r', encoding='utf-16') as f:
+            content = f.read()
+        for m in re.finditer(r'xmin\s*=\s*([\d\.]+)\s*xmax\s*=\s*([\d\.]+)\s*text\s*=\s*"([^"]+)"', content):
+            text = m.group(3).strip()
+            if text and text not in times:
+                times[text] = {"startTime": float(m.group(1)), "endTime": float(m.group(2))}
+    return times
+
 lessons = []
+textgrids = {}
 
 for _, row in struct2_df.iterrows():
     unit = row['Unit']
     if pd.isna(unit):
         continue
     unit = int(unit)
+    
+    if unit not in textgrids:
+        textgrids[unit] = get_textgrid(unit)
+    tg = textgrids[unit]
     
     while len(lessons) < unit:
         lessons.append({
@@ -59,11 +78,14 @@ for _, row in struct2_df.iterrows():
         items = []
         for char in data:
             if char.strip():
-                items.append({
+                item = {
                     "character": char,
                     "jyutping": word_dict.get(char, "Unknown"),
-                    "audioFile": f"asset/unit{unit}/{char}.wav"
-                })
+                    "audioFile": f"asset/unit{unit}/Unit{unit}.WAV"
+                }
+                if char in tg:
+                    item.update(tg[char])
+                items.append(item)
         current_lesson['modules'].append({
             "type": "AudioPractice",
             "subType": module_type,
@@ -87,11 +109,14 @@ for _, row in struct2_df.iterrows():
             if word:
                 jp = word_dict.get(word, "Unknown")
                 combo = get_tone_combo(jp)
-                groups_dict[combo].append({
+                item = {
                     "character": word,
                     "jyutping": jp,
-                    "audioFile": f"asset/unit{unit}/{word}.wav"
-                })
+                    "audioFile": f"asset/unit{unit}/Unit{unit}.WAV"
+                }
+                if word in tg:
+                    item.update(tg[word])
+                groups_dict[combo].append(item)
         
         group_list = []
         for k in order:
@@ -131,16 +156,19 @@ for _, row in struct2_df.iterrows():
             i += 1
                 
         for char in raw_options:
-            options.append({
+            item = {
                 "character": char,
                 "jyutping": word_dict.get(char, "Unknown"),
-                "audioFile": f"asset/unit{unit}/{char}.wav"
-            })
+                "audioFile": f"asset/unit{unit}/Unit{unit}.WAV"
+            }
+            if char in tg:
+                item.update(tg[char])
+            options.append(item)
             
         current_lesson['modules'].append({
             "type": "Quiz",
             "title": module_c,
-            "question": "以下哪個字的聲調和其他不一樣？",
+            "question": "ä»¥ä¸‹å“ªå€‹å­—çš„è²èª¿å’Œå…¶ä»–ä¸ä¸€æ¨£ï¼Ÿ",
             "options": options,
             "correctAnswer": correct_idx
         })
@@ -160,12 +188,15 @@ for _, row in struct2_df.iterrows():
             if char.strip():
                 distp = word_dict.get(char, "Unknown")
                 tone = int(distp[-1]) if distp[-1].isdigit() else 0
-                distinct_items.append({
+                item = {
                     "character": char,
                     "jyutping": distp,
-                    "audioFile": f"asset/unit{unit}/{char}.wav",
+                    "audioFile": f"asset/unit{unit}/Unit{unit}.WAV",
                     "tone": tone
-                })
+                }
+                if char in tg:
+                    item.update(tg[char])
+                distinct_items.append(item)
         current_lesson['modules'].append({
             "type": "Colour_puzzle",
             "title": module_c,
@@ -188,16 +219,19 @@ for _, row in struct2_df.iterrows():
             i += 1
 
         for char in raw_options:
-            options.append({
+            item = {
                 "character": char,
                 "jyutping": word_dict.get(char, "Unknown"),
-                "audioFile": f"asset/unit{unit}/{char}.wav"
-            })
+                "audioFile": f"asset/unit{unit}/Unit{unit}.WAV"
+            }
+            if char in tg:
+                item.update(tg[char])
+            options.append(item)
 
         current_lesson['modules'].append({
             "type": "Colour_MC",
             "title": module_c,
-            "question": "答案",
+            "question": "ç­”æ¡ˆ",
             "options": options,
             "correctAnswer": correct_idx
         })

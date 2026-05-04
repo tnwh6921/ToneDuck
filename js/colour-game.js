@@ -131,7 +131,7 @@ export function renderColourPuzzle(module, idx) {
                 audioBtn.className = 'btn-icon secondary';
                 audioBtn.style.padding = '5px 10px';
                 audioBtn.style.fontSize = '0.8rem';
-                audioBtn.onclick = () => window.playAudio(`distinct-${idx}-${di}`, item.audioFile);
+                audioBtn.onclick = () => window.playAudio(`distinct-${idx}-${di}`, item.audioFile, item.startTime, item.endTime);
                 audioBtn.innerHTML = `▶️ 播放`;
                 
                 // Jyutping (hidden initially)
@@ -207,7 +207,7 @@ export function renderColourMC(module, idx) {
         audioBtn.style.width = '100%';
         audioBtn.onclick = (e) => {
             e.stopPropagation();
-            window.playAudio(`cq${idx}-o${index}`, option.audioFile);
+            window.playAudio(`cq${idx}-o${index}`, option.audioFile, option.startTime, option.endTime);
         };
         audioBtn.innerHTML = `▶️ 播放示範 (${option.character})`;
 

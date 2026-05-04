@@ -52,7 +52,7 @@ class Quiz {
             audioBtn.style.width = '100%';
             audioBtn.onclick = (e) => {
                 e.stopPropagation();
-                window.playAudio(`q${this.id}-o${index}`, option.audioFile);
+                window.playAudio(`q${this.id}-o${index}`, option.audioFile, option.startTime, option.endTime);
             };
             audioBtn.innerHTML = `▶️ 播放示範 (${option.character})`;
             

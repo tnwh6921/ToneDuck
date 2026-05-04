@@ -5,6 +5,8 @@ import { loadLessonsData } from './data-loader.js';
 import { createQuiz } from './quiz.js';
 import { renderColourColour, renderColourPuzzle, renderColourMC } from './colour-game.js';
 import { AudioPlayer } from './audio.js';
+import { initLanguageToggle } from './translator.js';
+import { translateDOM } from './dom-translator.js';
 
 let currentLesson = null;
 let currentLessonNumber = 1;
@@ -12,7 +14,7 @@ let totalLessons = 5;
 const audioPlayer = new AudioPlayer();
 
 // Expose functions globally for inline handlers
-window.playAudio = (audioId, src) => audioPlayer.playAudio(audioId, src);
+window.playAudio = (audioId, src, startTime, endTime) => audioPlayer.playAudio(audioId, src, startTime, endTime);
 window.recordAudio = (audioId) => audioPlayer.recordAudio(audioId);
 window.playSequence = (audioIds, srcs) => audioPlayer.playSequence(audioIds, srcs);
 window.initWavesurfers = () => audioPlayer.initializeWavesurfers();
@@ -23,6 +25,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     await loadLesson(currentLessonNumber);
     setupNavigation();
+    initLanguageToggle();
+    
+    window.addEventListener('languageChanged', () => {
+        translateDOM(document.body);
+    });
 });
 
 async function loadLesson(lessonNumber) {
@@ -49,7 +56,7 @@ function renderLesson() {
     if (!currentLesson) return;
     
     document.getElementById('lessonTitle').textContent = currentLesson.title || `單元 ${currentLessonNumber}`;
-    document.title = `${currentLesson.title} - 廣東話聲調學習`;
+    document.title = `${currentLesson.title} - ToneDuck: 廣東話聲調練習平台`;
     
     const container = document.getElementById('dynamicContent');
     container.innerHTML = '';
@@ -124,8 +131,7 @@ function renderLesson() {
                     break;
             }
         });
-    }updateNavigationButtons();
-    
+    }updateNavigationButtons();    translateDOM(document.body);    
     // Initialize standard wavesurfers globally for rendered elements
     setTimeout(() => audioPlayer.initializeWavesurfers(), 200);
 }
@@ -186,7 +192,7 @@ function renderAudioPractice(module, moduleIdx) {
 
 function buildAudioPracticeItemHTML(item, audioId, module, isCompact = false) {
     const headingSize = isCompact ? '1.5rem' : '2rem';
-    const waveHeight = isCompact ? '40px' : '60px';
+    const waveHeight = isCompact ? '120px' : '180px';
     const btnLabelPlay = isCompact ? '▶️' : '▶️ 播放示範';
     const btnLabelRec = isCompact ? '🎤' : '🎤 對比錄音';
     const btnStyle = isCompact ? 'padding: 0.4rem; justify-content: center;' : '';
@@ -201,7 +207,7 @@ function buildAudioPracticeItemHTML(item, audioId, module, isCompact = false) {
         <!-- Audio visualization container -->
         <div>
             <div style="font-size:0.75rem; color:var(--text-secondary); margin-top: 0.5rem;">示範音調：</div>
-            <div class="waveform" id="waveform-${audioId}" data-src="${item.audioFile}" style="height: ${waveHeight}; background: #eee; border-radius: 8px; border: 2px solid var(--primary-color);"></div>
+            <div class="waveform" id="waveform-${audioId}" data-src="${item.audioFile}" data-start="${item.startTime !== undefined ? item.startTime : ''}" data-end="${item.endTime !== undefined ? item.endTime : ''}" style="height: ${waveHeight}; background: #eee; border-radius: 8px; border: 2px solid var(--primary-color);"></div>
         </div>
         ${module.subType !== 'Content_Mono' ? `
         <!-- Recording spectrogram container -->
@@ -212,7 +218,7 @@ function buildAudioPracticeItemHTML(item, audioId, module, isCompact = false) {
         ` : ''}
         
         <div class="audio-controls" style="${ctrlStyle}">
-            <button class="btn-icon" style="${isCompact ? 'flex:1; ' + btnStyle : ''}" onclick="window.playAudio('${audioId}', '${item.audioFile}')">
+            <button class="btn-icon" style="${isCompact ? 'flex:1; ' + btnStyle : ''}" onclick="window.playAudio('${audioId}', '${item.audioFile}', ${item.startTime !== undefined ? item.startTime : 'null'}, ${item.endTime !== undefined ? item.endTime : 'null'})">
                 ${btnLabelPlay}
             </button>
             ${module.subType !== 'Content_Mono' ? `
