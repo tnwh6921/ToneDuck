@@ -142,7 +142,7 @@ export function renderColourPuzzle(module, idx) {
                 specWrapper.style.marginTop = '5px';
                 specWrapper.dataset.html = `
                     <div style="font-size:0.7rem; color:var(--text-secondary); text-align:left;">圖譜及音高：</div>
-                    <div class="waveform" id="waveform-distinct-${idx}-${di}" data-src="${item.audioFile}" style="height: 40px; background: #eee; border-radius: 4px; border: 1px solid var(--primary-color);"></div>
+                    <div class="waveform" id="waveform-distinct-${idx}-${di}" data-src="${item.audioFile}" data-start="${item.startTime !== undefined ? item.startTime : ''}" data-end="${item.endTime !== undefined ? item.endTime : ''}" style="height: 40px; background: #eee; border-radius: 4px; border: 1px solid var(--primary-color);"></div>
                 `;
                 
                 wordBox.appendChild(charSpan);
@@ -185,7 +185,7 @@ export function renderColourMC(module, idx) {
 
         specWrapper.dataset.html = `
             <div style="font-size:0.7rem; color:var(--text-secondary); text-align:left;">圖譜及音高：</div>
-            <div class="waveform" id="waveform-cq${idx}-o${index}" data-src="${option.audioFile}" style="height: 60px; background: #eee; border-radius: 8px; border: 2px solid var(--primary-color);"></div>
+            <div class="waveform" id="waveform-cq${idx}-o${index}" data-src="${option.audioFile}" data-start="${option.startTime !== undefined ? option.startTime : ''}" data-end="${option.endTime !== undefined ? option.endTime : ''}" style="height: 60px; background: #eee; border-radius: 8px; border: 2px solid var(--primary-color);"></div>
         `;
 
         const audioBtn = document.createElement('button');
