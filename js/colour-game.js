@@ -63,20 +63,13 @@ export function renderColourPuzzle(module, idx) {
     container.appendChild(h3);
 
     const boardDiv = document.createElement('div');
-    boardDiv.style.display = 'grid';
-    boardDiv.style.gridTemplateColumns = 'repeat(8, 40px)';
-    boardDiv.style.gridTemplateRows = 'repeat(8, 40px)';
-    boardDiv.style.gap = '2px';
-    boardDiv.style.margin = '20px 0';
-    boardDiv.style.justifyContent = 'start';
+    boardDiv.className = 'colour-board';
     
     const palette = window.colourGamePalette || [];
     
     module.board.forEach((char, i) => {
         const cell = document.createElement('button');
         cell.className = 'btn-icon';
-        cell.style.width = '40px';
-        cell.style.height = '40px';
         cell.style.padding = '0';
         cell.style.display = 'flex';
         cell.style.alignItems = 'center';
@@ -175,21 +168,14 @@ export function renderColourMC(module, idx) {
     quizDiv.appendChild(question);
 
     const optionsContainer = document.createElement('div');
-    optionsContainer.className = 'quiz-options';
-    optionsContainer.style.display = 'grid';
-    optionsContainer.style.gridTemplateColumns = 'repeat(auto-fit, minmax(200px, 1fr))';
-    optionsContainer.style.gap = 'var(--spacing-md)';
+    optionsContainer.className = 'quiz-options quiz-options-grid';
 
     let isSubmitted = false;
 
     module.options.forEach((option, index) => {
         const optWrapper = document.createElement('div');
-        optWrapper.className = 'quiz-option';
+        optWrapper.className = 'quiz-option quiz-option-card';
         optWrapper.id = `cquiz-${idx}-option-${index}`;
-        optWrapper.style.display = 'flex';
-        optWrapper.style.flexDirection = 'column';
-        optWrapper.style.alignItems = 'center';
-        optWrapper.style.gap = '10px';
 
         const specWrapper = document.createElement('div');
         specWrapper.id = `cquiz-${idx}-spec-${index}`;
@@ -203,20 +189,15 @@ export function renderColourMC(module, idx) {
         `;
 
         const audioBtn = document.createElement('button');
-        audioBtn.className = 'btn-icon secondary';
-        audioBtn.style.width = '100%';
+        audioBtn.className = 'btn-icon secondary quiz-audio-btn';
         audioBtn.onclick = (e) => {
             e.stopPropagation();
             window.playAudio(`cq${idx}-o${index}`, option.audioFile, option.startTime, option.endTime);
         };
-        audioBtn.innerHTML = `▶️`;
+        audioBtn.innerHTML = `🎧`;
 
         const selectBtn = document.createElement('button');
-        selectBtn.className = 'btn-icon';
-        selectBtn.style.width = '100%';
-        selectBtn.style.fontSize = '1.5rem';
-        selectBtn.style.backgroundColor = '#F3AB63';
-        selectBtn.style.color = 'var(--text-primary)';
+        selectBtn.className = 'btn-icon quiz-choice-btn';
         selectBtn.textContent = option.character;
         selectBtn.id = `cquiz-${idx}-selectbtn-${index}`;
 

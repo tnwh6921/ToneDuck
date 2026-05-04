@@ -149,17 +149,12 @@ function renderAudioPractice(module, moduleIdx) {
             container.appendChild(groupTitle);
             
             const grid = document.createElement('div');
-            grid.style.display = 'grid';
-            grid.style.gridTemplateColumns = 'repeat(4, minmax(0, 1fr))';
-            grid.style.gap = 'var(--spacing-sm)';
-            grid.style.paddingBottom = '1rem';
+            grid.className = 'audio-practice-grid';
             
             group.items.forEach((item, itemIdx) => {
                 const audioId = `m${moduleIdx}-g${groupIdx}-i${itemIdx}`;
                 const itemDiv = document.createElement('div');
-                itemDiv.className = 'audio-item';
-                itemDiv.style.padding = '0.75rem';
-                itemDiv.style.overflow = 'hidden';
+                itemDiv.className = 'audio-item audio-practice-item';
                 
                 itemDiv.innerHTML = buildAudioPracticeItemHTML(item, audioId, module, true);
                 grid.appendChild(itemDiv);
@@ -170,18 +165,13 @@ function renderAudioPractice(module, moduleIdx) {
     }
 
     const grid = document.createElement('div');
-    grid.style.display = 'grid';
-    grid.style.gridTemplateColumns = 'repeat(4, minmax(0, 1fr))';
-    grid.style.gap = 'var(--spacing-sm)';
-    grid.style.paddingBottom = '1rem';
+    grid.className = 'audio-practice-grid';
     
     // If double character (Prac_Disyl), the audio visualization will show for the combination
     (module.items || []).forEach((item, itemIdx) => {
         const audioId = `m${moduleIdx}-i${itemIdx}`;
         const itemDiv = document.createElement('div');
-        itemDiv.className = 'audio-item';
-        itemDiv.style.padding = '0.75rem';
-        itemDiv.style.overflow = 'hidden';
+        itemDiv.className = 'audio-item audio-practice-item';
         
         itemDiv.innerHTML = buildAudioPracticeItemHTML(item, audioId, module, true);
         grid.appendChild(itemDiv);

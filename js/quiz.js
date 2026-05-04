@@ -20,19 +20,12 @@ class Quiz {
         quizDiv.appendChild(question);
         
         const optionsContainer = document.createElement('div');
-        optionsContainer.className = 'quiz-options';
-        optionsContainer.style.display = 'grid';
-        optionsContainer.style.gridTemplateColumns = 'repeat(auto-fit, minmax(200px, 1fr))';
-        optionsContainer.style.gap = 'var(--spacing-md)';
+        optionsContainer.className = 'quiz-options quiz-options-grid';
         
         this.data.options.forEach((option, index) => {
             const optWrapper = document.createElement('div');
-            optWrapper.className = 'quiz-option';
+            optWrapper.className = 'quiz-option quiz-option-card';
             optWrapper.id = `quiz-${this.id}-option-${index}`;
-            optWrapper.style.display = 'flex';
-            optWrapper.style.flexDirection = 'column';
-            optWrapper.style.alignItems = 'center';
-            optWrapper.style.gap = '10px';
             
             // Add spectrogram container for options (Req 6)
             const specWrapper = document.createElement('div');
@@ -48,8 +41,7 @@ class Quiz {
             `;
             
             const audioBtn = document.createElement('button');
-            audioBtn.className = 'btn-icon secondary';
-            audioBtn.style.width = '100%';
+            audioBtn.className = 'btn-icon secondary quiz-audio-btn';
             audioBtn.onclick = (e) => {
                 e.stopPropagation();
                 window.playAudio(`q${this.id}-o${index}`, option.audioFile, option.startTime, option.endTime);
@@ -57,11 +49,7 @@ class Quiz {
             audioBtn.innerHTML = `🎧`;
             
             const selectBtn = document.createElement('button');
-            selectBtn.className = 'btn-icon';
-            selectBtn.style.width = '100%';
-            selectBtn.style.fontSize = '1.5rem';
-            selectBtn.style.backgroundColor = '#F3AB63';
-            selectBtn.style.color = 'var(--text-primary)';
+            selectBtn.className = 'btn-icon quiz-choice-btn';
             selectBtn.textContent = option.character;
             selectBtn.onclick = () => this.selectOption(index);
             selectBtn.id = `quiz-${this.id}-selectbtn-${index}`;

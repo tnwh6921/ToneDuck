@@ -13,6 +13,8 @@
     --text-primary: #3D405B;         /* Warm dark gray */
     --text-secondary: #6B6D7A;
     --border-color: #E8DDD3;         /* Warm beige */
+    --shadow-soft: 0 10px 28px rgba(61, 64, 91, 0.08);
+    --shadow-hover: 0 14px 34px rgba(224, 122, 95, 0.16);
     --success: #81B29A;
     --error: #D4727B;
     --warning: #F2CC8F;
@@ -45,12 +47,13 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     font-size: 16px;
+    -webkit-text-size-adjust: 100%;
 }
 
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 var(--spacing-sm);
+    padding: 0 clamp(1rem, 4vw, var(--spacing-lg));
 }
 
 /* ===========================
@@ -89,12 +92,65 @@ p {
 header {
     background-color: var(--card-background);
     border-bottom: 3px solid var(--primary-color);
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-md) 0;
     margin-bottom: var(--spacing-xl);
 }
 
 header h1 {
-    margin-bottom: var(--spacing-xs);
+    margin: 0;
+}
+
+.lesson-header {
+    display: grid;
+    grid-template-columns: minmax(7rem, 1fr) minmax(0, 2fr) minmax(5rem, 1fr);
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.lesson-header-nav {
+    min-width: 0;
+}
+
+.lesson-header-title {
+    min-width: 0;
+    text-align: center;
+}
+
+.site-kicker {
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.lesson-header-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.language-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: white;
+    background: var(--primary-color);
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 700;
+    min-height: 2.4rem;
+    padding: 0.35rem 0.75rem;
+    box-shadow: 0 6px 14px rgba(224, 122, 95, 0.2);
+    user-select: none;
+}
+
+.language-toggle:focus-visible {
+    outline: 3px solid rgba(129, 178, 154, 0.45);
+    outline-offset: 3px;
+}
+
+.language-divider {
+    opacity: 0.55;
 }
 
 .subtitle {
@@ -103,11 +159,12 @@ header h1 {
 }
 
 .back-link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     color: var(--primary-color);
     text-decoration: none;
-    font-weight: 500;
-    margin-bottom: var(--spacing-md);
+    font-weight: 700;
+    min-height: 2.4rem;
     transition: color 0.3s ease;
 }
 
@@ -200,11 +257,26 @@ main {
     margin-bottom: var(--spacing-xl);
 }
 
+.section h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.section h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--border-color), transparent);
+}
+
 .content-box {
-    background-color: var(--card-background);
-    padding: var(--spacing-lg);
-    border-radius: var(--border-radius);
-    border: 2px solid var(--border-color);
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
 }
 
 .section-hint {
@@ -219,15 +291,40 @@ main {
 
 .audio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: var(--spacing-md);
 }
 
 .audio-item {
     background-color: var(--card-background);
-    border: 2px solid var(--border-color);
+    border: 1px solid rgba(232, 221, 211, 0.9);
     border-radius: var(--border-radius);
     padding: var(--spacing-md);
+    min-width: 0;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.audio-item:hover {
+    border-color: rgba(224, 122, 95, 0.45);
+    box-shadow: 0 10px 22px rgba(61, 64, 91, 0.06);
+    transform: translateY(-2px);
+}
+
+.audio-practice-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(140px, 1fr));
+    gap: var(--spacing-sm);
+    padding-bottom: 1rem;
+}
+
+.audio-practice-item {
+    overflow: hidden;
+    padding: 0.75rem;
+}
+
+.audio-practice-item .audio-header h4 {
+    overflow-wrap: anywhere;
+    line-height: 1.1;
 }
 
 .audio-header {
@@ -258,12 +355,13 @@ main {
 
 .waveform {
     height: 60px;
-    background: linear-gradient(to right, var(--secondary-color) 0%, var(--primary-color) 100%);
+    background: linear-gradient(180deg, #fff 0%, #f7f3ee 100%);
     border-radius: 8px;
     margin: var(--spacing-sm) 0;
-    opacity: 0.3;
+    opacity: 1;
     position: relative;
     overflow: hidden;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.55);
 }
 
 .waveform.active {
@@ -281,11 +379,12 @@ main {
    =========================== */
 
 .quiz {
-    background-color: var(--card-background);
-    border: 2px solid var(--border-color);
-    border-radius: var(--border-radius);
-    padding: var(--spacing-lg);
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: var(--spacing-md) 0;
     margin-bottom: var(--spacing-lg);
+    box-shadow: none;
 }
 
 .quiz-header {
@@ -312,6 +411,7 @@ main {
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: var(--spacing-lg);
+    max-width: 56rem;
 }
 
 .quiz-options {
@@ -320,19 +420,27 @@ main {
     gap: var(--spacing-sm);
 }
 
+.quiz-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    gap: var(--spacing-md);
+}
+
 .quiz-option {
-    background-color: var(--background);
-    border: 2px solid var(--border-color);
+    background-color: rgba(255, 255, 255, 0.76);
+    border: 1px solid rgba(232, 221, 211, 0.9);
     border-radius: var(--border-radius);
     padding: var(--spacing-md);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
     font-size: 1rem;
 }
 
 .quiz-option:hover {
-    border-color: var(--primary-color);
-    background-color: rgba(224, 122, 95, 0.05);
+    border-color: rgba(129, 178, 154, 0.7);
+    background-color: white;
+    box-shadow: 0 10px 22px rgba(61, 64, 91, 0.07);
+    transform: translateY(-2px);
 }
 
 .quiz-option.selected {
@@ -342,17 +450,68 @@ main {
 
 .quiz-option.correct {
     border-color: var(--success);
-    background-color: rgba(129, 178, 154, 0.1);
+    background-color: rgba(129, 178, 154, 0.14);
 }
 
 .quiz-option.incorrect {
     border-color: var(--error);
-    background-color: rgba(212, 114, 123, 0.1);
+    background-color: rgba(212, 114, 123, 0.08);
 }
 
 .quiz-option:disabled {
     cursor: not-allowed;
     opacity: 0.7;
+}
+
+.quiz-option-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.65rem;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.quiz-choice-btn {
+    width: 100%;
+    min-height: 4rem;
+    background: #fff;
+    color: var(--primary-color);
+    border: 1px solid rgba(224, 122, 95, 0.35);
+    box-shadow: none;
+    font-size: 1.65rem;
+    font-weight: 800;
+}
+
+.quiz-option-card.correct .quiz-choice-btn {
+    border-color: var(--success);
+    background: rgba(129, 178, 154, 0.14);
+    color: #4f806a;
+}
+
+.quiz-option-card.incorrect .quiz-choice-btn {
+    border-color: var(--error);
+    background: rgba(212, 114, 123, 0.08);
+    color: var(--error);
+}
+
+.quiz-choice-btn:hover {
+    background: rgba(224, 122, 95, 0.07);
+    color: #c96a51;
+    box-shadow: none;
+}
+
+.quiz-choice-btn:disabled {
+    background: rgba(250, 249, 246, 0.9);
+    color: var(--text-secondary);
+    border-color: var(--border-color);
+}
+
+.quiz-audio-btn {
+    width: 100%;
+    min-height: 2.6rem;
+    box-shadow: none;
 }
 
 /* Matching Quiz */
@@ -438,6 +597,24 @@ main {
     border-left: 4px solid var(--error);
 }
 
+/* Fill-colour game */
+.colour-board {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 40px));
+    grid-template-rows: repeat(8, minmax(0, 40px));
+    gap: 2px;
+    inline-size: min(100%, 334px);
+    margin: 20px 0;
+    justify-content: start;
+}
+
+.colour-board button {
+    aspect-ratio: 1;
+    min-height: 0;
+    inline-size: 100%;
+    block-size: auto;
+}
+
 /* ===========================
    Buttons
    =========================== */
@@ -453,12 +630,18 @@ button {
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: var(--font-main);
+    min-height: 2.7rem;
 }
 
 button:hover {
     background-color: #c96a51;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(224, 122, 95, 0.3);
+}
+
+button:focus-visible {
+    outline: 3px solid rgba(129, 178, 154, 0.45);
+    outline-offset: 3px;
 }
 
 button:active {
@@ -493,6 +676,7 @@ button.outline:hover {
 .btn-icon {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: var(--spacing-xs);
 }
 
@@ -550,6 +734,34 @@ footer {
    =========================== */
 
 @media (max-width: 768px) {
+    header {
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .lesson-header {
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "title title"
+            "back language";
+        row-gap: var(--spacing-sm);
+    }
+
+    .lesson-header-title {
+        grid-area: title;
+    }
+
+    .lesson-header-nav {
+        grid-area: back;
+    }
+
+    .lesson-header-actions {
+        grid-area: language;
+    }
+
+    .site-kicker {
+        font-size: 0.9rem;
+    }
+
     h1 {
         font-size: 2rem;
     }
@@ -578,6 +790,16 @@ footer {
     .audio-grid {
         grid-template-columns: 1fr;
     }
+
+    .audio-practice-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .content-box,
+    .quiz,
+    .intro {
+        padding: var(--spacing-md);
+    }
 }
 
 @media (max-width: 480px) {
@@ -586,12 +808,46 @@ footer {
         --spacing-xl: 2rem;
     }
     
-    .container {
-        padding: 0 var(--spacing-sm);
-    }
-    
     h1 {
-        font-size: 1.75rem;
+        font-size: 1.55rem;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+    }
+
+    .audio-practice-grid {
+        gap: 0.75rem;
+    }
+
+    .audio-practice-item {
+        padding: 0.65rem;
+    }
+
+    .audio-practice-item .waveform,
+    .audio-practice-item .spectrogram {
+        height: 108px !important;
+    }
+
+    .audio-controls {
+        gap: 0.5rem;
+    }
+
+    button {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .colour-board {
+        grid-template-columns: repeat(8, minmax(0, 1fr));
+        grid-template-rows: repeat(8, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 340px) {
+    .audio-practice-grid {
+        grid-template-columns: 1fr;
     }
 }
 
