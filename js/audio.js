@@ -1,8 +1,7 @@
 // Audio Player and Recorder Module
-// Handles audio playback, recording, and visualization (Waveform/Spectrogram)
+// Handles audio playback, recording, and visualization (Waveform/Pitch curve)
 
 import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js';
-import Spectrogram from 'https://unpkg.com/wavesurfer.js@7/dist/plugins/spectrogram.esm.js';
 import { computePitchCurve, drawPitchCurve } from './pitch.js';
 import { getSlicedAudioBlobUrl } from './audio-slicer.js';
 
@@ -33,23 +32,21 @@ export class AudioPlayer {
         waveforms.forEach(async el => {
             const id = el.id.replace('waveform-', '');
             const src = el.getAttribute('data-src');
-            const dataStart = el.getAttribute('data-start');
-            const dataEnd = el.getAttribute('data-end');
+            const startStr = el.getAttribute('data-start');
+            const endStr = el.getAttribute('data-end');
             
             if (src && !this.wavesurfers[id]) {
-                const startTime = dataStart ? parseFloat(dataStart) : null;
-                const endTime = dataEnd ? parseFloat(dataEnd) : null;
-                let actualSrc = src;
+                this.wavesurfers[id] = 'loading'; // prevent double init
                 
-                // Pre-slice audio if we have bounds to avoid loading entire audio into UI
-                if (startTime !== null && endTime !== null) {
+                let finalUrl = src;
+                if (startStr && endStr && startStr !== 'null' && endStr !== 'null' && startStr !== '' && endStr !== '') {
                     try {
-                        actualSrc = await getSlicedAudioBlobUrl(src, startTime, endTime);
-                        // Clear the attributes so playAudio thinks it's a zero-indexed file now
-                        el.setAttribute('data-sliced', 'true');
-                    } catch(e) { console.warn("Failed to slice audio", e); }
+                        finalUrl = await getSlicedAudioBlobUrl(src, parseFloat(startStr), parseFloat(endStr));
+                    } catch (err) {
+                        console.error('Slicing failed:', err);
+                    }
                 }
-                
+
                 // Ensure container structure is right for overlaying pitch and axis
                 el.style.position = 'relative';
                 el.style.display = 'flex';
@@ -65,7 +62,7 @@ export class AudioPlayer {
                 yAxis.style.backgroundColor = 'rgba(255,255,255,0.7)';
                 yAxis.style.borderRight = '1px solid #ccc';
                 yAxis.style.zIndex = '15';
-                yAxis.innerHTML = '<span>400Hz</span><span>350Hz</span><span>300Hz</span><span>250Hz</span><span>200Hz</span><span>150Hz</span><span>100Hz</span><span>50Hz</span><span>0Hz</span>';
+                yAxis.innerHTML = [400, 350, 300, 250, 200, 150, 100, 50, 0].map(freq => `<span>${freq}Hz</span>`).join('');
                 el.appendChild(yAxis);
                 
                 const wavesurferContainer = document.createElement('div');
@@ -81,7 +78,7 @@ export class AudioPlayer {
                 canvas.style.width = '100%';
                 canvas.style.height = '100%';
                 canvas.style.pointerEvents = 'none'; // let clicks pass through to wavesurfer
-                canvas.style.zIndex = '10'; // ensure above spectrogram
+                canvas.style.zIndex = '10'; // ensure above graph
                 wavesurferContainer.appendChild(canvas);
                 
                 const ws = WaveSurfer.create({
@@ -89,15 +86,8 @@ export class AudioPlayer {
                     waveColor: 'transparent',
                     progressColor: 'rgba(0, 0, 0, 0.1)',
                     cursorColor: '#333',
-                    height: el.clientHeight || 180,
-                    plugins: [
-                        Spectrogram.create({
-                            labels: false,
-                            height: el.clientHeight || 180,
-                            splitChannels: false,
-                            colorMap: greyMap
-                        })
-                    ]
+                    // Optional: remove height explicitly so it fills the parent completely
+                    // height: 60,
                 });
                 
                 ws.on('ready', async () => {
@@ -107,7 +97,7 @@ export class AudioPlayer {
                     canvas.height = rect.height;
                     
                     try {
-                        const pitches = await computePitchCurve(actualSrc);
+                        const pitches = await computePitchCurve(finalUrl);
                         canvas.style.pointerEvents = 'auto'; // allow hover
                         drawPitchCurve(canvas, pitches, duration);
                     } catch (e) {
@@ -116,11 +106,11 @@ export class AudioPlayer {
                 });
 
                 ws.on('error', (err) => {
-                    console.log('Wavesurfer failed to load file:', actualSrc, err);
+                    console.log('Wavesurfer failed to load file:', finalUrl, err);
                 });
 
-                ws.load(actualSrc).catch(e => {
-                    console.warn("Could not load audio file: " + actualSrc, e);
+                ws.load(finalUrl).catch(e => {
+                    console.warn("Could not load audio file: " + finalUrl, e);
                     wavesurferContainer.innerHTML = `<div style="text-align:center; padding-top:15px; color:var(--text-secondary);">錄音未找到</div>`;
                 });
                 this.wavesurfers[id] = ws;
@@ -129,68 +119,34 @@ export class AudioPlayer {
     }
 
     // Play standard audio (with wavesurfer if available, otherwise native)
-    async playAudio(audioId, src, startTime = null, endTime = null) {
-        let isCurrentPlaying = false;
-        
+    async playAudio(audioId, src, startTime, endTime) {
         // Stop currently playing
         Object.values(this.wavesurfers).forEach(ws => {
-            if (ws === this.wavesurfers[audioId] && ws.isPlaying()) {
-                isCurrentPlaying = true;
-            }
-            if (ws.isPlaying()) ws.pause();
+            if (ws && ws !== 'loading' && typeof ws.isPlaying === 'function' && ws.isPlaying()) ws.pause();
         });
         Object.values(this.recordWavesurfers).forEach(ws => {
-            if (ws.isPlaying()) ws.pause();
+            if (ws && ws !== 'loading' && typeof ws.isPlaying === 'function' && ws.isPlaying()) ws.pause();
         });
         
         // If it's a quiz option or similar without a wavesurfer container
         if (!this.wavesurfers[audioId] && src) {
+            let finalUrl = src;
+            if (startTime !== undefined && endTime !== undefined && startTime !== null && endTime !== null) {
+                finalUrl = await getSlicedAudioBlobUrl(src, startTime, endTime);
+            }
             if (!this.simpleAudios[audioId]) {
-                this.simpleAudios[audioId] = new Audio(src);
+                this.simpleAudios[audioId] = new Audio(finalUrl);
             }
-            const audio = this.simpleAudios[audioId];
-            
-            if (audio._timeUpdateListener) {
-                audio.removeEventListener('timeupdate', audio._timeUpdateListener);
-            }
-            
-            if (endTime !== null) {
-                audio._timeUpdateListener = () => {
-                    if (audio.currentTime >= endTime) {
-                        audio.pause();
-                        audio.removeEventListener('timeupdate', audio._timeUpdateListener);
-                    }
-                };
-                audio.addEventListener('timeupdate', audio._timeUpdateListener);
-            }
-
-            audio.currentTime = startTime !== null ? startTime : 0;
-            audio.play().catch(e => {
+            this.simpleAudios[audioId].currentTime = 0;
+            this.simpleAudios[audioId].play().catch(e => {
                 alert('播放失敗，請檢查錄音檔案：' + src);
             });
             return;
         }
 
         const ws = this.wavesurfers[audioId];
-        if (ws) {
-            if (isCurrentPlaying) {
-                // It was already playing, and we paused it above, so it just acts as a pause toggle.
-                return;
-            }
-            
-            const el = document.getElementById(`waveform-${audioId}`);
-            const isSliced = el && el.getAttribute('data-sliced') === 'true';
-            
-            if (isSliced) {
-                // We pre-sliced the audio in initializeWavesurfers, so play from 0 to end
-                ws.play();
-            } else if (startTime !== null && endTime !== null) {
-                ws.play(startTime, endTime);
-            } else if (startTime !== null) {
-                ws.play(startTime);
-            } else {
-                ws.play();
-            }
+        if (ws && ws !== 'loading' && typeof ws.playPause === 'function') {
+            ws.playPause();
         }
     }
     
@@ -295,7 +251,7 @@ export class AudioPlayer {
             yAxis.style.backgroundColor = 'rgba(255,255,255,0.7)';
             yAxis.style.borderRight = '1px solid #ccc';
             yAxis.style.zIndex = '15';
-            yAxis.innerHTML = '<span>400Hz</span><span>350Hz</span><span>300Hz</span><span>250Hz</span><span>200Hz</span><span>150Hz</span><span>100Hz</span><span>50Hz</span><span>0Hz</span>';
+            yAxis.innerHTML = [400, 350, 300, 250, 200, 150, 100, 50, 0].map(freq => `<span>${freq}Hz</span>`).join('');
             specDiv.appendChild(yAxis);
             
             const wavesurferContainer = document.createElement('div');
@@ -311,29 +267,14 @@ export class AudioPlayer {
             canvas.style.width = '100%';
             canvas.style.height = '100%';
             canvas.style.pointerEvents = 'none';
-            canvas.style.zIndex = '10'; // Ensure it overlaps spectrogram
+            canvas.style.zIndex = '10'; // Ensure it overlaps graph
             wavesurferContainer.appendChild(canvas);
-            
-            const greyMap = [];
-            for (let i = 0; i < 256; i++) {
-                const v = (255 - i) / 255;
-                greyMap.push([v, v, v, 1]);
-            }
             
             const ws = WaveSurfer.create({
                 container: wavesurferContainer,
                 waveColor: 'transparent',
                 progressColor: 'rgba(0, 0, 0, 0.1)',
                 cursorColor: '#333',
-                height: specDiv.clientHeight || 180,
-                plugins: [
-                    Spectrogram.create({
-                        labels: false,
-                        height: specDiv.clientHeight || 180,
-                        splitChannels: false,
-                        colorMap: greyMap
-                    })
-                ]
             });
             ws.load(audioUrl);
             this.recordWavesurfers[audioId] = ws;
@@ -363,11 +304,10 @@ export class AudioPlayer {
                 
                 // Moved playback button outside spectrogram so it doesn't block
                 const playBtn = document.createElement('button');
-                playBtn.className = 'btn-icon';
-                playBtn.style.backgroundColor = '#FFA500'; // Bright orange
+                playBtn.className = 'btn-icon secondary';
                 playBtn.style.color = 'white';
                 playBtn.style.width = '100%'; // Spans correctly under
-                playBtn.innerHTML = '▶️ 播放錄音';
+                playBtn.innerHTML = '🎧';
                 playBtn.onclick = () => {
                     if (this.recordWavesurfers[audioId]) {
                         this.recordWavesurfers[audioId].playPause();

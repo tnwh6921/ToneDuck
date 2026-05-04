@@ -132,7 +132,7 @@ export function renderColourPuzzle(module, idx) {
                 audioBtn.style.padding = '5px 10px';
                 audioBtn.style.fontSize = '0.8rem';
                 audioBtn.onclick = () => window.playAudio(`distinct-${idx}-${di}`, item.audioFile, item.startTime, item.endTime);
-                audioBtn.innerHTML = `▶️ 播放`;
+                audioBtn.innerHTML = `🎧`;
                 
                 // Jyutping (hidden initially)
                 const jyutping = document.createElement('div');
@@ -209,12 +209,14 @@ export function renderColourMC(module, idx) {
             e.stopPropagation();
             window.playAudio(`cq${idx}-o${index}`, option.audioFile, option.startTime, option.endTime);
         };
-        audioBtn.innerHTML = `▶️ 播放示範 (${option.character})`;
+        audioBtn.innerHTML = `▶️`;
 
         const selectBtn = document.createElement('button');
         selectBtn.className = 'btn-icon';
         selectBtn.style.width = '100%';
         selectBtn.style.fontSize = '1.5rem';
+        selectBtn.style.backgroundColor = '#F3AB63';
+        selectBtn.style.color = 'var(--text-primary)';
         selectBtn.textContent = option.character;
         selectBtn.id = `cquiz-${idx}-selectbtn-${index}`;
 

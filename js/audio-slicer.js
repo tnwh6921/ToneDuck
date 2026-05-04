@@ -60,7 +60,7 @@ function audioBufferToWavURL(buffer) {
         let offset = 0;
         while (offset < buffer.length) {
             let sample = Math.max(-1, Math.min(1, channel[offset]));
-            sample = (0.5 + sample < 0 ? sample * 32768 : sample * 32767) | 0;
+            sample = (sample < 0 ? sample * 32768 : sample * 32767) | 0;
             // interleaved logic if multiple channels, but simple loop if 1 channel 
             // wait, if multiple channels we must interleave!
             view.setInt16(pos, sample, true);
@@ -77,7 +77,7 @@ function audioBufferToWavURL(buffer) {
             for (let i = 0; i < numOfChan; i++) {
                 const channel = buffer.getChannelData(i);
                 let sample = Math.max(-1, Math.min(1, channel[offset]));
-                sample = (0.5 + sample < 0 ? sample * 32768 : sample * 32767) | 0;
+                sample = (sample < 0 ? sample * 32768 : sample * 32767) | 0;
                 view.setInt16(pos, sample, true);
                 pos += 2;
             }

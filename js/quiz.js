@@ -54,12 +54,14 @@ class Quiz {
                 e.stopPropagation();
                 window.playAudio(`q${this.id}-o${index}`, option.audioFile, option.startTime, option.endTime);
             };
-            audioBtn.innerHTML = `▶️ 播放示範 (${option.character})`;
+            audioBtn.innerHTML = `🎧`;
             
             const selectBtn = document.createElement('button');
             selectBtn.className = 'btn-icon';
             selectBtn.style.width = '100%';
             selectBtn.style.fontSize = '1.5rem';
+            selectBtn.style.backgroundColor = '#F3AB63';
+            selectBtn.style.color = 'var(--text-primary)';
             selectBtn.textContent = option.character;
             selectBtn.onclick = () => this.selectOption(index);
             selectBtn.id = `quiz-${this.id}-selectbtn-${index}`;

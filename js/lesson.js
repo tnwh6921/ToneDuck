@@ -193,7 +193,7 @@ function renderAudioPractice(module, moduleIdx) {
 function buildAudioPracticeItemHTML(item, audioId, module, isCompact = false) {
     const headingSize = isCompact ? '1.5rem' : '2rem';
     const waveHeight = isCompact ? '120px' : '180px';
-    const btnLabelPlay = isCompact ? '▶️' : '▶️ 播放示範';
+    const btnLabelPlay = '🎧';
     const btnLabelRec = isCompact ? '🎤' : '🎤 對比錄音';
     const btnStyle = isCompact ? 'padding: 0.4rem; justify-content: center;' : '';
     const ctrlStyle = isCompact ? 'display:flex; flex-direction:row; gap:0.5rem; justify-content:center;' : '';
@@ -218,11 +218,11 @@ function buildAudioPracticeItemHTML(item, audioId, module, isCompact = false) {
         ` : ''}
         
         <div class="audio-controls" style="${ctrlStyle}">
-            <button class="btn-icon" style="${isCompact ? 'flex:1; ' + btnStyle : ''}" onclick="window.playAudio('${audioId}', '${item.audioFile}', ${item.startTime !== undefined ? item.startTime : 'null'}, ${item.endTime !== undefined ? item.endTime : 'null'})">
+            <button class="btn-icon secondary" style="${isCompact ? 'flex:1; ' + btnStyle : ''}" onclick="window.playAudio('${audioId}', '${item.audioFile}', ${item.startTime !== undefined ? item.startTime : 'null'}, ${item.endTime !== undefined ? item.endTime : 'null'})">
                 ${btnLabelPlay}
             </button>
             ${module.subType !== 'Content_Mono' ? `
-            <button class="btn-icon secondary" style="${isCompact ? 'flex:1; ' + btnStyle : ''}" onclick="window.recordAudio('${audioId}')">
+            <button class="btn-icon" style="${isCompact ? 'flex:1; ' + btnStyle : ''}" onclick="window.recordAudio('${audioId}')">
                 ${btnLabelRec}
             </button>
             ` : ''}
