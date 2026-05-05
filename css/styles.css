@@ -15,7 +15,7 @@
     --border-color: #E8DDD3;         /* Warm beige */
     --shadow-soft: 0 10px 28px rgba(61, 64, 91, 0.08);
     --shadow-hover: 0 14px 34px rgba(224, 122, 95, 0.16);
-    --success: #F2CC8F;              /* Yellow/gold instead of green */
+    --success: #cbf0b9;              /* Green instead of yellow/gold */
     --error: #D4727B;
     --warning: #F2CC8F;
     
@@ -450,7 +450,8 @@ main {
 
 .quiz-option.correct {
     border-color: var(--success);
-    background-color: rgba(242, 204, 143, 0.14);
+    background-color: #87AE73;
+    color: white;
 }
 
 .quiz-option.incorrect {
@@ -486,8 +487,8 @@ main {
 
 .quiz-option-card.correct .quiz-choice-btn {
     border-color: var(--success);
-    background: rgba(242, 204, 143, 0.14);
-    color: var(--primary-color);
+    background: #87AE73;
+    color: white;
 }
 
 .quiz-option-card.incorrect .quiz-choice-btn {
@@ -547,7 +548,8 @@ main {
 
 .matching-item.matched {
     border-color: var(--success);
-    background-color: rgba(242, 204, 143, 0.1);
+    background-color: #87AE73;
+    color: white;
 }
 
 /* Fill in the Blank */
@@ -570,7 +572,7 @@ main {
 
 .fill-blank-input.correct {
     border-color: var(--success);
-    background-color: rgba(242, 204, 143, 0.05);
+    background-color: #eaf1e6; /* light green to keep text readable */
 }
 
 .fill-blank-input.incorrect {
@@ -586,7 +588,7 @@ main {
 }
 
 .quiz-feedback.correct {
-    background-color: rgba(242, 204, 143, 0.1);
+    background-color: #eaf1e6;
     color: var(--success);
     border-left: 4px solid var(--success);
 }
@@ -655,11 +657,11 @@ button:disabled {
 }
 
 button.secondary {
-    background-color: var(--accent-color);
+    background-color: #8D4004;
 }
 
 button.secondary:hover {
-    background-color: #6a9981;
+    background-color: #713303;
 }
 
 button.outline {

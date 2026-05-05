@@ -486,12 +486,12 @@
           ],
           "distinct_items": [
             {
-              "character": "天",
-              "jyutping": "tin1",
+              "character": "包",
+              "jyutping": "baau1",
               "audioFile": "asset/unit1/Unit1.WAV",
               "tone": 1,
-              "startTime": 20.491156462585035,
-              "endTime": 21.714308390022676
+              "startTime": 9.437437641723356,
+              "endTime": 10.599954648526078
             },
             {
               "character": "起",
@@ -510,12 +510,12 @@
               "endTime": 67.33448979591839
             },
             {
-              "character": "包",
-              "jyutping": "baau1",
+              "character": "天",
+              "jyutping": "tin1",
               "audioFile": "asset/unit1/Unit1.WAV",
               "tone": 1,
-              "startTime": 9.437437641723356,
-              "endTime": 10.599954648526078
+              "startTime": 20.491156462585035,
+              "endTime": 21.714308390022676
             }
           ]
         },
@@ -999,36 +999,20 @@
           ],
           "distinct_items": [
             {
-              "character": "早",
-              "jyutping": "zou2",
-              "audioFile": "asset/unit2/Unit2.WAV",
-              "tone": 2,
-              "startTime": 24.210181405895696,
-              "endTime": 25.179977324263042
-            },
-            {
-              "character": "條",
-              "jyutping": "tiu4",
-              "audioFile": "asset/unit2/Unit2.WAV",
-              "tone": 4,
-              "startTime": 26.00009070294785,
-              "endTime": 27.0792970521542
-            },
-            {
-              "character": "三",
-              "jyutping": "saam1",
-              "audioFile": "asset/unit2/Unit2.WAV",
-              "tone": 1,
-              "startTime": 0.0,
-              "endTime": 1.2143083900226757
-            },
-            {
               "character": "留",
               "jyutping": "lau4",
               "audioFile": "asset/unit2/Unit2.WAV",
               "tone": 4,
               "startTime": 35.81487528344672,
               "endTime": 36.89401360544218
+            },
+            {
+              "character": "安",
+              "jyutping": "on1",
+              "audioFile": "asset/unit2/Unit2.WAV",
+              "tone": 1,
+              "startTime": 17.193083900226757,
+              "endTime": 18.393378684807256
             },
             {
               "character": "走",
@@ -1039,12 +1023,28 @@
               "endTime": 43.47780045351475
             },
             {
-              "character": "安",
-              "jyutping": "on1",
+              "character": "三",
+              "jyutping": "saam1",
               "audioFile": "asset/unit2/Unit2.WAV",
               "tone": 1,
-              "startTime": 17.193083900226757,
-              "endTime": 18.393378684807256
+              "startTime": 0.0,
+              "endTime": 1.2143083900226757
+            },
+            {
+              "character": "條",
+              "jyutping": "tiu4",
+              "audioFile": "asset/unit2/Unit2.WAV",
+              "tone": 4,
+              "startTime": 26.00009070294785,
+              "endTime": 27.0792970521542
+            },
+            {
+              "character": "早",
+              "jyutping": "zou2",
+              "audioFile": "asset/unit2/Unit2.WAV",
+              "tone": 2,
+              "startTime": 24.210181405895696,
+              "endTime": 25.179977324263042
             }
           ]
         },
@@ -1533,20 +1533,12 @@
           ],
           "distinct_items": [
             {
-              "character": "工",
-              "jyutping": "gung1",
+              "character": "制",
+              "jyutping": "zai3",
               "audioFile": "asset/unit3/Unit3.WAV",
-              "tone": 1,
-              "startTime": 19.713741496598644,
-              "endTime": 20.795464852607715
-            },
-            {
-              "character": "提",
-              "jyutping": "tai4",
-              "audioFile": "asset/unit3/Unit3.WAV",
-              "tone": 4,
-              "startTime": 29.25428571428572,
-              "endTime": 30.366666666666674
+              "tone": 3,
+              "startTime": 8.932607709750567,
+              "endTime": 10.051541950113378
             },
             {
               "character": "半",
@@ -1573,20 +1565,28 @@
               "endTime": 19.713741496598644
             },
             {
-              "character": "制",
-              "jyutping": "zai3",
-              "audioFile": "asset/unit3/Unit3.WAV",
-              "tone": 3,
-              "startTime": 8.932607709750567,
-              "endTime": 10.051541950113378
-            },
-            {
               "character": "他",
               "jyutping": "taa1",
               "audioFile": "asset/unit3/Unit3.WAV",
               "tone": 1,
               "startTime": 2.5129251700680273,
               "endTime": 3.592448979591837
+            },
+            {
+              "character": "提",
+              "jyutping": "tai4",
+              "audioFile": "asset/unit3/Unit3.WAV",
+              "tone": 4,
+              "startTime": 29.25428571428572,
+              "endTime": 30.366666666666674
+            },
+            {
+              "character": "工",
+              "jyutping": "gung1",
+              "audioFile": "asset/unit3/Unit3.WAV",
+              "tone": 1,
+              "startTime": 19.713741496598644,
+              "endTime": 20.795464852607715
             }
           ]
         },
@@ -2127,12 +2127,28 @@
           ],
           "distinct_items": [
             {
+              "character": "品",
+              "jyutping": "ban2",
+              "audioFile": "asset/unit4/Unit4.WAV",
+              "tone": 2,
+              "startTime": 13.066167800453515,
+              "endTime": 14.018480725623583
+            },
+            {
               "character": "望",
               "jyutping": "mong6",
               "audioFile": "asset/unit4/Unit4.WAV",
               "tone": 6,
               "startTime": 33.728276643990924,
               "endTime": 35.005328798185936
+            },
+            {
+              "character": "萬",
+              "jyutping": "maan6",
+              "audioFile": "asset/unit4/Unit4.WAV",
+              "tone": 6,
+              "startTime": 60.1253514739229,
+              "endTime": 61.35684807256235
             },
             {
               "character": "案",
@@ -2143,12 +2159,12 @@
               "endTime": 37.22353741496598
             },
             {
-              "character": "瀉",
-              "jyutping": "se3",
+              "character": "聯",
+              "jyutping": "lyun4",
               "audioFile": "asset/unit4/Unit4.WAV",
-              "tone": 3,
-              "startTime": 39.8025850340136,
-              "endTime": 41.01235827664399
+              "tone": 4,
+              "startTime": 57.9919954648526,
+              "endTime": 59.12544217687074
             },
             {
               "character": "班",
@@ -2159,12 +2175,12 @@
               "endTime": 44.707120181405884
             },
             {
-              "character": "聯",
-              "jyutping": "lyun4",
+              "character": "瀉",
+              "jyutping": "se3",
               "audioFile": "asset/unit4/Unit4.WAV",
-              "tone": 4,
-              "startTime": 57.9919954648526,
-              "endTime": 59.12544217687074
+              "tone": 3,
+              "startTime": 39.8025850340136,
+              "endTime": 41.01235827664399
             },
             {
               "character": "投",
@@ -2173,22 +2189,6 @@
               "tone": 4,
               "startTime": 26.029410430839,
               "endTime": 27.193378684807254
-            },
-            {
-              "character": "品",
-              "jyutping": "ban2",
-              "audioFile": "asset/unit4/Unit4.WAV",
-              "tone": 2,
-              "startTime": 13.066167800453515,
-              "endTime": 14.018480725623583
-            },
-            {
-              "character": "萬",
-              "jyutping": "maan6",
-              "audioFile": "asset/unit4/Unit4.WAV",
-              "tone": 6,
-              "startTime": 60.1253514739229,
-              "endTime": 61.35684807256235
             }
           ]
         },
@@ -2714,11 +2714,11 @@
           "type": "Colour_puzzle",
           "title": "填色遊戲",
           "board": [
-            "妥",
-            "妥",
-            "妥",
-            "妥",
-            "妥",
+            "勇",
+            "勇",
+            "勇",
+            "勇",
+            "勇",
             "染",
             "染",
             "染",
@@ -2728,9 +2728,9 @@
             "何",
             "何",
             "權",
-            "妥",
+            "勇",
             "染",
-            "妥",
+            "勇",
             "權",
             "件",
             "笑",
@@ -2753,9 +2753,9 @@
             "笑",
             "第",
             "何",
-            "妥",
-            "妥",
-            "妥",
+            "勇",
+            "勇",
+            "勇",
             "何",
             "權",
             "權",
@@ -2764,60 +2764,22 @@
             "染",
             "染",
             "染",
-            "妥",
-            "妥",
-            "妥",
-            "妥",
+            "勇",
+            "勇",
+            "勇",
+            "勇",
             "染",
             "染",
-            "妥",
+            "勇",
             "染",
             "染",
             "染",
-            "妥",
-            "妥",
-            "妥",
-            "妥"
+            "勇",
+            "勇",
+            "勇",
+            "勇"
           ],
           "distinct_items": [
-            {
-              "character": "權",
-              "jyutping": "kyun4",
-              "audioFile": "asset/unit5/Unit5.WAV",
-              "tone": 4,
-              "startTime": 41.67507936507937,
-              "endTime": 42.72954648526078
-            },
-            {
-              "character": "染",
-              "jyutping": "jim5",
-              "audioFile": "asset/unit5/Unit5.WAV",
-              "tone": 5,
-              "startTime": 40.56634920634921,
-              "endTime": 41.67507936507937
-            },
-            {
-              "character": "件",
-              "jyutping": "gin6",
-              "audioFile": "asset/unit5/Unit5.WAV",
-              "tone": 6,
-              "startTime": 2.3033560090702947,
-              "endTime": 3.4378911564625847
-            },
-            {
-              "character": "妥",
-              "jyutping": "to5",
-              "audioFile": "asset/unit5/Unit5.WAV",
-              "tone": 5
-            },
-            {
-              "character": "笑",
-              "jyutping": "siu3",
-              "audioFile": "asset/unit5/Unit5.WAV",
-              "tone": 3,
-              "startTime": 59.74408163265306,
-              "endTime": 60.89875283446712
-            },
             {
               "character": "何",
               "jyutping": "ho4",
@@ -2833,6 +2795,46 @@
               "tone": 6,
               "startTime": 60.89875283446712,
               "endTime": 61.9112925170068
+            },
+            {
+              "character": "勇",
+              "jyutping": "jung5",
+              "audioFile": "asset/unit5/Unit5.WAV",
+              "tone": 5,
+              "startTime": 16.12922902494331,
+              "endTime": 17.239637188208615
+            },
+            {
+              "character": "笑",
+              "jyutping": "siu3",
+              "audioFile": "asset/unit5/Unit5.WAV",
+              "tone": 3,
+              "startTime": 59.74408163265306,
+              "endTime": 60.89875283446712
+            },
+            {
+              "character": "權",
+              "jyutping": "kyun4",
+              "audioFile": "asset/unit5/Unit5.WAV",
+              "tone": 4,
+              "startTime": 41.67507936507937,
+              "endTime": 42.72954648526078
+            },
+            {
+              "character": "件",
+              "jyutping": "gin6",
+              "audioFile": "asset/unit5/Unit5.WAV",
+              "tone": 6,
+              "startTime": 2.3033560090702947,
+              "endTime": 3.4378911564625847
+            },
+            {
+              "character": "染",
+              "jyutping": "jim5",
+              "audioFile": "asset/unit5/Unit5.WAV",
+              "tone": 5,
+              "startTime": 40.56634920634921,
+              "endTime": 41.67507936507937
             }
           ]
         },
