@@ -25,12 +25,20 @@ const PITCH_CONFIG = {
     maxInterpolatedGapSeconds: 0.08,
     maxEnergeticGapSeconds: 0.16,
     maxEnergeticInterpolationSemitones: 9,
-    maxLowToneGapSeconds: 0.18,
-    maxLowToneInterpolationSemitones: 14,
-    lowToneOctavePitch: 150,
-    maleLowToneMaxPitch: 140,
-    femaleLowToneMaxPitch: 170,
-    femaleLessonMinPitch: 70,
+    creakyPitchMax: 105,
+    creakyHarmonicMinPitch: 110,
+    creakyHarmonicMaxPitch: 220,
+    creakyMaxDoubleLagPenalty: 0.14,
+    creakyMaxDoubleLagValue: 0.34,
+    creakyMinSubharmonicRatio: 0.32,
+    creakyStrongSubharmonicRatio: 0.55,
+    creakyMaxH1H2Db: 6,
+    creakyMinJitter: 0.045,
+    creakyMinAperiodicity: 0.08,
+    creakyMinScore: 4,
+    creakyMinConfidence: 0.48,
+    lowRegisterOctavePitch: 150,
+    lowRegisterOctaveMaxPitch: 170,
     continuityLookaroundPoints: 5,
     minContinuityRmsRatio: 0.5,
     minContinuityTrendSemitones: 0.45,
@@ -61,30 +69,18 @@ const VOICE_LABELS = {
     female: '女聲'
 };
 
-const VOICE_PITCH_OVERRIDES = {
-    // Female lesson samples still need room for low tone-4 fall, but should not
-    // draw 40-60 Hz floor hits unless the item itself expects a low tone.
-    female: {
-        minPitch: PITCH_CONFIG.femaleLessonMinPitch
-    },
-    male: {
-        minPitch: 40
-    }
-};
-
 /*
 Pitch-detection pipeline, kept here for future tuning:
 1. Decode audio and analyze overlapping 60 ms frames every 5 ms.
 2. Estimate F0 with a YIN-style cumulative difference function. This is more
    stable than raw autocorrelation for short Cantonese syllables.
-3. Keep a broad candidate range (40-420 Hz) for male/neutral voices, with a
-   lower confidence threshold below 100 Hz so low male dips/falls are not
-   silently dropped. Female samples use a moderate low floor, then tone-4 hints
-   decide whether unusually low material should be trusted.
+3. Keep a broad candidate range (40-420 Hz), with a lower confidence threshold
+   below 100 Hz so low dips/falls are not silently dropped.
 4. Normalize common octave-doubling errors, especially short high fragments.
-5. Parse jyutping tone numbers when available. Tone 4 is allowed to be low and
-   creaky, so octave-doubled frames around 180-220 Hz can be corrected downward
-   inside that syllable without flattening real tone-2 rises.
+5. Correct lower-register octave doubling when the wav frame has creaky-voice
+   cues: low halved F0, subharmonic energy, low H1-H2-style balance, jitter, and
+   low-periodicity/noisy YIN evidence. The same correction can also be supported
+   by the surrounding audio-derived contour.
 6. Use intensity as a secondary cue. If neighboring frames are still energetic
    and the local slope keeps the same direction, large adjacent F0 steps are
    treated as continuous tonal movement rather than glitches.
@@ -93,15 +89,14 @@ Pitch-detection pipeline, kept here for future tuning:
 8. Interpolate short gaps. If the gap stays energetic and has no clear RMS
    valley or pitch reset, allow a slightly longer interpolation window so a
    steady tonal rise/fall is not split into pieces. Do not bridge syllable
-   boundaries just because the surrounding frames are loud. Low tone-4 gaps get
-   a separate creaky-voice path when both sides are in the same tone-4 syllable.
+   boundaries just because the surrounding frames are loud.
 9. Trim post-rise release artifacts when energy drops, or when the post-peak
    tail resets downward and then stays level. This keeps real second syllables
    or strong falling/rising motion from being mistaken for tone-2 release tails.
 */
 
-export async function computePitchCurve(audioUrl, options = 'neutral') {
-    const pitchContext = getPitchContext(options);
+export async function computePitchCurve(audioUrl) {
+    const pitchContext = { ...PITCH_CONFIG };
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
     
     // Fetch and decode audio
@@ -124,7 +119,8 @@ export async function computePitchCurve(audioUrl, options = 'neutral') {
             time: i / sampleRate,
             pitch: candidate && candidate.pitch ? candidate.pitch : null,
             confidence: candidate ? candidate.confidence : 0,
-            rms: candidate ? candidate.rms : 0
+            rms: candidate ? candidate.rms : 0,
+            creakyOctave: candidate ? candidate.creakyOctave : null
         });
     }
     
@@ -191,15 +187,182 @@ function detectPitchCandidate(buf, sampleRate, pitchContext = PITCH_CONFIG) {
     
     if (bestLag <= 0) return { pitch: null, confidence: 0, rms };
 
-    const refinedLag = parabolicMinimum(difference, bestLag);
-    const pitch = sampleRate / refinedLag;
-    const confidence = 1 - Math.max(0, Math.min(1, bestValue));
+    let selectedLag = bestLag;
+    let selectedValue = bestValue;
+    let creakyOctave = null;
 
-    if (!isCandidatePitchInRange(pitch, pitchContext) || confidence < getMinConfidenceForPitch(pitch, pitchContext)) {
+    const creakyCandidate = detectCreakyOctaveCandidate(windowed, difference, bestLag, bestValue, sampleRate, pitchContext);
+    if (creakyCandidate) {
+        selectedLag = creakyCandidate.lag;
+        selectedValue = creakyCandidate.value;
+        creakyOctave = creakyCandidate;
+    }
+
+    const refinedLag = parabolicMinimum(difference, selectedLag);
+    const pitch = sampleRate / refinedLag;
+    const confidence = 1 - Math.max(0, Math.min(1, selectedValue));
+    const minConfidence = creakyOctave
+        ? Math.min(getMinConfidenceForPitch(pitch, pitchContext), PITCH_CONFIG.creakyMinConfidence)
+        : getMinConfidenceForPitch(pitch, pitchContext);
+
+    if (!isCandidatePitchInRange(pitch, pitchContext) || confidence < minConfidence) {
         return { pitch: null, confidence, rms };
     }
 
-    return { pitch, confidence, rms };
+    return { pitch, confidence, rms, creakyOctave };
+}
+
+function detectCreakyOctaveCandidate(samples, difference, bestLag, bestValue, sampleRate, pitchContext = PITCH_CONFIG) {
+    const originalPitch = sampleRate / bestLag;
+    if (originalPitch < PITCH_CONFIG.creakyHarmonicMinPitch ||
+        originalPitch > PITCH_CONFIG.creakyHarmonicMaxPitch) {
+        return null;
+    }
+
+    const doubledLagCenter = Math.round(bestLag * 2);
+    if (doubledLagCenter >= difference.length - 1) return null;
+
+    const doubledLagRadius = Math.max(2, Math.round(doubledLagCenter * 0.08));
+    const doubledLag = findBestDifferenceLag(
+        difference,
+        Math.max(2, doubledLagCenter - doubledLagRadius),
+        Math.min(difference.length - 2, doubledLagCenter + doubledLagRadius)
+    );
+    if (doubledLag === null) return null;
+
+    const refinedDoubledLag = parabolicMinimum(difference, doubledLag);
+    const halvedPitch = sampleRate / refinedDoubledLag;
+    if (!isPitchInRange(halvedPitch, pitchContext) || halvedPitch > PITCH_CONFIG.creakyPitchMax) return null;
+
+    const doubledValue = difference[doubledLag];
+    if (!Number.isFinite(doubledValue) ||
+        doubledValue > PITCH_CONFIG.creakyMaxDoubleLagValue ||
+        doubledValue > bestValue + PITCH_CONFIG.creakyMaxDoubleLagPenalty) {
+        return null;
+    }
+
+    const h1 = getFrequencyAmplitude(samples, sampleRate, halvedPitch);
+    const h2 = getFrequencyAmplitude(samples, sampleRate, originalPitch);
+    const subharmonicRatio = h1 / Math.max(h2, 1e-12);
+    if (subharmonicRatio < PITCH_CONFIG.creakyMinSubharmonicRatio) return null;
+
+    const h1h2Db = amplitudeRatioDb(h1, h2);
+    const jitter = estimateLagJitter(samples, refinedDoubledLag);
+    const aperiodicity = Math.max(bestValue, doubledValue);
+
+    let score = 0;
+    if (halvedPitch <= PITCH_CONFIG.lowPitchCutoff) score++;
+    if (doubledValue <= bestValue + PITCH_CONFIG.yinThreshold * 0.5) score++;
+    if (subharmonicRatio >= PITCH_CONFIG.creakyStrongSubharmonicRatio) score++;
+    if (h1h2Db <= PITCH_CONFIG.creakyMaxH1H2Db) score++;
+    if (jitter >= PITCH_CONFIG.creakyMinJitter) score++;
+    if (aperiodicity >= PITCH_CONFIG.creakyMinAperiodicity) score++;
+
+    if (score < PITCH_CONFIG.creakyMinScore) return null;
+
+    return {
+        lag: doubledLag,
+        value: doubledValue,
+        originalPitch,
+        pitch: halvedPitch,
+        score,
+        subharmonicRatio,
+        h1h2Db,
+        jitter,
+        aperiodicity
+    };
+}
+
+function getFrequencyAmplitude(samples, sampleRate, frequency) {
+    if (!Number.isFinite(frequency) || frequency <= 0 || frequency >= sampleRate / 2) return 0;
+
+    const angularFrequency = (2 * Math.PI * frequency) / sampleRate;
+    let real = 0;
+    let imag = 0;
+
+    for (let i = 0; i < samples.length; i++) {
+        real += samples[i] * Math.cos(angularFrequency * i);
+        imag -= samples[i] * Math.sin(angularFrequency * i);
+    }
+
+    return Math.sqrt(real * real + imag * imag) / samples.length;
+}
+
+function amplitudeRatioDb(a, b) {
+    return 20 * Math.log10(Math.max(a, 1e-12) / Math.max(b, 1e-12));
+}
+
+function estimateLagJitter(samples, targetLag) {
+    const roundedLag = Math.round(targetLag);
+    if (!Number.isFinite(roundedLag) || roundedLag < 3) return 0;
+
+    const searchRadius = Math.max(2, Math.round(roundedLag * 0.18));
+    const minLag = Math.max(2, roundedLag - searchRadius);
+    const maxLag = Math.min(samples.length - 2, roundedLag + searchRadius);
+    const chunkSize = Math.min(samples.length, Math.max(roundedLag * 2, maxLag + roundedLag));
+    const hopSize = Math.max(4, Math.floor(roundedLag / 2));
+    const localLags = [];
+
+    for (let start = 0; start + chunkSize <= samples.length; start += hopSize) {
+        const localLag = findBestLocalLag(samples, start, start + chunkSize, minLag, maxLag);
+        if (localLag !== null) localLags.push(localLag);
+    }
+
+    if (localLags.length < 3) return 0;
+
+    const mean = localLags.reduce((sum, lag) => sum + lag, 0) / localLags.length;
+    if (mean <= 0) return 0;
+
+    const variance = localLags.reduce((sum, lag) => {
+        const delta = lag - mean;
+        return sum + delta * delta;
+    }, 0) / localLags.length;
+
+    return Math.sqrt(variance) / mean;
+}
+
+function findBestLocalLag(samples, start, end, minLag, maxLag) {
+    let bestLag = null;
+    let bestValue = Infinity;
+
+    for (let lag = minLag; lag <= maxLag; lag++) {
+        let differenceSum = 0;
+        let energySum = 0;
+        let count = 0;
+
+        for (let i = start; i + lag < end; i++) {
+            const a = samples[i];
+            const b = samples[i + lag];
+            const delta = a - b;
+            differenceSum += delta * delta;
+            energySum += a * a + b * b;
+            count++;
+        }
+
+        if (count === 0 || energySum <= 1e-12) continue;
+
+        const normalizedDifference = differenceSum / energySum;
+        if (normalizedDifference < bestValue) {
+            bestValue = normalizedDifference;
+            bestLag = lag;
+        }
+    }
+
+    return bestLag;
+}
+
+function findBestDifferenceLag(values, minLag, maxLag) {
+    let bestLag = null;
+    let bestValue = Infinity;
+
+    for (let lag = minLag; lag <= maxLag; lag++) {
+        if (values[lag] < bestValue) {
+            bestValue = values[lag];
+            bestLag = lag;
+        }
+    }
+
+    return bestLag;
 }
 
 function parabolicMinimum(values, index) {
@@ -213,10 +376,10 @@ function parabolicMinimum(values, index) {
 
 function cleanPitchTrack(points, pitchContext = PITCH_CONFIG) {
     const octaveCorrected = correctOctaveErrors(points, pitchContext);
-    const lowToneCorrected = correctLowToneOctaveErrors(octaveCorrected, pitchContext);
-    const rangeFiltered = lowToneCorrected.map(p => ({
+    const lowRegisterCorrected = correctLowRegisterOctaveErrors(octaveCorrected, pitchContext);
+    const rangeFiltered = lowRegisterCorrected.map(p => ({
         ...p,
-        pitch: isPitchInRange(p.pitch, pitchContext) && p.confidence >= getMinConfidenceForPitch(p.pitch, pitchContext) ? p.pitch : null
+        pitch: isPitchInRange(p.pitch, pitchContext) && hasEnoughPitchConfidence(p, pitchContext) ? p.pitch : null
     }));
 
     const highFragmentFiltered = rejectShortHighFragments(rangeFiltered);
@@ -257,17 +420,26 @@ function correctOctaveErrors(points, pitchContext = PITCH_CONFIG) {
     });
 }
 
-function correctLowToneOctaveErrors(points, pitchContext = PITCH_CONFIG) {
-    return points.map(point => {
-        if (point.pitch === null || point.pitch < PITCH_CONFIG.lowToneOctavePitch) return point;
-        if (!isExpectedLowToneAt(point.time, pitchContext)) return point;
+function correctLowRegisterOctaveErrors(points, pitchContext = PITCH_CONFIG) {
+    return points.map((point, index) => {
+        if (point.pitch === null || point.pitch < PITCH_CONFIG.lowRegisterOctavePitch) return point;
 
         const halvedPitch = point.pitch / 2;
-        if (!isPitchInRange(halvedPitch, getLowTonePitchContext(pitchContext))) return point;
-        if (halvedPitch > getLowToneMaxPitch(pitchContext)) return point;
+        if (!isPitchInRange(halvedPitch, pitchContext)) return point;
+        if (halvedPitch > PITCH_CONFIG.lowRegisterOctaveMaxPitch) return point;
+        if (!hasLowRegisterContourSupport(points, index, point.pitch, halvedPitch, pitchContext)) return point;
 
-        return { ...point, pitch: halvedPitch, octaveCorrected: 'low-tone' };
+        return { ...point, pitch: halvedPitch, octaveCorrected: 'low-register' };
     });
+}
+
+function hasLowRegisterContourSupport(points, index, originalPitch, halvedPitch, pitchContext = PITCH_CONFIG) {
+    const localMedian = getLocalPitchMedian(points, index, pitchContext);
+    if (localMedian === null || localMedian > PITCH_CONFIG.lowRegisterOctaveMaxPitch) return false;
+
+    const originalDistance = Math.abs(semitoneDistance(originalPitch, localMedian));
+    const halvedDistance = Math.abs(semitoneDistance(halvedPitch, localMedian));
+    return halvedDistance + PITCH_CONFIG.octaveCorrectionMarginSemitones < originalDistance;
 }
 
 function getLocalPitchMedian(points, index, pitchContext = PITCH_CONFIG) {
@@ -473,16 +645,11 @@ function interpolateShortGaps(points, pitchContext = PITCH_CONFIG) {
 
         const gapSeconds = interpolated[after].time - interpolated[before].time;
         const pitchJump = Math.abs(semitoneDistance(interpolated[after].pitch, interpolated[before].pitch));
-        const lowToneGap = isLowToneGap(interpolated, before, gapStart, gapEnd, after, pitchContext);
         const energySupportedGap = isEnergySupportedGap(interpolated, before, gapStart, gapEnd, after, pitchContext);
-        const maxGapSeconds = lowToneGap
-            ? PITCH_CONFIG.maxLowToneGapSeconds
-            : energySupportedGap
+        const maxGapSeconds = energySupportedGap
             ? PITCH_CONFIG.maxEnergeticGapSeconds
             : PITCH_CONFIG.maxInterpolatedGapSeconds;
-        const maxPitchJump = lowToneGap
-            ? PITCH_CONFIG.maxLowToneInterpolationSemitones
-            : energySupportedGap
+        const maxPitchJump = energySupportedGap
             ? PITCH_CONFIG.maxEnergeticInterpolationSemitones
             : PITCH_CONFIG.maxMedianDeviationSemitones;
         if (gapSeconds > maxGapSeconds || pitchJump > maxPitchJump) continue;
@@ -634,31 +801,6 @@ function isEnergySupportedGap(points, beforeIndex, gapStart, gapEnd, afterIndex,
     }
 
     return true;
-}
-
-function isLowToneGap(points, beforeIndex, gapStart, gapEnd, afterIndex, pitchContext = PITCH_CONFIG) {
-    const beforeHint = getToneHintAtTime(points[beforeIndex].time, pitchContext);
-    const afterHint = getToneHintAtTime(points[afterIndex].time, pitchContext);
-    if (!beforeHint || !afterHint || beforeHint.index !== afterHint.index || !isLowTone(beforeHint.tone)) {
-        return false;
-    }
-
-    const lowToneContext = getLowTonePitchContext(pitchContext);
-    if (!isPitchInRange(points[beforeIndex].pitch, lowToneContext) ||
-        !isPitchInRange(points[afterIndex].pitch, lowToneContext)) {
-        return false;
-    }
-
-    if (Math.max(points[beforeIndex].pitch, points[afterIndex].pitch) > getLowToneMaxPitch(pitchContext)) {
-        return false;
-    }
-
-    const gapRms = getMeanRms(points, gapStart, gapEnd);
-    const endpointRms = Math.min(points[beforeIndex].rms || 0, points[afterIndex].rms || 0);
-    if (gapRms < Math.max(PITCH_CONFIG.minRms * 0.35, endpointRms * 0.08)) return false;
-
-    const pitchJump = Math.abs(semitoneDistance(points[afterIndex].pitch, points[beforeIndex].pitch));
-    return pitchJump <= PITCH_CONFIG.maxLowToneInterpolationSemitones;
 }
 
 function hasStablePitchAndEnergy(points, index, pitchContext = PITCH_CONFIG) {
@@ -822,6 +964,14 @@ function getMinConfidenceForPitch(pitch, pitchContext = PITCH_CONFIG) {
         : pitchContext.minConfidence;
 }
 
+function hasEnoughPitchConfidence(point, pitchContext = PITCH_CONFIG) {
+    if (!point || point.pitch === null) return false;
+    const minConfidence = point.creakyOctave
+        ? Math.min(getMinConfidenceForPitch(point.pitch, pitchContext), PITCH_CONFIG.creakyMinConfidence)
+        : getMinConfidenceForPitch(point.pitch, pitchContext);
+    return point.confidence >= minConfidence;
+}
+
 function getMaxMedianDeviation(pitch, referencePitch) {
     return Math.min(pitch, referencePitch) <= PITCH_CONFIG.lowPitchCutoff
         ? PITCH_CONFIG.maxLowMedianDeviationSemitones
@@ -943,78 +1093,8 @@ function normalizeVoice(voice) {
     return normalized;
 }
 
-function normalizePitchOptions(options) {
-    if (options && typeof options === 'object') {
-        return {
-            voice: normalizeVoice(options.voice),
-            jyutping: String(options.jyutping || '')
-        };
-    }
-
-    return {
-        voice: normalizeVoice(options),
-        jyutping: ''
-    };
-}
-
-function getPitchContext(options) {
-    const normalizedOptions = normalizePitchOptions(options);
-    return {
-        ...PITCH_CONFIG,
-        ...(VOICE_PITCH_OVERRIDES[normalizedOptions.voice] || {}),
-        voice: normalizedOptions.voice,
-        toneHints: parseJyutpingTones(normalizedOptions.jyutping),
-        durationSeconds: 0
-    };
-}
-
 function getPitchColor(voice) {
     return PITCH_COLORS[normalizeVoice(voice)] || PITCH_COLORS.neutral;
-}
-
-function parseJyutpingTones(jyutping) {
-    return String(jyutping || '')
-        .trim()
-        .split(/\s+/)
-        .map(syllable => {
-            const match = syllable.match(/[1-6]$/);
-            return match ? Number(match[0]) : null;
-        })
-        .filter(tone => tone !== null);
-}
-
-function getToneHintAtTime(time, pitchContext = PITCH_CONFIG) {
-    const tones = pitchContext.toneHints || [];
-    if (!tones.length || !pitchContext.durationSeconds) return null;
-
-    const syllableCount = tones.length;
-    const normalizedTime = Math.min(0.999, Math.max(0, time / pitchContext.durationSeconds));
-    const index = Math.min(syllableCount - 1, Math.floor(normalizedTime * syllableCount));
-    return { tone: tones[index], index };
-}
-
-function isExpectedLowToneAt(time, pitchContext = PITCH_CONFIG) {
-    const hint = getToneHintAtTime(time, pitchContext);
-    return hint ? isLowTone(hint.tone) : false;
-}
-
-function isLowTone(tone) {
-    return tone === 4;
-}
-
-function getLowTonePitchContext(pitchContext = PITCH_CONFIG) {
-    return {
-        ...pitchContext,
-        minPitch: pitchContext.voice === 'female'
-            ? PITCH_CONFIG.femaleLessonMinPitch
-            : PITCH_CONFIG.minPitch
-    };
-}
-
-function getLowToneMaxPitch(pitchContext = PITCH_CONFIG) {
-    return pitchContext.voice === 'female'
-        ? PITCH_CONFIG.femaleLowToneMaxPitch
-        : PITCH_CONFIG.maleLowToneMaxPitch;
 }
 
 function buildDrawableSegments(pitches, width, height, duration) {

@@ -52,7 +52,6 @@ export class AudioPlayer {
             const startStr = el.getAttribute('data-start');
             const endStr = el.getAttribute('data-end');
             const voice = el.getAttribute('data-voice') || 'neutral';
-            const jyutping = el.getAttribute('data-jyutping') || '';
             
             if (src && !this.wavesurfers[id]) {
                 this.wavesurfers[id] = 'loading'; // prevent double init
@@ -104,7 +103,7 @@ export class AudioPlayer {
                     canvas.height = rect.height;
                     
                     try {
-                        const pitches = await computePitchCurve(finalUrl, { voice, jyutping });
+                        const pitches = await computePitchCurve(finalUrl);
                         canvas.style.pointerEvents = 'auto'; // allow hover
                         drawPitchCurve(canvas, pitches, duration, voice);
                     } catch (e) {
