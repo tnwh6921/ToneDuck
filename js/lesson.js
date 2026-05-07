@@ -187,17 +187,23 @@ function buildAudioPracticeItemHTML(item, audioId, module, isCompact = false) {
     const btnLabelRec = isCompact ? '🎤' : '🎤 對比錄音';
     const btnStyle = isCompact ? 'padding: 0.4rem; justify-content: center;' : '';
     const ctrlStyle = isCompact ? 'display:flex; flex-direction:row; gap:0.5rem; justify-content:center;' : '';
-    const marginClass = isCompact ? 'm-0' : '';
+    const voice = normalizeVoice(item.voice);
+    const voiceLabel = voice === 'male' ? '男聲' : voice === 'female' ? '女聲' : '';
+    const voiceBadge = voiceLabel ? `<span class="voice-badge voice-${voice}">${voiceLabel}</span>` : '';
+    const jyutping = item.jyutping || '';
 
     return `
         <div class="audio-header">
             <h4 style="font-size: ${headingSize}; margin: 0;">${item.character}</h4>
-            <div class="audio-romanization" style="${isCompact ? 'font-size:0.9rem;' : ''}">${item.jyutping}</div>
+            <div class="audio-meta-row">
+                <div class="audio-romanization" style="${isCompact ? 'font-size:0.9rem;' : ''}">${item.jyutping}</div>
+                ${voiceBadge}
+            </div>
         </div>
         <!-- Audio visualization container -->
         <div>
             <div style="font-size:0.75rem; color:var(--text-secondary); margin-top: 0.5rem;">示範音調：</div>
-            <div class="waveform" id="waveform-${audioId}" data-src="${item.audioFile}" data-start="${item.startTime !== undefined ? item.startTime : ''}" data-end="${item.endTime !== undefined ? item.endTime : ''}" style="height: ${waveHeight}; background: #eee; border-radius: 8px; border: 2px solid var(--primary-color);"></div>
+            <div class="waveform" id="waveform-${audioId}" data-src="${item.audioFile}" data-start="${item.startTime !== undefined ? item.startTime : ''}" data-end="${item.endTime !== undefined ? item.endTime : ''}" data-voice="${voice}" data-jyutping="${jyutping}" style="height: ${waveHeight}; background: #eee; border-radius: 8px; border: 2px solid var(--primary-color);"></div>
         </div>
         ${module.subType !== 'Content_Mono' ? `
         <!-- Recording spectrogram container -->
@@ -219,6 +225,13 @@ function buildAudioPracticeItemHTML(item, audioId, module, isCompact = false) {
         </div>
         <div id="recording-status-${audioId}" class="hidden" style="margin-top: 0.5rem; font-size: 0.8rem;"></div>
     `;
+}
+
+function normalizeVoice(voice) {
+    const normalized = String(voice || '').trim().toLowerCase();
+    if (normalized === 'm') return 'male';
+    if (normalized === 'f') return 'female';
+    return normalized === 'male' || normalized === 'female' ? normalized : '';
 }
 
 function setupNavigation() {

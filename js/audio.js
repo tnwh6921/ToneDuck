@@ -5,6 +5,23 @@ import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js
 import { computePitchCurve, drawPitchCurve } from './pitch.js';
 import { getSlicedAudioBlobUrl } from './audio-slicer.js';
 
+const PITCH_AXIS_LABELS = [400, 350, 300, 250, 200, 150, 100, 70, 50, 40, 0];
+
+function createPitchAxis() {
+    const yAxis = document.createElement('div');
+    yAxis.style.display = 'flex';
+    yAxis.style.flexDirection = 'column';
+    yAxis.style.justifyContent = 'space-between';
+    yAxis.style.fontSize = '8px';
+    yAxis.style.padding = '2px 4px';
+    yAxis.style.color = '#555';
+    yAxis.style.backgroundColor = 'rgba(255,255,255,0.7)';
+    yAxis.style.borderRight = '1px solid #ccc';
+    yAxis.style.zIndex = '15';
+    yAxis.innerHTML = PITCH_AXIS_LABELS.map(freq => `<span>${freq}Hz</span>`).join('');
+    return yAxis;
+}
+
 export class AudioPlayer {
     constructor() {
         this.mediaRecorder = null;
@@ -34,6 +51,8 @@ export class AudioPlayer {
             const src = el.getAttribute('data-src');
             const startStr = el.getAttribute('data-start');
             const endStr = el.getAttribute('data-end');
+            const voice = el.getAttribute('data-voice') || 'neutral';
+            const jyutping = el.getAttribute('data-jyutping') || '';
             
             if (src && !this.wavesurfers[id]) {
                 this.wavesurfers[id] = 'loading'; // prevent double init
@@ -51,19 +70,7 @@ export class AudioPlayer {
                 el.style.position = 'relative';
                 el.style.display = 'flex';
                 
-                // Add Y-Axis for 0-400Hz
-                const yAxis = document.createElement('div');
-                yAxis.style.display = 'flex';
-                yAxis.style.flexDirection = 'column';
-                yAxis.style.justifyContent = 'space-between';
-                yAxis.style.fontSize = '8px';
-                yAxis.style.padding = '2px 4px';
-                yAxis.style.color = '#555';
-                yAxis.style.backgroundColor = 'rgba(255,255,255,0.7)';
-                yAxis.style.borderRight = '1px solid #ccc';
-                yAxis.style.zIndex = '15';
-                yAxis.innerHTML = [400, 350, 300, 250, 200, 150, 100, 50, 0].map(freq => `<span>${freq}Hz</span>`).join('');
-                el.appendChild(yAxis);
+                el.appendChild(createPitchAxis());
                 
                 const wavesurferContainer = document.createElement('div');
                 wavesurferContainer.style.flex = '1';
@@ -97,9 +104,9 @@ export class AudioPlayer {
                     canvas.height = rect.height;
                     
                     try {
-                        const pitches = await computePitchCurve(finalUrl);
+                        const pitches = await computePitchCurve(finalUrl, { voice, jyutping });
                         canvas.style.pointerEvents = 'auto'; // allow hover
-                        drawPitchCurve(canvas, pitches, duration);
+                        drawPitchCurve(canvas, pitches, duration, voice);
                     } catch (e) {
                         console.error('Error drawing pitch curve:', e);
                     }
@@ -240,19 +247,7 @@ export class AudioPlayer {
             specDiv.style.position = 'relative';
             specDiv.style.display = 'flex';
             
-            // Add Y-Axis for 0-400Hz
-            const yAxis = document.createElement('div');
-            yAxis.style.display = 'flex';
-            yAxis.style.flexDirection = 'column';
-            yAxis.style.justifyContent = 'space-between';
-            yAxis.style.fontSize = '8px';
-            yAxis.style.padding = '2px 4px';
-            yAxis.style.color = '#555';
-            yAxis.style.backgroundColor = 'rgba(255,255,255,0.7)';
-            yAxis.style.borderRight = '1px solid #ccc';
-            yAxis.style.zIndex = '15';
-            yAxis.innerHTML = [400, 350, 300, 250, 200, 150, 100, 50, 0].map(freq => `<span>${freq}Hz</span>`).join('');
-            specDiv.appendChild(yAxis);
+            specDiv.appendChild(createPitchAxis());
             
             const wavesurferContainer = document.createElement('div');
             wavesurferContainer.style.flex = '1';

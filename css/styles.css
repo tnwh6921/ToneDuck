@@ -18,6 +18,8 @@
     --success: #cbf0b9;              /* Green instead of yellow/gold */
     --error: #D4727B;
     --warning: #F2CC8F;
+    --voice-male: #2563EB;
+    --voice-female: #D9466E;
     
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -331,6 +333,13 @@ main {
     margin-bottom: var(--spacing-md);
 }
 
+.audio-meta-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
 .audio-item h4 {
     color: var(--primary-color);
     font-size: 1.1rem;
@@ -341,6 +350,24 @@ main {
     color: var(--text-secondary);
     font-style: italic;
     font-size: 0.9rem;
+}
+
+.voice-badge {
+    border-radius: 999px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    line-height: 1;
+    padding: 0.25rem 0.45rem;
+}
+
+.voice-badge.voice-male {
+    color: var(--voice-male);
+    background: rgba(37, 99, 235, 0.09);
+}
+
+.voice-badge.voice-female {
+    color: var(--voice-female);
+    background: rgba(217, 70, 110, 0.1);
 }
 
 .audio-controls {
@@ -367,6 +394,14 @@ main {
 .waveform.active {
     opacity: 1;
     animation: pulse 1.5s ease-in-out infinite;
+}
+
+.waveform[data-voice="male"] {
+    border-color: var(--voice-male) !important;
+}
+
+.waveform[data-voice="female"] {
+    border-color: var(--voice-female) !important;
 }
 
 @keyframes pulse {

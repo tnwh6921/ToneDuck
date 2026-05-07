@@ -19,6 +19,7 @@
               "character": "都",
               "jyutping": "dou1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 67.33448979591839,
               "endTime": 68.09476190476192
             },
@@ -26,6 +27,7 @@
               "character": "多",
               "jyutping": "do1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 19.713492063492065,
               "endTime": 20.491156462585035
             },
@@ -33,6 +35,7 @@
               "character": "開",
               "jyutping": "hoi1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 68.09476190476192,
               "endTime": 68.98430839002269
             },
@@ -40,6 +43,7 @@
               "character": "心",
               "jyutping": "sam1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 28.575963718820866,
               "endTime": 29.521859410430842
             },
@@ -47,6 +51,7 @@
               "character": "之",
               "jyutping": "zi1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 2.0651020408163268,
               "endTime": 3.275714285714286
             },
@@ -54,6 +59,7 @@
               "character": "經",
               "jyutping": "ging1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 54.601337868480734,
               "endTime": 55.73662131519275
             },
@@ -61,6 +67,7 @@
               "character": "新",
               "jyutping": "san1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 37.567551020408175,
               "endTime": 38.89138321995466
             },
@@ -68,6 +75,7 @@
               "character": "機",
               "jyutping": "gei1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 42.66764172335601,
               "endTime": 43.713469387755104
             }
@@ -82,6 +90,7 @@
               "character": "加",
               "jyutping": "gaa1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 8.64138321995465,
               "endTime": 9.437437641723356
             },
@@ -89,6 +98,7 @@
               "character": "公",
               "jyutping": "gung1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 6.372811791383221,
               "endTime": 7.146258503401361
             },
@@ -96,6 +106,7 @@
               "character": "方",
               "jyutping": "fong1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 38.89138321995466,
               "endTime": 39.87609977324264
             },
@@ -103,6 +114,7 @@
               "character": "今",
               "jyutping": "gam1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 3.275714285714286,
               "endTime": 4.061428571428571
             },
@@ -110,6 +122,7 @@
               "character": "真",
               "jyutping": "zan1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 51.40700680272109,
               "endTime": 52.27417233560091
             },
@@ -117,6 +130,7 @@
               "character": "先",
               "jyutping": "sin1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 5.017165532879819,
               "endTime": 6.372811791383221
             },
@@ -124,6 +138,7 @@
               "character": "高",
               "jyutping": "gou1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 76.02528344671202,
               "endTime": 77.174716553288
             },
@@ -131,6 +146,7 @@
               "character": "收",
               "jyutping": "sau1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 36.23648526077098,
               "endTime": 37.567551020408175
             },
@@ -138,6 +154,7 @@
               "character": "車",
               "jyutping": "ce1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 63.66179138321996,
               "endTime": 64.80528344671202
             },
@@ -145,6 +162,7 @@
               "character": "關",
               "jyutping": "gwaan1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 68.98430839002269,
               "endTime": 70.33526077097507
             }
@@ -164,6 +182,7 @@
               "character": "可",
               "jyutping": "ho2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 15.319410430839005,
               "endTime": 16.26151927437642
             },
@@ -171,6 +190,7 @@
               "character": "港",
               "jyutping": "gong2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 48.10882086167801,
               "endTime": 48.97102040816327
             },
@@ -178,6 +198,7 @@
               "character": "好",
               "jyutping": "hou2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 21.714308390022676,
               "endTime": 22.701904761904764
             },
@@ -185,6 +206,7 @@
               "character": "手",
               "jyutping": "sau2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 31.53809523809524,
               "endTime": 32.561995464852615
             },
@@ -192,6 +214,7 @@
               "character": "點",
               "jyutping": "dim2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 77.174716553288,
               "endTime": 78.09079365079366
             },
@@ -199,6 +222,7 @@
               "character": "主",
               "jyutping": "zyu2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 1.1769614512471656,
               "endTime": 2.0651020408163268
             },
@@ -206,6 +230,7 @@
               "character": "本",
               "jyutping": "bun2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 40.938027210884364,
               "endTime": 41.869501133786855
             },
@@ -213,6 +238,7 @@
               "character": "影",
               "jyutping": "jing2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 27.555011337868486,
               "endTime": 28.575963718820866
             }
@@ -227,6 +253,7 @@
               "character": "者",
               "jyutping": "ze2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 55.73662131519275,
               "endTime": 56.608253968253976
             },
@@ -234,6 +261,7 @@
               "character": "所",
               "jyutping": "so2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 30.496916099773244,
               "endTime": 31.53809523809524
             },
@@ -241,6 +269,7 @@
               "character": "小",
               "jyutping": "siu2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 24.201292517006806,
               "endTime": 25.225918367346942
             },
@@ -248,6 +277,7 @@
               "character": "比",
               "jyutping": "bei2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 45.13136054421769,
               "endTime": 45.84600907029479
             },
@@ -255,6 +285,7 @@
               "character": "等",
               "jyutping": "dang2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 53.83691609977325,
               "endTime": 54.601337868480734
             },
@@ -262,6 +293,7 @@
               "character": "保",
               "jyutping": "bou2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 4.061428571428571,
               "endTime": 5.017165532879819
             },
@@ -269,6 +301,7 @@
               "character": "反",
               "jyutping": "faan2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 12.0381179138322,
               "endTime": 13.322517006802723
             },
@@ -276,6 +309,7 @@
               "character": "股",
               "jyutping": "gu2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 56.608253968253976,
               "endTime": 57.62591836734695
             },
@@ -283,6 +317,7 @@
               "character": "解",
               "jyutping": "gaai2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 59.74485260770976,
               "endTime": 60.70140589569162
             },
@@ -290,6 +325,7 @@
               "character": "警",
               "jyutping": "ging2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 61.560997732426316,
               "endTime": 62.56621315192745
             }
@@ -304,6 +340,7 @@
               "character": "中",
               "jyutping": "zung1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 0.0,
               "endTime": 1.1769614512471656
             },
@@ -311,6 +348,7 @@
               "character": "只",
               "jyutping": "zi2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 14.192086167800456,
               "endTime": 15.319410430839005
             },
@@ -318,6 +356,7 @@
               "character": "單",
               "jyutping": "daan1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 17.61589569160998,
               "endTime": 18.851360544217687
             },
@@ -325,6 +364,7 @@
               "character": "通",
               "jyutping": "tung1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 64.80528344671202,
               "endTime": 66.01464852607711
             }
@@ -340,6 +380,7 @@
               "character": "波",
               "jyutping": "bo1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 45.84600907029479,
               "endTime": 46.62879818594105
             },
@@ -347,6 +388,7 @@
               "character": "該",
               "jyutping": "goi1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 60.70140589569162,
               "endTime": 61.560997732426316
             },
@@ -354,6 +396,7 @@
               "character": "因",
               "jyutping": "jan1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 18.851360544217687,
               "endTime": 19.713492063492065
             },
@@ -361,6 +404,7 @@
               "character": "表",
               "jyutping": "biu2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 57.62591836734695,
               "endTime": 58.416643990929714
             }
@@ -376,6 +420,7 @@
               "character": "當",
               "jyutping": "dong1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 50.40052154195012,
               "endTime": 51.40700680272109
             },
@@ -383,6 +428,7 @@
               "character": "把",
               "jyutping": "baa2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 33.89287981859411,
               "endTime": 34.759773242630395
             },
@@ -390,6 +436,7 @@
               "character": "己",
               "jyutping": "gei2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 25.225918367346942,
               "endTime": 26.26122448979592
             },
@@ -397,6 +444,7 @@
               "character": "感",
               "jyutping": "gam2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "female",
               "startTime": 29.521859410430842,
               "endTime": 30.496916099773244
             }
@@ -486,36 +534,40 @@
           ],
           "distinct_items": [
             {
-              "character": "包",
-              "jyutping": "baau1",
+              "character": "天",
+              "jyutping": "tin1",
               "audioFile": "asset/unit1/Unit1.WAV",
-              "tone": 1,
-              "startTime": 9.437437641723356,
-              "endTime": 10.599954648526078
+              "voice": "female",
+              "startTime": 20.491156462585035,
+              "endTime": 21.714308390022676,
+              "tone": 1
             },
             {
               "character": "起",
               "jyutping": "hei2",
               "audioFile": "asset/unit1/Unit1.WAV",
-              "tone": 2,
+              "voice": "female",
               "startTime": 62.56621315192745,
-              "endTime": 63.66179138321996
+              "endTime": 63.66179138321996,
+              "tone": 2
             },
             {
               "character": "選",
               "jyutping": "syun2",
               "audioFile": "asset/unit1/Unit1.WAV",
-              "tone": 2,
+              "voice": "female",
               "startTime": 66.01464852607711,
-              "endTime": 67.33448979591839
+              "endTime": 67.33448979591839,
+              "tone": 2
             },
             {
-              "character": "天",
-              "jyutping": "tin1",
+              "character": "包",
+              "jyutping": "baau1",
               "audioFile": "asset/unit1/Unit1.WAV",
-              "tone": 1,
-              "startTime": 20.491156462585035,
-              "endTime": 21.714308390022676
+              "voice": "female",
+              "startTime": 9.437437641723356,
+              "endTime": 10.599954648526078,
+              "tone": 1
             }
           ]
         },
@@ -528,6 +580,7 @@
               "character": "星",
               "jyutping": "sing1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 39.87609977324264,
               "endTime": 40.938027210884364
             },
@@ -535,6 +588,7 @@
               "character": "口",
               "jyutping": "hau2",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 13.322517006802723,
               "endTime": 14.192086167800456
             },
@@ -542,6 +596,7 @@
               "character": "杯",
               "jyutping": "bui1",
               "audioFile": "asset/unit1/Unit1.WAV",
+              "voice": "male",
               "startTime": 41.869501133786855,
               "endTime": 42.66764172335601
             }
@@ -560,6 +615,7 @@
                   "character": "分鐘",
                   "jyutping": "fan1 zung1",
                   "audioFile": "asset/unit1/Unit1.WAV",
+                  "voice": "male",
                   "startTime": 7.146258503401361,
                   "endTime": 8.64138321995465
                 },
@@ -567,6 +623,7 @@
                   "character": "餐廳",
                   "jyutping": "caan1 teng1",
                   "audioFile": "asset/unit1/Unit1.WAV",
+                  "voice": "male",
                   "startTime": 74.58956916099774,
                   "endTime": 76.02528344671202
                 },
@@ -574,6 +631,7 @@
                   "character": "空間",
                   "jyutping": "hung1 gaan1",
                   "audioFile": "asset/unit1/Unit1.WAV",
+                  "voice": "female",
                   "startTime": 52.27417233560091,
                   "endTime": 53.83691609977325
                 },
@@ -581,6 +639,7 @@
                   "character": "專家",
                   "jyutping": "zyun1 gaa1",
                   "audioFile": "asset/unit1/Unit1.WAV",
+                  "voice": "female",
                   "startTime": 22.701904761904764,
                   "endTime": 24.201292517006806
                 }
@@ -593,6 +652,7 @@
                   "character": "採訪",
                   "jyutping": "coi2 fong2",
                   "audioFile": "asset/unit1/Unit1.WAV",
+                  "voice": "male",
                   "startTime": 34.759773242630395,
                   "endTime": 36.23648526077098
                 },
@@ -600,6 +660,7 @@
                   "character": "阻止",
                   "jyutping": "zo2 zi2",
                   "audioFile": "asset/unit1/Unit1.WAV",
+                  "voice": "male",
                   "startTime": 70.33526077097507,
                   "endTime": 71.67875283446713
                 },
@@ -607,6 +668,7 @@
                   "character": "檢討",
                   "jyutping": "gim2 tou2",
                   "audioFile": "asset/unit1/Unit1.WAV",
+                  "voice": "female",
                   "startTime": 43.713469387755104,
                   "endTime": 45.13136054421769
                 },
@@ -614,6 +676,7 @@
                   "character": "飲品",
                   "jyutping": "jam2 ban2",
                   "audioFile": "asset/unit1/Unit1.WAV",
+                  "voice": "female",
                   "startTime": 73.1820634920635,
                   "endTime": 74.58956916099774
                 }
@@ -626,6 +689,7 @@
                   "character": "申請",
                   "jyutping": "san1 cing2",
                   "audioFile": "asset/unit1/Unit1.WAV",
+                  "voice": "male",
                   "startTime": 48.97102040816327,
                   "endTime": 50.40052154195012
                 },
@@ -633,6 +697,7 @@
                   "character": "清楚",
                   "jyutping": "cing1 co2",
                   "audioFile": "asset/unit1/Unit1.WAV",
+                  "voice": "male",
                   "startTime": 46.62879818594105,
                   "endTime": 48.10882086167801
                 },
@@ -640,6 +705,7 @@
                   "character": "風險",
                   "jyutping": "fung1 him2",
                   "audioFile": "asset/unit1/Unit1.WAV",
+                  "voice": "female",
                   "startTime": 71.67875283446713,
                   "endTime": 73.1820634920635
                 },
@@ -647,6 +713,7 @@
                   "character": "參考",
                   "jyutping": "caam1 haau2",
                   "audioFile": "asset/unit1/Unit1.WAV",
+                  "voice": "female",
                   "startTime": 10.599954648526078,
                   "endTime": 12.0381179138322
                 }
@@ -659,6 +726,7 @@
                   "character": "喜歡",
                   "jyutping": "hei2 fun1",
                   "audioFile": "asset/unit1/Unit1.WAV",
+                  "voice": "male",
                   "startTime": 16.26151927437642,
                   "endTime": 17.61589569160998
                 },
@@ -666,6 +734,7 @@
                   "character": "廣東",
                   "jyutping": "gwong2 dung1",
                   "audioFile": "asset/unit1/Unit1.WAV",
+                  "voice": "male",
                   "startTime": 26.26122448979592,
                   "endTime": 27.555011337868486
                 },
@@ -673,6 +742,7 @@
                   "character": "補充",
                   "jyutping": "bou2 cung1",
                   "audioFile": "asset/unit1/Unit1.WAV",
+                  "voice": "female",
                   "startTime": 58.416643990929714,
                   "endTime": 59.74485260770976
                 },
@@ -680,6 +750,7 @@
                   "character": "打工",
                   "jyutping": "daa2 gung1",
                   "audioFile": "asset/unit1/Unit1.WAV",
+                  "voice": "female",
                   "startTime": 32.561995464852615,
                   "endTime": 33.89287981859411
                 }
@@ -713,6 +784,7 @@
               "character": "人",
               "jyutping": "jan4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "male",
               "startTime": 2.039047619047619,
               "endTime": 2.896734693877551
             },
@@ -720,6 +792,7 @@
               "character": "同",
               "jyutping": "tung4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "male",
               "startTime": 9.572607709750567,
               "endTime": 10.39750566893424
             },
@@ -727,6 +800,7 @@
               "character": "成",
               "jyutping": "sing4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "male",
               "startTime": 21.082063492063494,
               "endTime": 22.11746031746032
             },
@@ -734,6 +808,7 @@
               "character": "前",
               "jyutping": "cin4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "male",
               "startTime": 7.718843537414966,
               "endTime": 8.698503401360545
             },
@@ -741,6 +816,7 @@
               "character": "門",
               "jyutping": "mun4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "female",
               "startTime": 46.95682539682541,
               "endTime": 48.0213605442177
             },
@@ -748,6 +824,7 @@
               "character": "無",
               "jyutping": "mou4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "female",
               "startTime": 31.507142857142863,
               "endTime": 32.62213151927438
             },
@@ -755,6 +832,7 @@
               "character": "如",
               "jyutping": "jyu4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "female",
               "startTime": 16.120680272108842,
               "endTime": 17.193083900226757
             },
@@ -762,6 +840,7 @@
               "character": "來",
               "jyutping": "loi4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "female",
               "startTime": 2.896734693877551,
               "endTime": 4.031632653061225
             }
@@ -776,6 +855,7 @@
               "character": "然",
               "jyutping": "jin4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "male",
               "startTime": 32.62213151927438,
               "endTime": 33.438095238095244
             },
@@ -783,6 +863,7 @@
               "character": "全",
               "jyutping": "cyun4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "male",
               "startTime": 5.385918367346939,
               "endTime": 6.3034240362811795
             },
@@ -790,6 +871,7 @@
               "character": "明",
               "jyutping": "ming4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "male",
               "startTime": 25.179977324263042,
               "endTime": 26.00009070294785
             },
@@ -797,6 +879,7 @@
               "character": "民",
               "jyutping": "man4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "male",
               "startTime": 28.365895691609982,
               "endTime": 29.18600907029479
             },
@@ -804,6 +887,7 @@
               "character": "能",
               "jyutping": "nang4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "male",
               "startTime": 40.37006802721089,
               "endTime": 41.225396825396835
             },
@@ -811,6 +895,7 @@
               "character": "球",
               "jyutping": "kau4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "female",
               "startTime": 33.438095238095244,
               "endTime": 34.59285714285715
             },
@@ -818,6 +903,7 @@
               "character": "員",
               "jyutping": "jyun4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "female",
               "startTime": 12.74859410430839,
               "endTime": 13.965850340136054
             },
@@ -825,6 +911,7 @@
               "character": "頭",
               "jyutping": "tau4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "female",
               "startTime": 50.82755102040818,
               "endTime": 51.999342403628134
             },
@@ -832,6 +919,7 @@
               "character": "和",
               "jyutping": "wo4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "female",
               "startTime": 10.39750566893424,
               "endTime": 11.489795918367347
             },
@@ -839,6 +927,7 @@
               "character": "情",
               "jyutping": "cing4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "female",
               "startTime": 19.84981859410431,
               "endTime": 21.082063492063494
             }
@@ -853,6 +942,7 @@
               "character": "連",
               "jyutping": "lin4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "male",
               "startTime": 43.47780045351475,
               "endTime": 44.29321995464854
             },
@@ -860,6 +950,7 @@
               "character": "回",
               "jyutping": "wui4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "male",
               "startTime": 13.965850340136054,
               "endTime": 14.887301587301588
             },
@@ -867,6 +958,7 @@
               "character": "交",
               "jyutping": "gaau1",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "male",
               "startTime": 1.2143083900226757,
               "endTime": 2.039047619047619
             },
@@ -874,6 +966,7 @@
               "character": "台",
               "jyutping": "toi4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "male",
               "startTime": 8.698503401360545,
               "endTime": 9.572607709750567
             }
@@ -889,6 +982,7 @@
               "character": "持",
               "jyutping": "ci4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "female",
               "startTime": 22.11746031746032,
               "endTime": 23.31775510204082
             },
@@ -896,6 +990,7 @@
               "character": "題",
               "jyutping": "tai4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "female",
               "startTime": 51.999342403628134,
               "endTime": 53.18099773242632
             },
@@ -903,6 +998,7 @@
               "character": "男",
               "jyutping": "naam4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "female",
               "startTime": 34.59285714285715,
               "endTime": 35.81487528344672
             },
@@ -910,6 +1006,7 @@
               "character": "火",
               "jyutping": "fo2",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "female",
               "startTime": 30.415510204081638,
               "endTime": 31.507142857142863
             }
@@ -999,52 +1096,58 @@
           ],
           "distinct_items": [
             {
+              "character": "走",
+              "jyutping": "zau2",
+              "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "female",
+              "startTime": 42.458798185941056,
+              "endTime": 43.47780045351475,
+              "tone": 2
+            },
+            {
               "character": "留",
               "jyutping": "lau4",
               "audioFile": "asset/unit2/Unit2.WAV",
-              "tone": 4,
+              "voice": "female",
               "startTime": 35.81487528344672,
-              "endTime": 36.89401360544218
+              "endTime": 36.89401360544218,
+              "tone": 4
             },
             {
               "character": "安",
               "jyutping": "on1",
               "audioFile": "asset/unit2/Unit2.WAV",
-              "tone": 1,
+              "voice": "female",
               "startTime": 17.193083900226757,
-              "endTime": 18.393378684807256
-            },
-            {
-              "character": "走",
-              "jyutping": "zau2",
-              "audioFile": "asset/unit2/Unit2.WAV",
-              "tone": 2,
-              "startTime": 42.458798185941056,
-              "endTime": 43.47780045351475
-            },
-            {
-              "character": "三",
-              "jyutping": "saam1",
-              "audioFile": "asset/unit2/Unit2.WAV",
-              "tone": 1,
-              "startTime": 0.0,
-              "endTime": 1.2143083900226757
-            },
-            {
-              "character": "條",
-              "jyutping": "tiu4",
-              "audioFile": "asset/unit2/Unit2.WAV",
-              "tone": 4,
-              "startTime": 26.00009070294785,
-              "endTime": 27.0792970521542
+              "endTime": 18.393378684807256,
+              "tone": 1
             },
             {
               "character": "早",
               "jyutping": "zou2",
               "audioFile": "asset/unit2/Unit2.WAV",
-              "tone": 2,
+              "voice": "female",
               "startTime": 24.210181405895696,
-              "endTime": 25.179977324263042
+              "endTime": 25.179977324263042,
+              "tone": 2
+            },
+            {
+              "character": "三",
+              "jyutping": "saam1",
+              "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "female",
+              "startTime": 0.0,
+              "endTime": 1.2143083900226757,
+              "tone": 1
+            },
+            {
+              "character": "條",
+              "jyutping": "tiu4",
+              "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "female",
+              "startTime": 26.00009070294785,
+              "endTime": 27.0792970521542,
+              "tone": 4
             }
           ]
         },
@@ -1057,6 +1160,7 @@
               "character": "龍",
               "jyutping": "lung4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "male",
               "startTime": 55.69365079365081,
               "endTime": 56.51111111111111
             },
@@ -1064,6 +1168,7 @@
               "character": "紅",
               "jyutping": "hung4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "male",
               "startTime": 39.46070294784581,
               "endTime": 40.37006802721089
             },
@@ -1071,6 +1176,7 @@
               "character": "旗",
               "jyutping": "kei4",
               "audioFile": "asset/unit2/Unit2.WAV",
+              "voice": "male",
               "startTime": 23.31775510204082,
               "endTime": 24.210181405895696
             }
@@ -1089,6 +1195,7 @@
                   "character": "銀行",
                   "jyutping": "ngan4 hong4",
                   "audioFile": "asset/unit2/Unit2.WAV",
+                  "voice": "male",
                   "startTime": 45.68950113378686,
                   "endTime": 46.95682539682541
                 },
@@ -1096,6 +1203,7 @@
                   "character": "傳媒",
                   "jyutping": "cyun4 mui4",
                   "audioFile": "asset/unit2/Unit2.WAV",
+                  "voice": "male",
                   "startTime": 4.031632653061225,
                   "endTime": 5.385918367346939
                 },
@@ -1103,6 +1211,7 @@
                   "character": "形容",
                   "jyutping": "jing4 jung4",
                   "audioFile": "asset/unit2/Unit2.WAV",
+                  "voice": "female",
                   "startTime": 18.393378684807256,
                   "endTime": 19.84981859410431
                 },
@@ -1110,6 +1219,7 @@
                   "character": "凌晨",
                   "jyutping": "ling4 san4",
                   "audioFile": "asset/unit2/Unit2.WAV",
+                  "voice": "female",
                   "startTime": 6.3034240362811795,
                   "endTime": 7.718843537414966
                 }
@@ -1122,6 +1232,7 @@
                   "character": "黃金",
                   "jyutping": "wong4 gam1",
                   "audioFile": "asset/unit2/Unit2.WAV",
+                  "voice": "male",
                   "startTime": 54.484331065759655,
                   "endTime": 55.69365079365081
                 },
@@ -1129,6 +1240,7 @@
                   "character": "離開",
                   "jyutping": "lei4 hoi1",
                   "audioFile": "asset/unit2/Unit2.WAV",
+                  "voice": "female",
                   "startTime": 49.436757369614526,
                   "endTime": 50.82755102040818
                 },
@@ -1136,6 +1248,7 @@
                   "character": "重新",
                   "jyutping": "cung4 san1",
                   "audioFile": "asset/unit2/Unit2.WAV",
+                  "voice": "female",
                   "startTime": 44.29321995464854,
                   "endTime": 45.68950113378686
                 }
@@ -1148,6 +1261,7 @@
                   "character": "當年",
                   "jyutping": "dong1 nin4",
                   "audioFile": "asset/unit2/Unit2.WAV",
+                  "voice": "male",
                   "startTime": 36.89401360544218,
                   "endTime": 38.023424036281185
                 },
@@ -1155,6 +1269,7 @@
                   "character": "要求",
                   "jyutping": "jiu1 kau4",
                   "audioFile": "asset/unit2/Unit2.WAV",
+                  "voice": "male",
                   "startTime": 41.225396825396835,
                   "endTime": 42.458798185941056
                 },
@@ -1162,6 +1277,7 @@
                   "character": "高層",
                   "jyutping": "gou1 cang4",
                   "audioFile": "asset/unit2/Unit2.WAV",
+                  "voice": "female",
                   "startTime": 53.18099773242632,
                   "endTime": 54.484331065759655
                 }
@@ -1174,6 +1290,7 @@
                   "character": "團體",
                   "jyutping": "tyun4 tai2",
                   "audioFile": "asset/unit2/Unit2.WAV",
+                  "voice": "male",
                   "startTime": 14.887301587301588,
                   "endTime": 16.120680272108842
                 },
@@ -1181,6 +1298,7 @@
                   "character": "防止",
                   "jyutping": "fong4 zi2",
                   "audioFile": "asset/unit2/Unit2.WAV",
+                  "voice": "female",
                   "startTime": 48.0213605442177,
                   "endTime": 49.436757369614526
                 },
@@ -1188,6 +1306,7 @@
                   "character": "籌款",
                   "jyutping": "cau4 fun2",
                   "audioFile": "asset/unit2/Unit2.WAV",
+                  "voice": "female",
                   "startTime": 38.023424036281185,
                   "endTime": 39.46070294784581
                 }
@@ -1200,6 +1319,7 @@
                   "character": "品牌",
                   "jyutping": "ban2 paai4",
                   "audioFile": "asset/unit2/Unit2.WAV",
+                  "voice": "male",
                   "startTime": 11.489795918367347,
                   "endTime": 12.74859410430839
                 },
@@ -1207,6 +1327,7 @@
                   "character": "檢查",
                   "jyutping": "gim2 caa4",
                   "audioFile": "asset/unit2/Unit2.WAV",
+                  "voice": "male",
                   "startTime": 27.0792970521542,
                   "endTime": 28.365895691609982
                 },
@@ -1214,6 +1335,7 @@
                   "character": "減肥",
                   "jyutping": "gaam2 fei4",
                   "audioFile": "asset/unit2/Unit2.WAV",
+                  "voice": "female",
                   "startTime": 29.18600907029479,
                   "endTime": 30.415510204081638
                 }
@@ -1247,6 +1369,7 @@
               "character": "過",
               "jyutping": "gwo3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "male",
               "startTime": 61.561972789115664,
               "endTime": 62.45297052154197
             },
@@ -1254,6 +1377,7 @@
               "character": "要",
               "jyutping": "jiu3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "male",
               "startTime": 52.72408163265308,
               "endTime": 53.65868480725626
             },
@@ -1261,6 +1385,7 @@
               "character": "到",
               "jyutping": "dou3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "male",
               "startTime": 8.092312925170068,
               "endTime": 8.932607709750567
             },
@@ -1268,6 +1393,7 @@
               "character": "次",
               "jyutping": "ci3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "male",
               "startTime": 36.43712018140591,
               "endTime": 37.53553287981861
             },
@@ -1275,6 +1401,7 @@
               "character": "見",
               "jyutping": "gin3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "female",
               "startTime": 53.65868480725626,
               "endTime": 54.74510204081635
             },
@@ -1282,6 +1409,7 @@
               "character": "政",
               "jyutping": "zing3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "female",
               "startTime": 31.47562358276645,
               "endTime": 32.70287981859411
             },
@@ -1289,6 +1417,7 @@
               "character": "至",
               "jyutping": "zi3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "female",
               "startTime": 51.567369614512494,
               "endTime": 52.72408163265308
             },
@@ -1296,6 +1425,7 @@
               "character": "價",
               "jyutping": "gaa3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "female",
               "startTime": 6.034217687074831,
               "endTime": 7.151519274376418
             }
@@ -1310,6 +1440,7 @@
               "character": "記",
               "jyutping": "gei3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "male",
               "startTime": 56.21235827664401,
               "endTime": 57.097437641723374
             },
@@ -1317,6 +1448,7 @@
               "character": "再",
               "jyutping": "zoi3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "male",
               "startTime": 7.151519274376418,
               "endTime": 8.092312925170068
             },
@@ -1324,6 +1456,7 @@
               "character": "報",
               "jyutping": "bou3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "male",
               "startTime": 16.483038548752837,
               "endTime": 17.339863945578234
             },
@@ -1331,6 +1464,7 @@
               "character": "放",
               "jyutping": "fong3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "male",
               "startTime": 30.366666666666674,
               "endTime": 31.47562358276645
             },
@@ -1338,6 +1472,7 @@
               "character": "算",
               "jyutping": "syun3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "male",
               "startTime": 45.882789115646275,
               "endTime": 46.977891156462604
             },
@@ -1345,6 +1480,7 @@
               "character": "世",
               "jyutping": "sai3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "female",
               "startTime": 0.0,
               "endTime": 1.2190022675736962
             },
@@ -1352,6 +1488,7 @@
               "character": "氣",
               "jyutping": "hei3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "female",
               "startTime": 37.53553287981861,
               "endTime": 38.68895691609979
             },
@@ -1359,6 +1496,7 @@
               "character": "戰",
               "jyutping": "zin3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "female",
               "startTime": 23.99040816326531,
               "endTime": 25.232494331065766
             },
@@ -1366,6 +1504,7 @@
               "character": "教",
               "jyutping": "gaau3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "female",
               "startTime": 32.70287981859411,
               "endTime": 33.898027210884365
             },
@@ -1373,6 +1512,7 @@
               "character": "太",
               "jyutping": "taai3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "female",
               "startTime": 17.339863945578234,
               "endTime": 18.58603174603175
             }
@@ -1387,6 +1527,7 @@
               "character": "變",
               "jyutping": "bin3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "male",
               "startTime": 58.14192743764174,
               "endTime": 58.95489795918369
             },
@@ -1394,6 +1535,7 @@
               "character": "賽",
               "jyutping": "coi3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "male",
               "startTime": 60.51716553287984,
               "endTime": 61.561972789115664
             },
@@ -1401,6 +1543,7 @@
               "character": "界",
               "jyutping": "gaai3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "male",
               "startTime": 42.29693877551022,
               "endTime": 43.186099773242645
             },
@@ -1408,6 +1551,7 @@
               "character": "指",
               "jyutping": "zi2",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "male",
               "startTime": 28.323401360544224,
               "endTime": 29.25428571428572
             }
@@ -1423,6 +1567,7 @@
               "character": "叫",
               "jyutping": "giu3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "female",
               "startTime": 13.90170068027211,
               "endTime": 15.031587301587303
             },
@@ -1430,6 +1575,7 @@
               "character": "化",
               "jyutping": "faa3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "female",
               "startTime": 10.051541950113378,
               "endTime": 11.188004535147392
             },
@@ -1437,6 +1583,7 @@
               "character": "流",
               "jyutping": "lau4",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "female",
               "startTime": 38.68895691609979,
               "endTime": 39.71374149659866
             },
@@ -1444,6 +1591,7 @@
               "character": "爆",
               "jyutping": "baau3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "female",
               "startTime": 41.23272108843539,
               "endTime": 42.29693877551022
             }
@@ -1533,60 +1681,67 @@
           ],
           "distinct_items": [
             {
-              "character": "制",
-              "jyutping": "zai3",
+              "character": "講",
+              "jyutping": "gong2",
               "audioFile": "asset/unit3/Unit3.WAV",
-              "tone": 3,
-              "startTime": 8.932607709750567,
-              "endTime": 10.051541950113378
+              "voice": "female",
+              "startTime": 57.097437641723374,
+              "endTime": 58.14192743764174,
+              "tone": 2
             },
             {
               "character": "半",
               "jyutping": "bun3",
               "audioFile": "asset/unit3/Unit3.WAV",
-              "tone": 3,
+              "voice": "female",
               "startTime": 11.188004535147392,
-              "endTime": 12.300362811791384
-            },
-            {
-              "character": "講",
-              "jyutping": "gong2",
-              "audioFile": "asset/unit3/Unit3.WAV",
-              "tone": 2,
-              "startTime": 57.097437641723374,
-              "endTime": 58.14192743764174
-            },
-            {
-              "character": "完",
-              "jyutping": "jyun4",
-              "audioFile": "asset/unit3/Unit3.WAV",
-              "tone": 4,
-              "startTime": 18.58603174603175,
-              "endTime": 19.713741496598644
-            },
-            {
-              "character": "他",
-              "jyutping": "taa1",
-              "audioFile": "asset/unit3/Unit3.WAV",
-              "tone": 1,
-              "startTime": 2.5129251700680273,
-              "endTime": 3.592448979591837
+              "endTime": 12.300362811791384,
+              "tone": 3
             },
             {
               "character": "提",
               "jyutping": "tai4",
               "audioFile": "asset/unit3/Unit3.WAV",
-              "tone": 4,
+              "voice": "female",
               "startTime": 29.25428571428572,
-              "endTime": 30.366666666666674
+              "endTime": 30.366666666666674,
+              "tone": 4
+            },
+            {
+              "character": "制",
+              "jyutping": "zai3",
+              "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "female",
+              "startTime": 8.932607709750567,
+              "endTime": 10.051541950113378,
+              "tone": 3
+            },
+            {
+              "character": "他",
+              "jyutping": "taa1",
+              "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "female",
+              "startTime": 2.5129251700680273,
+              "endTime": 3.592448979591837,
+              "tone": 1
+            },
+            {
+              "character": "完",
+              "jyutping": "jyun4",
+              "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "female",
+              "startTime": 18.58603174603175,
+              "endTime": 19.713741496598644,
+              "tone": 4
             },
             {
               "character": "工",
               "jyutping": "gung1",
               "audioFile": "asset/unit3/Unit3.WAV",
-              "tone": 1,
+              "voice": "female",
               "startTime": 19.713741496598644,
-              "endTime": 20.795464852607715
+              "endTime": 20.795464852607715,
+              "tone": 1
             }
           ]
         },
@@ -1599,6 +1754,7 @@
               "character": "傘",
               "jyutping": "saan3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "male",
               "startTime": 4.9897959183673475,
               "endTime": 6.034217687074831
             },
@@ -1606,6 +1762,7 @@
               "character": "愛",
               "jyutping": "oi3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "male",
               "startTime": 23.083424036281183,
               "endTime": 23.99040816326531
             },
@@ -1613,6 +1770,7 @@
               "character": "快",
               "jyutping": "faai3",
               "audioFile": "asset/unit3/Unit3.WAV",
+              "voice": "male",
               "startTime": 21.991859410430845,
               "endTime": 23.083424036281183
             }
@@ -1631,6 +1789,7 @@
                   "character": "個案",
                   "jyutping": "go3 on3",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "male",
                   "startTime": 3.592448979591837,
                   "endTime": 4.9897959183673475
                 },
@@ -1638,6 +1797,7 @@
                   "character": "照顧",
                   "jyutping": "ziu3 gu3",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "male",
                   "startTime": 39.71374149659866,
                   "endTime": 41.23272108843539
                 },
@@ -1645,6 +1805,7 @@
                   "character": "聖誕",
                   "jyutping": "sing3 daan3",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "female",
                   "startTime": 46.977891156462604,
                   "endTime": 48.59013605442179
                 },
@@ -1652,6 +1813,7 @@
                   "character": "貢獻",
                   "jyutping": "gung3 hin3",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "female",
                   "startTime": 58.95489795918369,
                   "endTime": 60.51716553287984
                 }
@@ -1664,6 +1826,7 @@
                   "character": "抗爭",
                   "jyutping": "kong3 zang1",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "female",
                   "startTime": 26.782131519274383,
                   "endTime": 28.323401360544224
                 },
@@ -1671,6 +1834,7 @@
                   "character": "更加",
                   "jyutping": "gang3 gaa1",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "male",
                   "startTime": 33.898027210884365,
                   "endTime": 35.15444444444446
                 },
@@ -1678,6 +1842,7 @@
                   "character": "降低",
                   "jyutping": "gong3 dai1",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "male",
                   "startTime": 68.12165532879821,
                   "endTime": 69.31430839002267
                 }
@@ -1690,6 +1855,7 @@
                   "character": "觀眾",
                   "jyutping": "gun1 zung3",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "female",
                   "startTime": 54.74510204081635,
                   "endTime": 56.21235827664401
                 },
@@ -1697,6 +1863,7 @@
                   "character": "機構",
                   "jyutping": "gei1 kau3",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "male",
                   "startTime": 35.15444444444446,
                   "endTime": 36.43712018140591
                 },
@@ -1704,6 +1871,7 @@
                   "character": "關注",
                   "jyutping": "gwaan1 zyu3",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "female",
                   "startTime": 66.5860770975057,
                   "endTime": 68.12165532879821
                 }
@@ -1716,6 +1884,7 @@
                   "character": "背景",
                   "jyutping": "bui3 ging2",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "female",
                   "startTime": 50.16843537414968,
                   "endTime": 51.567369614512494
                 },
@@ -1723,6 +1892,7 @@
                   "character": "破產",
                   "jyutping": "po3 caan2",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "male",
                   "startTime": 43.186099773242645,
                   "endTime": 44.55503401360546
                 },
@@ -1730,6 +1900,7 @@
                   "character": "禁止",
                   "jyutping": "gam3 zi2",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "female",
                   "startTime": 44.55503401360546,
                   "endTime": 45.882789115646275
                 }
@@ -1742,6 +1913,7 @@
                   "character": "酒店",
                   "jyutping": "zau2 dim3",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "male",
                   "startTime": 62.45297052154197,
                   "endTime": 63.754399092970544
                 },
@@ -1749,6 +1921,7 @@
                   "character": "廣吿",
                   "jyutping": "gwong2 gou3",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "male",
                   "startTime": 20.795464852607715,
                   "endTime": 21.991859410430845
                 },
@@ -1756,6 +1929,7 @@
                   "character": "口罩",
                   "jyutping": "hau2 zaau3",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "female",
                   "startTime": 12.300362811791384,
                   "endTime": 13.90170068027211
                 }
@@ -1768,6 +1942,7 @@
                   "character": "鏡頭",
                   "jyutping": "geng3 tau4",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "male",
                   "startTime": 63.754399092970544,
                   "endTime": 64.98829931972791
                 },
@@ -1775,6 +1950,7 @@
                   "character": "四圍",
                   "jyutping": "sei3 wai4",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "male",
                   "startTime": 15.031587301587303,
                   "endTime": 16.483038548752837
                 },
@@ -1782,6 +1958,7 @@
                   "character": "肺炎",
                   "jyutping": "fai3 jim4",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "female",
                   "startTime": 48.59013605442179,
                   "endTime": 50.16843537414968
                 }
@@ -1794,6 +1971,7 @@
                   "character": "投訴",
                   "jyutping": "tau4 sou3",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "female",
                   "startTime": 25.232494331065766,
                   "endTime": 26.782131519274383
                 },
@@ -1801,6 +1979,7 @@
                   "character": "門票",
                   "jyutping": "mun4 piu3",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "female",
                   "startTime": 64.98829931972791,
                   "endTime": 66.5860770975057
                 },
@@ -1808,6 +1987,7 @@
                   "character": "人數",
                   "jyutping": "jan4 sou3",
                   "audioFile": "asset/unit3/Unit3.WAV",
+                  "voice": "male",
                   "startTime": 1.2190022675736962,
                   "endTime": 2.5129251700680273
                 }
@@ -1841,6 +2021,7 @@
               "character": "大",
               "jyutping": "daai6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "male",
               "startTime": 21.011473922902493,
               "endTime": 21.949478458049885
             },
@@ -1848,6 +2029,7 @@
               "character": "地",
               "jyutping": "dei6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "male",
               "startTime": 17.877392290249432,
               "endTime": 18.75349206349206
             },
@@ -1855,6 +2037,7 @@
               "character": "後",
               "jyutping": "hau6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "male",
               "startTime": 25.024761904761903,
               "endTime": 26.029410430839
             },
@@ -1862,6 +2045,7 @@
               "character": "自",
               "jyutping": "zi6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "male",
               "startTime": 59.12544217687074,
               "endTime": 60.1253514739229
             },
@@ -1869,6 +2053,7 @@
               "character": "面",
               "jyutping": "min6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "female",
               "startTime": 76.38757369614513,
               "endTime": 77.57124716553288
             },
@@ -1876,6 +2061,7 @@
               "character": "在",
               "jyutping": "zoi6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "female",
               "startTime": 16.72208616780045,
               "endTime": 17.877392290249432
             },
@@ -1883,6 +2069,7 @@
               "character": "用",
               "jyutping": "jung6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "female",
               "startTime": 47.189546485260756,
               "endTime": 48.36521541950112
             },
@@ -1890,6 +2077,7 @@
               "character": "定",
               "jyutping": "ding6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "female",
               "startTime": 21.949478458049885,
               "endTime": 23.172653061224487
             }
@@ -1904,6 +2092,7 @@
               "character": "就",
               "jyutping": "zau6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "male",
               "startTime": 23.172653061224487,
               "endTime": 24.120158730158728
             },
@@ -1911,6 +2100,7 @@
               "character": "為",
               "jyutping": "wai6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "male",
               "startTime": 41.01235827664399,
               "endTime": 42.02653061224489
             },
@@ -1918,6 +2108,7 @@
               "character": "話",
               "jyutping": "waa6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "male",
               "startTime": 62.78029478458049,
               "endTime": 63.75637188208616
             },
@@ -1925,6 +2116,7 @@
               "character": "但",
               "jyutping": "daan6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "male",
               "startTime": 2.5554875283446714,
               "endTime": 3.4363492063492065
             },
@@ -1932,6 +2124,7 @@
               "character": "現",
               "jyutping": "jin6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "male",
               "startTime": 44.707120181405884,
               "endTime": 45.7308163265306
             },
@@ -1939,6 +2132,7 @@
               "character": "動",
               "jyutping": "dung6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "female",
               "startTime": 9.052448979591837,
               "endTime": 10.240272108843538
             },
@@ -1946,6 +2140,7 @@
               "character": "外",
               "jyutping": "ngoi6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "female",
               "startTime": 18.75349206349206,
               "endTime": 19.96612244897959
             },
@@ -1953,6 +2148,7 @@
               "character": "問",
               "jyutping": "man6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "female",
               "startTime": 14.018480725623583,
               "endTime": 15.181519274376416
             },
@@ -1960,6 +2156,7 @@
               "character": "利",
               "jyutping": "lei6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "female",
               "startTime": 7.939024943310658,
               "endTime": 9.052448979591837
             },
@@ -1967,6 +2164,7 @@
               "character": "部",
               "jyutping": "bou6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "female",
               "startTime": 72.82038548752834,
               "endTime": 73.9536507936508
             }
@@ -1981,6 +2179,7 @@
               "character": "未",
               "jyutping": "mei6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "male",
               "startTime": 35.005328798185936,
               "endTime": 35.98065759637188
             },
@@ -1988,6 +2187,7 @@
               "character": "排",
               "jyutping": "paai4",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "male",
               "startTime": 27.193378684807254,
               "endTime": 28.163696145124714
             },
@@ -1995,6 +2195,7 @@
               "character": "住",
               "jyutping": "zyu6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "male",
               "startTime": 3.4363492063492065,
               "endTime": 4.445374149659864
             },
@@ -2002,6 +2203,7 @@
               "character": "道",
               "jyutping": "dou6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "male",
               "startTime": 71.89725623582765,
               "endTime": 72.82038548752834
             }
@@ -2017,6 +2219,7 @@
               "character": "電",
               "jyutping": "din6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "female",
               "startTime": 75.21156462585034,
               "endTime": 76.38757369614513
             },
@@ -2024,6 +2227,7 @@
               "character": "做",
               "jyutping": "zou6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "female",
               "startTime": 5.60015873015873,
               "endTime": 6.708163265306123
             },
@@ -2031,6 +2235,7 @@
               "character": "認",
               "jyutping": "jing6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "female",
               "startTime": 63.75637188208616,
               "endTime": 65.05573696145123
             },
@@ -2038,6 +2243,7 @@
               "character": "費",
               "jyutping": "fai3",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "female",
               "startTime": 67.8111111111111,
               "endTime": 69.15369614512471
             }
@@ -2127,68 +2333,76 @@
           ],
           "distinct_items": [
             {
-              "character": "品",
-              "jyutping": "ban2",
-              "audioFile": "asset/unit4/Unit4.WAV",
-              "tone": 2,
-              "startTime": 13.066167800453515,
-              "endTime": 14.018480725623583
-            },
-            {
-              "character": "望",
-              "jyutping": "mong6",
-              "audioFile": "asset/unit4/Unit4.WAV",
-              "tone": 6,
-              "startTime": 33.728276643990924,
-              "endTime": 35.005328798185936
-            },
-            {
-              "character": "萬",
-              "jyutping": "maan6",
-              "audioFile": "asset/unit4/Unit4.WAV",
-              "tone": 6,
-              "startTime": 60.1253514739229,
-              "endTime": 61.35684807256235
-            },
-            {
-              "character": "案",
-              "jyutping": "on3",
-              "audioFile": "asset/unit4/Unit4.WAV",
-              "tone": 3,
-              "startTime": 35.98065759637188,
-              "endTime": 37.22353741496598
-            },
-            {
               "character": "聯",
               "jyutping": "lyun4",
               "audioFile": "asset/unit4/Unit4.WAV",
-              "tone": 4,
+              "voice": "female",
               "startTime": 57.9919954648526,
-              "endTime": 59.12544217687074
-            },
-            {
-              "character": "班",
-              "jyutping": "baan1",
-              "audioFile": "asset/unit4/Unit4.WAV",
-              "tone": 1,
-              "startTime": 43.59528344671201,
-              "endTime": 44.707120181405884
-            },
-            {
-              "character": "瀉",
-              "jyutping": "se3",
-              "audioFile": "asset/unit4/Unit4.WAV",
-              "tone": 3,
-              "startTime": 39.8025850340136,
-              "endTime": 41.01235827664399
+              "endTime": 59.12544217687074,
+              "tone": 4
             },
             {
               "character": "投",
               "jyutping": "tau4",
               "audioFile": "asset/unit4/Unit4.WAV",
-              "tone": 4,
+              "voice": "female",
               "startTime": 26.029410430839,
-              "endTime": 27.193378684807254
+              "endTime": 27.193378684807254,
+              "tone": 4
+            },
+            {
+              "character": "品",
+              "jyutping": "ban2",
+              "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "female",
+              "startTime": 13.066167800453515,
+              "endTime": 14.018480725623583,
+              "tone": 2
+            },
+            {
+              "character": "萬",
+              "jyutping": "maan6",
+              "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "female",
+              "startTime": 60.1253514739229,
+              "endTime": 61.35684807256235,
+              "tone": 6
+            },
+            {
+              "character": "望",
+              "jyutping": "mong6",
+              "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "female",
+              "startTime": 33.728276643990924,
+              "endTime": 35.005328798185936,
+              "tone": 6
+            },
+            {
+              "character": "案",
+              "jyutping": "on3",
+              "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "female",
+              "startTime": 35.98065759637188,
+              "endTime": 37.22353741496598,
+              "tone": 3
+            },
+            {
+              "character": "班",
+              "jyutping": "baan1",
+              "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "female",
+              "startTime": 43.59528344671201,
+              "endTime": 44.707120181405884,
+              "tone": 1
+            },
+            {
+              "character": "瀉",
+              "jyutping": "se3",
+              "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "female",
+              "startTime": 39.8025850340136,
+              "endTime": 41.01235827664399,
+              "tone": 3
             }
           ]
         },
@@ -2201,6 +2415,7 @@
               "character": "夢",
               "jyutping": "mung6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "male",
               "startTime": 19.96612244897959,
               "endTime": 21.011473922902493
             },
@@ -2208,6 +2423,7 @@
               "character": "幣",
               "jyutping": "bai6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "male",
               "startTime": 24.120158730158728,
               "endTime": 25.024761904761903
             },
@@ -2215,6 +2431,7 @@
               "character": "浪",
               "jyutping": "long6",
               "audioFile": "asset/unit4/Unit4.WAV",
+              "voice": "male",
               "startTime": 37.22353741496598,
               "endTime": 38.25700680272109
             }
@@ -2233,6 +2450,7 @@
                   "character": "運動",
                   "jyutping": "wan6 dung6",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "male",
                   "startTime": 70.45773242630385,
                   "endTime": 71.89725623582765
                 },
@@ -2240,6 +2458,7 @@
                   "character": "任務",
                   "jyutping": "jam6 mou6",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "male",
                   "startTime": 1.2063492063492063,
                   "endTime": 2.5554875283446714
                 },
@@ -2247,6 +2466,7 @@
                   "character": "混亂",
                   "jyutping": "wan6 lyun6",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "female",
                   "startTime": 38.25700680272109,
                   "endTime": 39.8025850340136
                 },
@@ -2254,6 +2474,7 @@
                   "character": "誤會",
                   "jyutping": "ng6 wui6",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "female",
                   "startTime": 65.05573696145123,
                   "endTime": 66.54027210884352
                 }
@@ -2266,6 +2487,7 @@
                   "character": "健康",
                   "jyutping": "gin6 hong1",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "male",
                   "startTime": 6.708163265306123,
                   "endTime": 7.939024943310658
                 },
@@ -2273,6 +2495,7 @@
                   "character": "第三",
                   "jyutping": "dai6 saam1",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "female",
                   "startTime": 51.16975056689341,
                   "endTime": 52.55356009070294
                 },
@@ -2280,6 +2503,7 @@
                   "character": "罷工",
                   "jyutping": "baa6 gung1",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "female",
                   "startTime": 56.69369614512471,
                   "endTime": 57.9919954648526
                 }
@@ -2292,6 +2516,7 @@
                   "character": "關係",
                   "jyutping": "gwaan1 hai6",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "male",
                   "startTime": 73.9536507936508,
                   "endTime": 75.21156462585034
                 },
@@ -2299,6 +2524,7 @@
                   "character": "方便",
                   "jyutping": "fong1 bin6",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "female",
                   "startTime": 30.873968253968254,
                   "endTime": 32.434829931972786
                 },
@@ -2306,6 +2532,7 @@
                   "character": "經驗",
                   "jyutping": "ging1 jim6",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "male",
                   "startTime": 53.97092970521541,
                   "endTime": 55.31297052154194
                 }
@@ -2318,6 +2545,7 @@
                   "character": "效果",
                   "jyutping": "haau6 gwo2",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "male",
                   "startTime": 29.590226757369614,
                   "endTime": 30.873968253968254
                 },
@@ -2325,6 +2553,7 @@
                   "character": "代表",
                   "jyutping": "doi6 biu2",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "male",
                   "startTime": 0.0,
                   "endTime": 1.2063492063492063
                 },
@@ -2332,6 +2561,7 @@
                   "character": "系統",
                   "jyutping": "hai6 tung2",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "female",
                   "startTime": 52.55356009070294,
                   "endTime": 53.97092970521541
                 }
@@ -2344,6 +2574,7 @@
                   "character": "口號",
                   "jyutping": "hau2 hou6",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "male",
                   "startTime": 11.743129251700681,
                   "endTime": 13.066167800453515
                 },
@@ -2351,6 +2582,7 @@
                   "character": "改善",
                   "jyutping": "goi2 sin6",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "female",
                   "startTime": 28.163696145124714,
                   "endTime": 29.590226757369614
                 },
@@ -2358,6 +2590,7 @@
                   "character": "總共",
                   "jyutping": "zung2 gung6",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "female",
                   "startTime": 55.31297052154194,
                   "endTime": 56.69369614512471
                 }
@@ -2370,6 +2603,7 @@
                   "character": "甚至",
                   "jyutping": "sam6 zi3",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "male",
                   "startTime": 45.7308163265306,
                   "endTime": 47.189546485260756
                 },
@@ -2377,6 +2611,7 @@
                   "character": "受到",
                   "jyutping": "sau6 dou3",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "female",
                   "startTime": 10.240272108843538,
                   "endTime": 11.743129251700681
                 },
@@ -2384,6 +2619,7 @@
                   "character": "預計",
                   "jyutping": "jyu6 gai3",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "female",
                   "startTime": 77.57124716553288,
                   "endTime": 79.02219954648527
                 }
@@ -2396,6 +2632,7 @@
                   "character": "透露",
                   "jyutping": "tau3 lou6",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "male",
                   "startTime": 69.15369614512471,
                   "endTime": 70.45773242630385
                 },
@@ -2403,6 +2640,7 @@
                   "character": "訓練",
                   "jyutping": "fan3 lin6",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "male",
                   "startTime": 61.35684807256235,
                   "endTime": 62.78029478458049
                 },
@@ -2410,6 +2648,7 @@
                   "character": "破壞",
                   "jyutping": "po3 waai6",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "female",
                   "startTime": 49.56614512471654,
                   "endTime": 51.16975056689341
                 }
@@ -2422,6 +2661,7 @@
                   "character": "病人",
                   "jyutping": "beng6 jan4",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "male",
                   "startTime": 48.36521541950112,
                   "endTime": 49.56614512471654
                 },
@@ -2429,6 +2669,7 @@
                   "character": "例如",
                   "jyutping": "lai6 jyu4",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "male",
                   "startTime": 4.445374149659864,
                   "endTime": 5.60015873015873
                 },
@@ -2436,6 +2677,7 @@
                   "character": "調查",
                   "jyutping": "diu6 caa4",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "female",
                   "startTime": 66.54027210884352,
                   "endTime": 67.8111111111111
                 }
@@ -2448,6 +2690,7 @@
                   "character": "旗下",
                   "jyutping": "kei4 haa6",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "male",
                   "startTime": 32.434829931972786,
                   "endTime": 33.728276643990924
                 },
@@ -2455,6 +2698,7 @@
                   "character": "嚴重",
                   "jyutping": "jim4 zung6",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "female",
                   "startTime": 15.181519274376416,
                   "endTime": 16.72208616780045
                 },
@@ -2462,6 +2706,7 @@
                   "character": "無限",
                   "jyutping": "mou4 haan6",
                   "audioFile": "asset/unit4/Unit4.WAV",
+                  "voice": "female",
                   "startTime": 42.02653061224489,
                   "endTime": 43.59528344671201
                 }
@@ -2495,6 +2740,7 @@
               "character": "秒",
               "jyutping": "miu5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "male",
               "startTime": 58.786485260770974,
               "endTime": 59.74408163265306
             },
@@ -2502,6 +2748,7 @@
               "character": "我",
               "jyutping": "ngo5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "male",
               "startTime": 33.586190476190474,
               "endTime": 34.531020408163265
             },
@@ -2509,6 +2756,7 @@
               "character": "你",
               "jyutping": "nei5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "male",
               "startTime": 6.859319727891156,
               "endTime": 7.868004535147392
             },
@@ -2516,6 +2764,7 @@
               "character": "腦",
               "jyutping": "nou5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "male",
               "startTime": 66.65541950113378,
               "endTime": 67.585873015873
             },
@@ -2523,6 +2772,7 @@
               "character": "買",
               "jyutping": "maai5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "female",
               "startTime": 71.24290249433106,
               "endTime": 72.34079365079364
             },
@@ -2530,6 +2780,7 @@
               "character": "碼",
               "jyutping": "maa5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "female",
               "startTime": 55.79573696145125,
               "endTime": 56.77920634920635
             },
@@ -2537,6 +2788,7 @@
               "character": "惘",
               "jyutping": "mong5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "female",
               "startTime": 31.416417233560086,
               "endTime": 32.57621315192743
             },
@@ -2544,6 +2796,7 @@
               "character": "與",
               "jyutping": "jyu5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "female",
               "startTime": 67.585873015873,
               "endTime": 68.58564625850339
             }
@@ -2558,6 +2811,7 @@
               "character": "懶",
               "jyutping": "laan5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "male",
               "startTime": 32.57621315192743,
               "endTime": 33.586190476190474
             },
@@ -2565,6 +2819,7 @@
               "character": "理",
               "jyutping": "lei5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "male",
               "startTime": 53.866303854875284,
               "endTime": 54.85104308390023
             },
@@ -2572,6 +2827,7 @@
               "character": "晚",
               "jyutping": "maan5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "male",
               "startTime": 37.20650793650794,
               "endTime": 38.15292517006803
             },
@@ -2579,6 +2835,7 @@
               "character": "武",
               "jyutping": "mou5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "male",
               "startTime": 42.72954648526078,
               "endTime": 43.696712018140595
             },
@@ -2586,6 +2843,7 @@
               "character": "也",
               "jyutping": "jaa5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "male",
               "startTime": 0.0,
               "endTime": 0.883061224489796
             },
@@ -2593,6 +2851,7 @@
               "character": "每",
               "jyutping": "mui5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "female",
               "startTime": 45.03315192743764,
               "endTime": 46.08002267573696
             },
@@ -2600,6 +2859,7 @@
               "character": "引",
               "jyutping": "jan5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "female",
               "startTime": 27.85274376417233,
               "endTime": 28.963424036281175
             },
@@ -2607,6 +2867,7 @@
               "character": "遠",
               "jyutping": "jyun5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "female",
               "startTime": 75.92564625850339,
               "endTime": 77.0568707482993
             },
@@ -2614,6 +2875,7 @@
               "character": "滿",
               "jyutping": "mun5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "female",
               "startTime": 48.65990929705215,
               "endTime": 49.75632653061224
             },
@@ -2621,6 +2883,7 @@
               "character": "朗",
               "jyutping": "long5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "female",
               "startTime": 39.440657596371885,
               "endTime": 40.56634920634921
             }
@@ -2635,6 +2898,7 @@
               "character": "企",
               "jyutping": "kei5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "male",
               "startTime": 3.4378911564625847,
               "endTime": 4.397052154195011
             },
@@ -2642,6 +2906,7 @@
               "character": "路",
               "jyutping": "lou6",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "male",
               "startTime": 72.34079365079364,
               "endTime": 73.3548752834467
             },
@@ -2649,6 +2914,7 @@
               "character": "禮",
               "jyutping": "lai5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "male",
               "startTime": 57.89092970521542,
               "endTime": 58.786485260770974
             },
@@ -2656,6 +2922,7 @@
               "character": "往",
               "jyutping": "wong5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "male",
               "startTime": 28.963424036281175,
               "endTime": 29.912448979591833
             }
@@ -2671,6 +2938,7 @@
               "character": "神",
               "jyutping": "san4",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "female",
               "startTime": 56.77920634920635,
               "endTime": 57.89092970521542
             },
@@ -2678,6 +2946,7 @@
               "character": "免",
               "jyutping": "min5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "female",
               "startTime": 13.469183673469388,
               "endTime": 14.606780045351474
             },
@@ -2685,6 +2954,7 @@
               "character": "署",
               "jyutping": "cyu5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "female",
               "startTime": 64.63247165532879,
               "endTime": 65.71648526077097
             },
@@ -2692,6 +2962,7 @@
               "character": "永",
               "jyutping": "wing5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "female",
               "startTime": 46.08002267573696,
               "endTime": 47.2284126984127
             }
@@ -2781,60 +3052,67 @@
           ],
           "distinct_items": [
             {
+              "character": "勇",
+              "jyutping": "jung5",
+              "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "female",
+              "startTime": 16.12922902494331,
+              "endTime": 17.239637188208615,
+              "tone": 5
+            },
+            {
               "character": "何",
               "jyutping": "ho4",
               "audioFile": "asset/unit5/Unit5.WAV",
-              "tone": 4,
+              "voice": "female",
               "startTime": 5.782675736961451,
-              "endTime": 6.859319727891156
+              "endTime": 6.859319727891156,
+              "tone": 4
             },
             {
               "character": "第",
               "jyutping": "dai6",
               "audioFile": "asset/unit5/Unit5.WAV",
-              "tone": 6,
+              "voice": "female",
               "startTime": 60.89875283446712,
-              "endTime": 61.9112925170068
-            },
-            {
-              "character": "勇",
-              "jyutping": "jung5",
-              "audioFile": "asset/unit5/Unit5.WAV",
-              "tone": 5,
-              "startTime": 16.12922902494331,
-              "endTime": 17.239637188208615
-            },
-            {
-              "character": "笑",
-              "jyutping": "siu3",
-              "audioFile": "asset/unit5/Unit5.WAV",
-              "tone": 3,
-              "startTime": 59.74408163265306,
-              "endTime": 60.89875283446712
-            },
-            {
-              "character": "權",
-              "jyutping": "kyun4",
-              "audioFile": "asset/unit5/Unit5.WAV",
-              "tone": 4,
-              "startTime": 41.67507936507937,
-              "endTime": 42.72954648526078
-            },
-            {
-              "character": "件",
-              "jyutping": "gin6",
-              "audioFile": "asset/unit5/Unit5.WAV",
-              "tone": 6,
-              "startTime": 2.3033560090702947,
-              "endTime": 3.4378911564625847
+              "endTime": 61.9112925170068,
+              "tone": 6
             },
             {
               "character": "染",
               "jyutping": "jim5",
               "audioFile": "asset/unit5/Unit5.WAV",
-              "tone": 5,
+              "voice": "female",
               "startTime": 40.56634920634921,
-              "endTime": 41.67507936507937
+              "endTime": 41.67507936507937,
+              "tone": 5
+            },
+            {
+              "character": "笑",
+              "jyutping": "siu3",
+              "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "female",
+              "startTime": 59.74408163265306,
+              "endTime": 60.89875283446712,
+              "tone": 3
+            },
+            {
+              "character": "權",
+              "jyutping": "kyun4",
+              "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "female",
+              "startTime": 41.67507936507937,
+              "endTime": 42.72954648526078,
+              "tone": 4
+            },
+            {
+              "character": "件",
+              "jyutping": "gin6",
+              "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "female",
+              "startTime": 2.3033560090702947,
+              "endTime": 3.4378911564625847,
+              "tone": 6
             }
           ]
         },
@@ -2847,6 +3125,7 @@
               "character": "奶",
               "jyutping": "naai5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "male",
               "startTime": 22.612585034013602,
               "endTime": 23.599206349206344
             },
@@ -2854,6 +3133,7 @@
               "character": "眼",
               "jyutping": "ngaan5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "male",
               "startTime": 54.85104308390023,
               "endTime": 55.79573696145125
             },
@@ -2861,6 +3141,7 @@
               "character": "美",
               "jyutping": "mei5",
               "audioFile": "asset/unit5/Unit5.WAV",
+              "voice": "male",
               "startTime": 65.71648526077097,
               "endTime": 66.65541950113378
             }
@@ -2879,6 +3160,7 @@
                   "character": "螞蟻",
                   "jyutping": "maa5 ngai5",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "male",
                   "startTime": 68.58564625850339,
                   "endTime": 69.92523809523809
                 },
@@ -2886,6 +3168,7 @@
                   "character": "母語",
                   "jyutping": "mou5 jyu5",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "male",
                   "startTime": 43.696712018140595,
                   "endTime": 45.03315192743764
                 },
@@ -2893,6 +3176,7 @@
                   "character": "魯莽",
                   "jyutping": "lou5 mong5",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "female",
                   "startTime": 82.6581632653061,
                   "endTime": 84.08315192743764
                 },
@@ -2900,6 +3184,7 @@
                   "character": "馬尾",
                   "jyutping": "maa5 mei5",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "female",
                   "startTime": 81.24224489795917,
                   "endTime": 82.6581632653061
                 }
@@ -2912,6 +3197,7 @@
                   "character": "領先",
                   "jyutping": "ling5 sin1",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "male",
                   "startTime": 78.35115646258502,
                   "endTime": 79.79287981859409
                 },
@@ -2919,6 +3205,7 @@
                   "character": "野豬",
                   "jyutping": "je5 zyu1",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "male",
                   "startTime": 77.0568707482993,
                   "endTime": 78.35115646258502
                 },
@@ -2926,6 +3213,7 @@
                   "character": "有些",
                   "jyutping": "jau5 se1",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "female",
                   "startTime": 38.15292517006803,
                   "endTime": 39.440657596371885
                 }
@@ -2938,6 +3226,7 @@
                   "character": "優雅",
                   "jyutping": "jau1 ngaa5",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "male",
                   "startTime": 10.614671201814058,
                   "endTime": 11.922312925170068
                 },
@@ -2945,6 +3234,7 @@
                   "character": "温暖",
                   "jyutping": "wan1 nyun5",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "female",
                   "startTime": 47.2284126984127,
                   "endTime": 48.65990929705215
                 },
@@ -2952,6 +3242,7 @@
                   "character": "風雨",
                   "jyutping": "fung1 jyu5",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "female",
                   "startTime": 79.79287981859409,
                   "endTime": 81.24224489795917
                 }
@@ -2964,6 +3255,7 @@
                   "character": "勇敢",
                   "jyutping": "jung5 gam2",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "male",
                   "startTime": 17.239637188208615,
                   "endTime": 18.434784580498864
                 },
@@ -2971,6 +3263,7 @@
                   "character": "了解",
                   "jyutping": "liu5 gaai2",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "female",
                   "startTime": 0.883061224489796,
                   "endTime": 2.3033560090702947
                 },
@@ -2978,6 +3271,7 @@
                   "character": "敏感",
                   "jyutping": "man5 gam2",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "female",
                   "startTime": 35.88081632653061,
                   "endTime": 37.20650793650794
                 }
@@ -2990,6 +3284,7 @@
                   "character": "展覽",
                   "jyutping": "zin2 laam5",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "male",
                   "startTime": 25.07682539682539,
                   "endTime": 26.43303854875283
                 },
@@ -2997,6 +3292,7 @@
                   "character": "小鳥",
                   "jyutping": "siu2 niu5",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "male",
                   "startTime": 23.599206349206344,
                   "endTime": 25.07682539682539
                 },
@@ -3004,6 +3300,7 @@
                   "character": "口吻",
                   "jyutping": "hau2 man5",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "female",
                   "startTime": 19.688843537414964,
                   "endTime": 21.147301587301584
                 }
@@ -3016,6 +3313,7 @@
                   "character": "挽救",
                   "jyutping": "waan5 gau3",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "male",
                   "startTime": 34.531020408163265,
                   "endTime": 35.88081632653061
                 },
@@ -3023,6 +3321,7 @@
                   "character": "軟化",
                   "jyutping": "jyun5 faa3",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "male",
                   "startTime": 73.3548752834467,
                   "endTime": 74.66902494331065
                 },
@@ -3030,6 +3329,7 @@
                   "character": "猛獸",
                   "jyutping": "maang5 sau3",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "female",
                   "startTime": 52.43219954648526,
                   "endTime": 53.866303854875284
                 }
@@ -3042,6 +3342,7 @@
                   "character": "過癮",
                   "jyutping": "gwo3 jan5",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "male",
                   "startTime": 74.66902494331065,
                   "endTime": 75.92564625850339
                 },
@@ -3049,6 +3350,7 @@
                   "character": "快艇",
                   "jyutping": "faai3 teng5",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "female",
                   "startTime": 29.912448979591833,
                   "endTime": 31.416417233560086
                 },
@@ -3056,6 +3358,7 @@
                   "character": "器皿",
                   "jyutping": "hei3 ming5",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "female",
                   "startTime": 21.147301587301584,
                   "endTime": 22.612585034013602
                 }
@@ -3068,6 +3371,7 @@
                   "character": "友情",
                   "jyutping": "jau5 cing4",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "male",
                   "startTime": 18.434784580498864,
                   "endTime": 19.688843537414964
                 },
@@ -3075,6 +3379,7 @@
                   "character": "儲存",
                   "jyutping": "cyu5 cyun4",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "female",
                   "startTime": 11.922312925170068,
                   "endTime": 13.469183673469388
                 },
@@ -3082,6 +3387,7 @@
                   "character": "偶然",
                   "jyutping": "ngau5 jin4",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "female",
                   "startTime": 9.279319727891156,
                   "endTime": 10.614671201814058
                 }
@@ -3094,6 +3400,7 @@
                   "character": "行李",
                   "jyutping": "hang4 lei5",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "male",
                   "startTime": 69.92523809523809,
                   "endTime": 71.24290249433106
                 },
@@ -3101,6 +3408,7 @@
                   "character": "牛腩",
                   "jyutping": "ngau4 naam5",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "male",
                   "startTime": 51.187460317460314,
                   "endTime": 52.43219954648526
                 },
@@ -3108,6 +3416,7 @@
                   "character": "煩惱",
                   "jyutping": "faan4 nou5",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "female",
                   "startTime": 49.75632653061224,
                   "endTime": 51.187460317460314
                 }
@@ -3120,6 +3429,7 @@
                   "character": "冷淡",
                   "jyutping": "laang5 daam6",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "male",
                   "startTime": 14.606780045351474,
                   "endTime": 16.12922902494331
                 },
@@ -3127,6 +3437,7 @@
                   "character": "偉大",
                   "jyutping": "wai5 daai6",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "male",
                   "startTime": 7.868004535147392,
                   "endTime": 9.279319727891156
                 },
@@ -3134,6 +3445,7 @@
                   "character": "網站",
                   "jyutping": "mong5 zaam6",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "female",
                   "startTime": 63.19503401360544,
                   "endTime": 64.63247165532879
                 }
@@ -3146,6 +3458,7 @@
                   "character": "糯米",
                   "jyutping": "no6 mai5",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "male",
                   "startTime": 61.9112925170068,
                   "endTime": 63.19503401360544
                 },
@@ -3153,6 +3466,7 @@
                   "character": "伴舞",
                   "jyutping": "bun6 mou5",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "female",
                   "startTime": 4.397052154195011,
                   "endTime": 5.782675736961451
                 },
@@ -3160,6 +3474,7 @@
                   "character": "廟宇",
                   "jyutping": "miu6 jyu5",
                   "audioFile": "asset/unit5/Unit5.WAV",
+                  "voice": "female",
                   "startTime": 26.43303854875283,
                   "endTime": 27.85274376417233
                 }

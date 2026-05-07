@@ -23,6 +23,7 @@ class Quiz {
         optionsContainer.className = 'quiz-options quiz-options-grid';
         
         this.data.options.forEach((option, index) => {
+            const voice = normalizeVoice(option.voice);
             const optWrapper = document.createElement('div');
             optWrapper.className = 'quiz-option quiz-option-card';
             optWrapper.id = `quiz-${this.id}-option-${index}`;
@@ -37,7 +38,7 @@ class Quiz {
             // Store HTML to be injected later so Wavesurfer gets correct width when visible
             specWrapper.dataset.html = `
                 <div style="font-size:0.7rem; color:var(--text-secondary); text-align:left;">圖譜及音高：</div>
-                <div class="waveform" id="waveform-q${this.id}-o${index}" data-src="${option.audioFile}" data-start="${option.startTime !== undefined ? option.startTime : ''}" data-end="${option.endTime !== undefined ? option.endTime : ''}" style="height: 60px; background: #eee; border-radius: 8px; border: 2px solid var(--primary-color);"></div>
+                <div class="waveform" id="waveform-q${this.id}-o${index}" data-src="${option.audioFile}" data-start="${option.startTime !== undefined ? option.startTime : ''}" data-end="${option.endTime !== undefined ? option.endTime : ''}" data-voice="${voice}" data-jyutping="${option.jyutping || ''}" style="height: 60px; background: #eee; border-radius: 8px; border: 2px solid var(--primary-color);"></div>
             `;
             
             const audioBtn = document.createElement('button');
@@ -131,6 +132,13 @@ class Quiz {
             }
         }
     }
+}
+
+function normalizeVoice(voice) {
+    const normalized = String(voice || '').trim().toLowerCase();
+    if (normalized === 'm') return 'male';
+    if (normalized === 'f') return 'female';
+    return normalized === 'male' || normalized === 'female' ? normalized : '';
 }
 
 // Factory function to create quiz

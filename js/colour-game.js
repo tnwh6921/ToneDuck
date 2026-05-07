@@ -140,9 +140,10 @@ export function renderColourPuzzle(module, idx) {
                 specWrapper.className = 'hidden distinct-spec';
                 specWrapper.style.width = '100%';
                 specWrapper.style.marginTop = '5px';
+                const voice = normalizeVoice(item.voice);
                 specWrapper.dataset.html = `
                     <div style="font-size:0.7rem; color:var(--text-secondary); text-align:left;">圖譜及音高：</div>
-                    <div class="waveform" id="waveform-distinct-${idx}-${di}" data-src="${item.audioFile}" data-start="${item.startTime !== undefined ? item.startTime : ''}" data-end="${item.endTime !== undefined ? item.endTime : ''}" style="height: 40px; background: #eee; border-radius: 4px; border: 1px solid var(--primary-color);"></div>
+                    <div class="waveform" id="waveform-distinct-${idx}-${di}" data-src="${item.audioFile}" data-start="${item.startTime !== undefined ? item.startTime : ''}" data-end="${item.endTime !== undefined ? item.endTime : ''}" data-voice="${voice}" data-jyutping="${item.jyutping || ''}" style="height: 40px; background: #eee; border-radius: 4px; border: 1px solid var(--primary-color);"></div>
                 `;
                 
                 wordBox.appendChild(charSpan);
@@ -173,6 +174,7 @@ export function renderColourMC(module, idx) {
     let isSubmitted = false;
 
     module.options.forEach((option, index) => {
+        const voice = normalizeVoice(option.voice);
         const optWrapper = document.createElement('div');
         optWrapper.className = 'quiz-option quiz-option-card';
         optWrapper.id = `cquiz-${idx}-option-${index}`;
@@ -185,7 +187,7 @@ export function renderColourMC(module, idx) {
 
         specWrapper.dataset.html = `
             <div style="font-size:0.7rem; color:var(--text-secondary); text-align:left;">圖譜及音高：</div>
-            <div class="waveform" id="waveform-cq${idx}-o${index}" data-src="${option.audioFile}" data-start="${option.startTime !== undefined ? option.startTime : ''}" data-end="${option.endTime !== undefined ? option.endTime : ''}" style="height: 60px; background: #eee; border-radius: 8px; border: 2px solid var(--primary-color);"></div>
+            <div class="waveform" id="waveform-cq${idx}-o${index}" data-src="${option.audioFile}" data-start="${option.startTime !== undefined ? option.startTime : ''}" data-end="${option.endTime !== undefined ? option.endTime : ''}" data-voice="${voice}" data-jyutping="${option.jyutping || ''}" style="height: 60px; background: #eee; border-radius: 8px; border: 2px solid var(--primary-color);"></div>
         `;
 
         const audioBtn = document.createElement('button');
@@ -273,4 +275,11 @@ export function renderColourMC(module, idx) {
 
     quizDiv.appendChild(optionsContainer);
     return quizDiv;
+}
+
+function normalizeVoice(voice) {
+    const normalized = String(voice || '').trim().toLowerCase();
+    if (normalized === 'm') return 'male';
+    if (normalized === 'f') return 'female';
+    return normalized === 'male' || normalized === 'female' ? normalized : '';
 }
