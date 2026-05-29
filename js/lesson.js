@@ -5,12 +5,24 @@ import { loadLessonsData } from './data-loader.js';
 import { createQuiz } from './quiz.js';
 import { renderColourColour, renderColourPuzzle, renderColourMC } from './colour-game.js';
 import { AudioPlayer } from './audio.js';
+import {
+    getOfflineMessage,
+    loadExperimentConfig,
+    renderExperimentNotice,
+    resolveLessonAccess,
+    shouldHideQuizzesAndGames
+} from './experiment-config.js';
 import { initLanguageToggle } from './translator.js';
 import { translateDOM } from './dom-translator.js';
 
 let currentLesson = null;
 let currentLessonNumber = 1;
 let totalLessons = 5;
+let experimentState = {
+    training: false,
+    mode: 'full-viz',
+    hideQuizzesAndGames: false
+};
 const audioPlayer = new AudioPlayer();
 
 // Expose functions globally for inline handlers
@@ -21,7 +33,32 @@ window.initWavesurfers = () => audioPlayer.initializeWavesurfers();
 
 document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
-    currentLessonNumber = parseInt(urlParams.get('lesson')) || 1;
+
+    try {
+        const experimentConfig = await loadExperimentConfig();
+        const access = await resolveLessonAccess(experimentConfig, urlParams);
+
+        if (!access.ok) {
+            renderExperimentNotice(access.message || getOfflineMessage(experimentConfig));
+            initLanguageToggle();
+            translateDOM(document.body);
+            return;
+        }
+
+        experimentState = {
+            training: access.training,
+            mode: access.mode,
+            hideQuizzesAndGames: shouldHideQuizzesAndGames(experimentConfig)
+        };
+        currentLessonNumber = access.lessonNumber;
+        audioPlayer.setVisualizationEnabled(experimentState.mode !== 'no-viz');
+
+        applyExperimentShell();
+    } catch (error) {
+        console.error('Error loading experiment config:', error);
+        renderExperimentNotice('ToneDuck is currently offline.');
+        return;
+    }
     
     await loadLesson(currentLessonNumber);
     setupNavigation();
@@ -72,6 +109,11 @@ function renderLesson() {
         let currentColourSection = null;
 
         currentLesson.modules.forEach((module, idx) => {
+            if (shouldSkipModule(module)) {
+                currentColourSection = null;
+                return;
+            }
+
             const isColourModule = ['Colour_colour', 'Colour_puzzle', 'Colour_MC'].includes(module.type);
             
             let section;
@@ -131,9 +173,25 @@ function renderLesson() {
                     break;
             }
         });
-    }updateNavigationButtons();    translateDOM(document.body);    
+    }
+
+    updateNavigationButtons();
+    translateDOM(document.body);
+
     // Initialize standard wavesurfers globally for rendered elements
-    setTimeout(() => audioPlayer.initializeWavesurfers(), 200);
+    if (experimentState.mode !== 'no-viz') {
+        setTimeout(() => audioPlayer.initializeWavesurfers(), 200);
+    }
+}
+
+function shouldSkipModule(module) {
+    const hiddenExperimentModules = ['Quiz', 'Colour_colour', 'Colour_puzzle', 'Colour_MC'];
+
+    if (experimentState.hideQuizzesAndGames && hiddenExperimentModules.includes(module.type)) {
+        return true;
+    }
+
+    return experimentState.training && module.type === 'Link';
 }
 
 function renderAudioPractice(module, moduleIdx) {
@@ -156,7 +214,7 @@ function renderAudioPractice(module, moduleIdx) {
                 const itemDiv = document.createElement('div');
                 itemDiv.className = 'audio-item audio-practice-item';
                 
-                itemDiv.innerHTML = buildAudioPracticeItemHTML(item, audioId, module, true);
+                itemDiv.innerHTML = buildAudioPracticeItemHTML(item, audioId, module, true, experimentState.mode !== 'no-viz');
                 grid.appendChild(itemDiv);
             });
             container.appendChild(grid);
@@ -173,14 +231,14 @@ function renderAudioPractice(module, moduleIdx) {
         const itemDiv = document.createElement('div');
         itemDiv.className = 'audio-item audio-practice-item';
         
-        itemDiv.innerHTML = buildAudioPracticeItemHTML(item, audioId, module, true);
+        itemDiv.innerHTML = buildAudioPracticeItemHTML(item, audioId, module, true, experimentState.mode !== 'no-viz');
         grid.appendChild(itemDiv);
     });
     
     return grid;
 }
 
-function buildAudioPracticeItemHTML(item, audioId, module, isCompact = false) {
+function buildAudioPracticeItemHTML(item, audioId, module, isCompact = false, useVisualization = true) {
     const headingSize = isCompact ? '1.5rem' : '2rem';
     const waveHeight = isCompact ? '120px' : '180px';
     const btnLabelPlay = '🎧';
@@ -191,6 +249,30 @@ function buildAudioPracticeItemHTML(item, audioId, module, isCompact = false) {
     const voiceLabel = voice === 'male' ? '男聲' : voice === 'female' ? '女聲' : '';
     const voiceBadge = voiceLabel ? `<span class="voice-badge voice-${voice}">${voiceLabel}</span>` : '';
     const jyutping = item.jyutping || '';
+    const sampleDisplay = useVisualization
+        ? `
+        <div>
+            <div style="font-size:0.75rem; color:var(--text-secondary); margin-top: 0.5rem;">示範音調：</div>
+            <div class="waveform" id="waveform-${audioId}" data-src="${item.audioFile}" data-start="${item.startTime !== undefined ? item.startTime : ''}" data-end="${item.endTime !== undefined ? item.endTime : ''}" data-voice="${voice}" data-jyutping="${jyutping}" style="height: ${waveHeight}; background: #eee; border-radius: 8px; border: 2px solid var(--primary-color);"></div>
+        </div>
+        `
+        : `
+        <div class="audio-only-sample">
+            <span>示範錄音</span>
+        </div>
+        `;
+    const recordingDisplay = module.subType !== 'Content_Mono'
+        ? (useVisualization
+            ? `
+        <div class="mt-1 hidden" id="spectrogram-container-${audioId}">
+             <div style="font-size:0.75rem; color:var(--text-secondary);">你的音調：</div>
+             <div class="spectrogram" id="spectrogram-${audioId}" style="height: ${waveHeight}; background: #eee; border-radius: 8px; border: 2px solid #FFA500;"></div>
+        </div>
+        `
+            : `
+        <div class="mt-1 hidden audio-only-recording" id="recording-playback-container-${audioId}"></div>
+        `)
+        : '';
 
     return `
         <div class="audio-header">
@@ -200,25 +282,15 @@ function buildAudioPracticeItemHTML(item, audioId, module, isCompact = false) {
                 ${voiceBadge}
             </div>
         </div>
-        <!-- Audio visualization container -->
-        <div>
-            <div style="font-size:0.75rem; color:var(--text-secondary); margin-top: 0.5rem;">示範音調：</div>
-            <div class="waveform" id="waveform-${audioId}" data-src="${item.audioFile}" data-start="${item.startTime !== undefined ? item.startTime : ''}" data-end="${item.endTime !== undefined ? item.endTime : ''}" data-voice="${voice}" data-jyutping="${jyutping}" style="height: ${waveHeight}; background: #eee; border-radius: 8px; border: 2px solid var(--primary-color);"></div>
-        </div>
-        ${module.subType !== 'Content_Mono' ? `
-        <!-- Recording spectrogram container -->
-        <div class="mt-1 hidden" id="spectrogram-container-${audioId}">
-             <div style="font-size:0.75rem; color:var(--text-secondary);">你的音調：</div>
-             <div class="spectrogram" id="spectrogram-${audioId}" style="height: ${waveHeight}; background: #eee; border-radius: 8px; border: 2px solid #FFA500;"></div>
-        </div>
-        ` : ''}
+        ${sampleDisplay}
+        ${recordingDisplay}
         
         <div class="audio-controls" style="${ctrlStyle}">
             <button class="btn-icon secondary" style="${isCompact ? 'flex:1; ' + btnStyle : ''}" onclick="window.playAudio('${audioId}', '${item.audioFile}', ${item.startTime !== undefined ? item.startTime : 'null'}, ${item.endTime !== undefined ? item.endTime : 'null'})">
                 ${btnLabelPlay}
             </button>
             ${module.subType !== 'Content_Mono' ? `
-            <button class="btn-icon" style="${isCompact ? 'flex:1; ' + btnStyle : ''}" onclick="window.recordAudio('${audioId}')">
+            <button class="btn-icon" style="${isCompact ? 'flex:1; ' + btnStyle : ''}" data-record-button="${audioId}" data-default-label="${btnLabelRec}" onclick="window.recordAudio('${audioId}')">
                 ${btnLabelRec}
             </button>
             ` : ''}
@@ -234,7 +306,23 @@ function normalizeVoice(voice) {
     return normalized === 'male' || normalized === 'female' ? normalized : '';
 }
 
+function applyExperimentShell() {
+    document.body.dataset.experimentMode = experimentState.mode;
+
+    if (!experimentState.training) return;
+
+    document.body.classList.add('training-mode');
+
+    const headerNav = document.querySelector('.lesson-header-nav');
+    const lessonNav = document.querySelector('.lesson-nav');
+
+    if (headerNav) headerNav.classList.add('hidden');
+    if (lessonNav) lessonNav.classList.add('hidden');
+}
+
 function setupNavigation() {
+    if (experimentState.training) return;
+
     const prevBtn = document.getElementById('prevLesson');
     const nextBtn = document.getElementById('nextLesson');
     

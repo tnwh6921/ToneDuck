@@ -1,11 +1,19 @@
 // Audio Player and Recorder Module
 // Handles audio playback, recording, and visualization (Waveform/Pitch curve)
 
-import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js';
 import { computePitchCurve, drawPitchCurve } from './pitch.js';
 import { getSlicedAudioBlobUrl } from './audio-slicer.js';
 
 const PITCH_AXIS_LABELS = [400, 350, 300, 250, 200, 150, 100, 70, 50, 40, 0];
+let waveSurferModule = null;
+
+async function loadWaveSurfer() {
+    if (!waveSurferModule) {
+        waveSurferModule = await import('https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js');
+    }
+
+    return waveSurferModule.default;
+}
 
 function createPitchAxis() {
     const yAxis = document.createElement('div');
@@ -23,11 +31,12 @@ function createPitchAxis() {
 }
 
 export class AudioPlayer {
-    constructor() {
+    constructor(options = {}) {
         this.mediaRecorder = null;
         this.audioChunks = [];
         this.isRecording = false;
         this.currentRecordingId = null;
+        this.visualizationEnabled = options.visualizationEnabled !== false;
         
         // Cache object to store wavesurfer instances
         this.wavesurfers = {};
@@ -36,9 +45,15 @@ export class AudioPlayer {
         // Custom simple audio player fallback if Wavesurfer not used for quiz
         this.simpleAudios = {};
     }
+
+    setVisualizationEnabled(isEnabled) {
+        this.visualizationEnabled = isEnabled === true;
+    }
     
     // Initialize wavesurfers for original samples
     initializeWavesurfers() {
+        if (!this.visualizationEnabled) return;
+
         const greyMap = [];
         for (let i = 0; i < 256; i++) {
             const v = (255 - i) / 255;
@@ -87,6 +102,15 @@ export class AudioPlayer {
                 canvas.style.zIndex = '10'; // ensure above graph
                 wavesurferContainer.appendChild(canvas);
                 
+                let WaveSurfer;
+                try {
+                    WaveSurfer = await loadWaveSurfer();
+                } catch (error) {
+                    console.error('Could not load visualization library:', error);
+                    wavesurferContainer.innerHTML = `<div style="text-align:center; padding-top:15px; color:var(--text-secondary);">圖像載入失敗</div>`;
+                    return;
+                }
+
                 const ws = WaveSurfer.create({
                     container: wavesurferContainer,
                     waveColor: 'transparent',
@@ -132,6 +156,9 @@ export class AudioPlayer {
         });
         Object.values(this.recordWavesurfers).forEach(ws => {
             if (ws && ws !== 'loading' && typeof ws.isPlaying === 'function' && ws.isPlaying()) ws.pause();
+        });
+        Object.values(this.simpleAudios).forEach(audio => {
+            if (audio && typeof audio.pause === 'function') audio.pause();
         });
         
         // If it's a quiz option or similar without a wavesurfer container
@@ -230,12 +257,21 @@ export class AudioPlayer {
         const audioUrl = URL.createObjectURL(audioBlob);
         
         this.updateRecordButton(audioId, false);
-        this.showStatus(audioId, '✓ 錄音完成！點擊播放對比波形', 'success');
+        this.showStatus(
+            audioId,
+            this.visualizationEnabled ? '✓ 錄音完成！點擊播放對比波形' : '✓ 錄音完成！點擊播放錄音',
+            'success'
+        );
         
         this.renderRecordedAudio(audioId, audioUrl);
     }
 
-    renderRecordedAudio(audioId, audioUrl) {
+    async renderRecordedAudio(audioId, audioUrl) {
+        if (!this.visualizationEnabled) {
+            this.renderRecordedAudioOnly(audioId, audioUrl);
+            return;
+        }
+
         const container = document.getElementById(`spectrogram-container-${audioId}`);
         const specDiv = document.getElementById(`spectrogram-${audioId}`);
         
@@ -263,6 +299,15 @@ export class AudioPlayer {
             canvas.style.pointerEvents = 'none';
             canvas.style.zIndex = '10'; // Ensure it overlaps graph
             wavesurferContainer.appendChild(canvas);
+
+            let WaveSurfer;
+            try {
+                WaveSurfer = await loadWaveSurfer();
+            } catch (error) {
+                console.error('Could not load visualization library:', error);
+                wavesurferContainer.innerHTML = `<div style="text-align:center; padding-top:15px; color:var(--text-secondary);">圖像載入失敗</div>`;
+                return;
+            }
             
             const ws = WaveSurfer.create({
                 container: wavesurferContainer,
@@ -315,21 +360,47 @@ export class AudioPlayer {
             }
         }
     }
+
+    renderRecordedAudioOnly(audioId, audioUrl) {
+        const container = document.getElementById(`recording-playback-container-${audioId}`);
+        if (!container) return;
+
+        const recordingKey = `recording-${audioId}`;
+        this.simpleAudios[recordingKey] = new Audio(audioUrl);
+
+        container.classList.remove('hidden');
+        container.innerHTML = '';
+
+        const playBtn = document.createElement('button');
+        playBtn.className = 'btn-icon audio-only-playback-btn';
+        playBtn.innerHTML = '🎧';
+        playBtn.onclick = () => {
+            Object.values(this.simpleAudios).forEach(audio => {
+                if (audio && typeof audio.pause === 'function') audio.pause();
+            });
+            this.simpleAudios[recordingKey].currentTime = 0;
+            this.simpleAudios[recordingKey].play().catch(() => {
+                alert('播放錄音失敗');
+            });
+        };
+
+        container.appendChild(playBtn);
+    }
     
     updateRecordButton(audioId, isRecording) {
         const statusDiv = document.getElementById(`recording-status-${audioId}`);
         if (!statusDiv) return;
         const itemDiv = statusDiv.parentElement;
-        const btns = itemDiv.querySelectorAll('button');
+        const btns = itemDiv.querySelectorAll(`button[data-record-button="${audioId}"], button`);
         
         btns.forEach(btn => {
-            if (btn.textContent.includes('錄音') || btn.textContent.includes('停止')) {
+            if (btn.dataset.recordButton === audioId || btn.textContent.includes('錄音') || btn.textContent.includes('停止')) {
                 if (isRecording) {
                     btn.classList.add('recording');
                     btn.innerHTML = '⏹️ 停止錄音';
                 } else {
                     btn.classList.remove('recording');
-                    btn.innerHTML = '🎤 對比錄音';
+                    btn.innerHTML = btn.dataset.defaultLabel || '🎤 對比錄音';
                 }
             }
         });

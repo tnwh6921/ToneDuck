@@ -404,6 +404,20 @@ main {
     border-color: var(--voice-female) !important;
 }
 
+.audio-only-sample,
+.audio-only-recording {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-top: var(--spacing-sm);
+}
+
+.audio-only-playback-btn {
+    background-color: #F3AB63;
+    color: white;
+    justify-content: center;
+    width: 100%;
+}
+
 @keyframes pulse {
     0%, 100% { opacity: 0.7; }
     50% { opacity: 1; }
@@ -756,6 +770,12 @@ footer {
 
 .text-center {
     text-align: center;
+}
+
+.experiment-notice {
+    margin: var(--spacing-xl) auto;
+    max-width: 44rem;
+    padding: var(--spacing-xl);
 }
 
 .mt-1 { margin-top: var(--spacing-sm); }

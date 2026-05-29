@@ -2,11 +2,33 @@
 // Loads lesson cards on the home page
 
 import { loadLessonsData } from './data-loader.js';
+import {
+    getOfflineMessage,
+    isHomepageVisible,
+    isSiteActive,
+    loadExperimentConfig,
+    renderExperimentNotice
+} from './experiment-config.js';
 import { initLanguageToggle } from './translator.js';
 import { translateDOM } from './dom-translator.js';
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const experimentConfig = await loadExperimentConfig();
+
+        if (!isSiteActive(experimentConfig) || !isHomepageVisible(experimentConfig)) {
+            renderExperimentNotice(getOfflineMessage(experimentConfig));
+            initLanguageToggle();
+            translateDOM(document.body);
+            return;
+        }
+    } catch (error) {
+        console.error('Error loading experiment config:', error);
+        renderExperimentNotice('ToneDuck is currently offline.');
+        return;
+    }
+
     await loadLessonCards();
     
     initLanguageToggle();

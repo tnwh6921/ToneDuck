@@ -1,0 +1,59 @@
+{
+  "siteActive": true,
+  "homepageVisible": false,
+  "directLessonAccess": false,
+  "hideQuizzesAndGames": true,
+  "offlineMessage": "ToneDuck is currently offline. Please check with your instructor.",
+  "assignments": [
+    {
+      "tokenHash": "36d8d5c8ee6230ec25f46b545293580faf1368bfaa110e66fdd79eeb343b462f",
+      "lesson": 1,
+      "mode": "full-viz"
+    },
+    {
+      "tokenHash": "56d82486a8e6e60f610601e933859179902480891a3674ef093aaef6c457c2ac",
+      "lesson": 1,
+      "mode": "no-viz"
+    },
+    {
+      "tokenHash": "9347953783453f357094d0a682c9c3d72054ac12fd37545ab93988e6932e6bc4",
+      "lesson": 2,
+      "mode": "full-viz"
+    },
+    {
+      "tokenHash": "6f32c664236b2457317bc987898f9f74f743ccd2db7965bbb5fa6baf3703ccd0",
+      "lesson": 2,
+      "mode": "no-viz"
+    },
+    {
+      "tokenHash": "903042135af4d14314846372e7989ae0dc74709a6ae1621aa291c6a6380b1a1c",
+      "lesson": 3,
+      "mode": "full-viz"
+    },
+    {
+      "tokenHash": "556e4fd44d96891befc07f0eda24cde3ab10a538f77a05f2120119ee70a14311",
+      "lesson": 3,
+      "mode": "no-viz"
+    },
+    {
+      "tokenHash": "b5e33127e12c18b642acf1a1c1f65de03f1120d11a3c353af636d0797738b38c",
+      "lesson": 4,
+      "mode": "full-viz"
+    },
+    {
+      "tokenHash": "7b1f3f0bae9a8ae1e59acdc4a6389ac6facd282ea595aa18dc173ba2e6208e78",
+      "lesson": 4,
+      "mode": "no-viz"
+    },
+    {
+      "tokenHash": "2d6df6f6dffa71fcd92fc95a924360737e75fe4e90fe1d66c930dfab1e02b5bc",
+      "lesson": 5,
+      "mode": "full-viz"
+    },
+    {
+      "tokenHash": "a3b62bdc7425f7bacc16140e7faad8f2697104dc15bd335845e1170279daa94a",
+      "lesson": 5,
+      "mode": "no-viz"
+    }
+  ]
+}
