@@ -2,6 +2,7 @@
 
 const CONFIG_PATH = './data/experiment-config.json';
 const VALID_MODES = new Set(['full-viz', 'no-viz']);
+const FULL_ACCESS_PARAM = 'fullAccess';
 
 export async function loadExperimentConfig() {
     const response = await fetch(`${CONFIG_PATH}?t=${Date.now()}`, { cache: 'no-store' });
@@ -33,7 +34,45 @@ export function getOfflineMessage(config) {
     return (config && config.offlineMessage) || 'ToneDuck is currently offline.';
 }
 
+export async function resolveFullAccess(config, urlParams) {
+    const token = urlParams.get(FULL_ACCESS_PARAM);
+    if (!token || !config || !config.fullAccess || !config.fullAccess.tokenHash) {
+        return {
+            ok: false
+        };
+    }
+
+    const tokenHash = await sha256Hex(token);
+
+    if (tokenHash !== config.fullAccess.tokenHash) {
+        return {
+            ok: false
+        };
+    }
+
+    const modeParam = urlParams.get('mode');
+    const defaultMode = isValidMode(config.fullAccess.defaultMode) ? config.fullAccess.defaultMode : 'full-viz';
+
+    if (modeParam && !isValidMode(modeParam)) {
+        return block('Invalid visualization mode.');
+    }
+
+    return {
+        ok: true,
+        fullAccess: true,
+        token,
+        training: false,
+        lessonNumber: Number.parseInt(urlParams.get('lesson'), 10) || 1,
+        mode: modeParam || defaultMode
+    };
+}
+
 export async function resolveLessonAccess(config, urlParams) {
+    const fullAccess = await resolveFullAccess(config, urlParams);
+    if (fullAccess.ok) {
+        return fullAccess;
+    }
+
     if (!isSiteActive(config)) {
         return block(getOfflineMessage(config));
     }

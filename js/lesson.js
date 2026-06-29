@@ -21,7 +21,9 @@ let totalLessons = 5;
 let experimentState = {
     training: false,
     mode: 'full-viz',
-    hideQuizzesAndGames: false
+    hideQuizzesAndGames: false,
+    fullAccess: false,
+    fullAccessToken: ''
 };
 const audioPlayer = new AudioPlayer();
 
@@ -48,7 +50,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         experimentState = {
             training: access.training,
             mode: access.mode,
-            hideQuizzesAndGames: shouldHideQuizzesAndGames(experimentConfig)
+            hideQuizzesAndGames: access.fullAccess ? false : shouldHideQuizzesAndGames(experimentConfig),
+            fullAccess: access.fullAccess === true,
+            fullAccessToken: access.token || ''
         };
         currentLessonNumber = access.lessonNumber;
         audioPlayer.setVisualizationEnabled(experimentState.mode !== 'no-viz');
@@ -309,6 +313,13 @@ function normalizeVoice(voice) {
 function applyExperimentShell() {
     document.body.dataset.experimentMode = experimentState.mode;
 
+    if (experimentState.fullAccess) {
+        document.body.classList.add('full-access-mode');
+        const backLink = document.querySelector('.back-link');
+        if (backLink) backLink.href = buildLessonHref('index');
+        return;
+    }
+
     if (!experimentState.training) return;
 
     document.body.classList.add('training-mode');
@@ -328,15 +339,37 @@ function setupNavigation() {
     
     prevBtn.addEventListener('click', () => {
         if (currentLessonNumber > 1) {
-            window.location.href = `lesson.html?lesson=${currentLessonNumber - 1}`;
+            window.location.href = buildLessonHref(currentLessonNumber - 1);
         }
     });
     
     nextBtn.addEventListener('click', () => {
         if (currentLessonNumber < totalLessons) {
-            window.location.href = `lesson.html?lesson=${currentLessonNumber + 1}`;
+            window.location.href = buildLessonHref(currentLessonNumber + 1);
         }
     });
+}
+
+function buildLessonHref(lessonNumber) {
+    if (lessonNumber === 'index') {
+        const params = new URLSearchParams();
+        if (experimentState.fullAccessToken) {
+            params.set('fullAccess', experimentState.fullAccessToken);
+        }
+        return params.toString() ? `index.html?${params.toString()}` : 'index.html';
+    }
+
+    const params = new URLSearchParams({ lesson: String(lessonNumber) });
+
+    if (experimentState.mode !== 'full-viz') {
+        params.set('mode', experimentState.mode);
+    }
+
+    if (experimentState.fullAccessToken) {
+        params.set('fullAccess', experimentState.fullAccessToken);
+    }
+
+    return `lesson.html?${params.toString()}`;
 }
 
 function updateNavigationButtons() {

@@ -7,17 +7,22 @@ import {
     isHomepageVisible,
     isSiteActive,
     loadExperimentConfig,
-    renderExperimentNotice
+    renderExperimentNotice,
+    resolveFullAccess
 } from './experiment-config.js';
 import { initLanguageToggle } from './translator.js';
 import { translateDOM } from './dom-translator.js';
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', async () => {
+    let fullAccessToken = '';
+
     try {
         const experimentConfig = await loadExperimentConfig();
+        const fullAccess = await resolveFullAccess(experimentConfig, new URLSearchParams(window.location.search));
+        fullAccessToken = fullAccess.ok ? fullAccess.token : '';
 
-        if (!isSiteActive(experimentConfig) || !isHomepageVisible(experimentConfig)) {
+        if (!fullAccess.ok && (!isSiteActive(experimentConfig) || !isHomepageVisible(experimentConfig))) {
             renderExperimentNotice(getOfflineMessage(experimentConfig));
             initLanguageToggle();
             translateDOM(document.body);
@@ -29,7 +34,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
     }
 
-    await loadLessonCards();
+    await loadLessonCards({ fullAccessToken });
     
     initLanguageToggle();
     translateDOM(document.body);
@@ -40,7 +45,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 // Load and display lesson cards on home page
-async function loadLessonCards() {
+async function loadLessonCards(options = {}) {
     const container = document.getElementById('lessonsContainer');
     
     if (!container) return;
@@ -56,7 +61,7 @@ async function loadLessonCards() {
         container.innerHTML = '';
         
         lessons.forEach((lesson, index) => {
-            const card = createLessonCard(lesson, index + 1);
+            const card = createLessonCard(lesson, index + 1, options);
             container.appendChild(card);
         });
         
@@ -67,9 +72,9 @@ async function loadLessonCards() {
 }
 
 // Create a lesson card element
-function createLessonCard(lesson, lessonNumber) {
+function createLessonCard(lesson, lessonNumber, options = {}) {
     const card = document.createElement('a');
-    card.href = `lesson.html?lesson=${lessonNumber}`;
+    card.href = buildLessonHref(lessonNumber, options);
     card.className = 'lesson-card fade-in';
     
     card.innerHTML = `
@@ -79,6 +84,16 @@ function createLessonCard(lesson, lessonNumber) {
     `;
     
     return card;
+}
+
+function buildLessonHref(lessonNumber, options = {}) {
+    const params = new URLSearchParams({ lesson: String(lessonNumber) });
+
+    if (options.fullAccessToken) {
+        params.set('fullAccess', options.fullAccessToken);
+    }
+
+    return `lesson.html?${params.toString()}`;
 }
 
 // Export for testing

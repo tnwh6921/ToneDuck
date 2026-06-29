@@ -3,6 +3,10 @@
   "homepageVisible": false,
   "directLessonAccess": false,
   "hideQuizzesAndGames": true,
+  "fullAccess": {
+    "tokenHash": "c20eba084ce4702f585e003aabd8ff8daf12a6777d7a13cdabb02f2849f32888",
+    "defaultMode": "full-viz"
+  },
   "offlineMessage": "ToneDuck is currently offline. Please check with your instructor.",
   "assignments": [
     {
